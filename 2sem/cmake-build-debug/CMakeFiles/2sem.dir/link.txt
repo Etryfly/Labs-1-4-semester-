@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/2sem.dir/w/quicksort.c.o  -o 2sem -lm 

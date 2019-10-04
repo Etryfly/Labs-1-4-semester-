@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/2sem/KP/kp8/list.c
+list.h
+/home/etryfly/Документы/Labs/2sem/KP/kp8/list.h
+
+/home/etryfly/Документы/Labs/2sem/KP/kp8/list.h
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+week.h
+/home/etryfly/Документы/Labs/2sem/KP/kp8/week.h
+
+/home/etryfly/Документы/Labs/2sem/KP/kp8/main.c
+stdbool.h
+-
+stdio.h
+-
+week.h
+/home/etryfly/Документы/Labs/2sem/KP/kp8/week.h
+list.h
+/home/etryfly/Документы/Labs/2sem/KP/kp8/list.h
+
+/home/etryfly/Документы/Labs/2sem/KP/kp8/week.c
+week.h
+/home/etryfly/Документы/Labs/2sem/KP/kp8/week.h
+
+/home/etryfly/Документы/Labs/2sem/KP/kp8/week.h
+

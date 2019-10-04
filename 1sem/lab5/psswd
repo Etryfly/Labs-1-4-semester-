@@ -1,0 +1,140 @@
+00, ,<,01
+01,1,<,01
+01,0,<,01
+01, ,>,02
+02,0,l,l
+02,1,h,h
+02,l,>,02
+02,h,>,02
+
+l,0,>,l
+l,1,>,l
+l,l,>,l
+l,h,>,l
+
+h,0,>,h
+h,1,>,h
+h,h,>,h
+h,l,>,h
+
+l, ,>,l1
+h, ,>,h1
+
+l1, ,0,left1
+h1, ,1,left1
+l1,0,>,l1
+l1,1,>,l1
+h1,0,>,h1
+h1,1,>,h1
+
+left1,l,<,left1
+left1,h,<,left1
+left1,0,<,left1
+left1,1,<,left1
+left1, ,<,left2
+
+left2,l,<,left2
+left2,h,<,left2
+left2,0,<,left2
+left2,1,<,left2
+left2, ,>,02
+
+02, ,<,r
+r,l,0,r
+r,h,1,r
+r,0,<,r
+r,1,<,r
+r, ,>,right1
+right1,0,>,right1
+right1,1,>,right1
+right1, ,>,right2
+right2,0,>,right2
+right2,1,>,right2
+
+right2, ,<,main
+main,0, ,L
+main,1, ,L
+main1,0, ,R
+main1,1, ,R
+
+L,0,<,L
+L,1,<,L
+L, ,<,L1
+L1,0,<,L1
+L1,1,<,L1
+L1, ,>,main1
+
+R,0,>,R
+R,1,>,R
+R, ,>,R1
+R1,0,>,R1
+R1,1,>,R1
+R1, ,<,main
+
+main, ,c,c1
+c1,c,<,c1
+c1, ,c,c2
+c2,c,<,rc
+
+rc, ,<,rc
+rc,l,<,rc
+rc,h,<,rc 
+rc,1,h,rc1
+rc,0,l,rc0
+rc0,l,>,rc0
+rc0,h,>,rc0
+rc1,l,>,rc1
+rc1,h,>,rc1
+rc0, ,>,rc00
+rc1, ,>,rc11
+rc00, ,>,rc00
+rc11, ,>,rc11
+rc00,c,>,rc000
+rc000,c,0,w1    //Идем к w1
+rc11,c,>,rc111
+rc111,c,1,w1    //Идем к w1
+
+w1,0,<,w1
+w1,1,<,w1
+w1,c,<,w11
+w1, ,<,w11
+w11, ,<,w11
+w11,l,<,lc
+w11,h,<,lc
+lc,l,<,lc
+lc,h,<,lc
+lc,0,<,lc
+lc,1,<,lc
+lc, ,>,lcc
+lcc,0,l,lc0
+lcc,1,h,lc1
+lcc,l,>,lcc
+lcc,h,>,lcc
+
+lc0,l,>,lc0
+lc0,h,>,lc0
+lc0,0,>,lc0
+lc0,1,>,lc0
+lc0, ,>,lc00
+lc00, ,>,lc00
+lc00,c,c,lc000 //Дописать обработку lc00,0(или 1)
+lc000,c,0,w1
+lc000,0,<,lc0000
+lc0000, ,0,w1
+lc000,1,<,lc0000
+
+
+lc1,l,>,lc1
+lc1,h,>,lc1
+lc1,0,>,lc1
+lc1,1,>,lc1
+lc1, ,>,lc11
+lc11, ,>,lc11
+lc11,c,c,lc111
+lc111,c,1,w1
+lc111,0,<,lc1111
+lc1111, ,1,w1
+lc111,1,<,lc1111
+
+
+//Тащит 1 или 0 к левой границе w2

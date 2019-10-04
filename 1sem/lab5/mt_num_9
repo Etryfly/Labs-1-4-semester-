@@ -1,0 +1,330 @@
+00, ,<,01
+01,0,<,le
+01,1,<,le
+le,0,<,le
+le,1,<,le
+le,#,>,cop
+cop,0, ,cop0
+cop,1, ,cop1
+
+cop0, ,>,cops0
+cop1, ,>,cops1
+
+cops0,1,>,cops0
+cops0,0,>,cops0
+cops1,1,>,cops1
+cops1,0,>,cops1
+
+cops0, ,>,cop00
+cops1, ,>,cop11
+cops0,0,>,cops00
+cops0,1,>,cops00
+cops1,0,>,cops11
+cops1,1,>,cops11
+cops00,0,>,cops00
+cops00,1,>,cops00
+cops00, ,cop00
+
+cop00, ,0,lef0
+cop11, ,1,lef1
+
+lef0,0,<,lef0
+lef0,1,<,lef0
+lef0, ,<,lef00
+
+lef1,0,<,lef1
+lef1,1,<,lef1
+lef1, ,<,lef11
+
+lef11,1,<,lef11
+lef11,0,<,lef11
+lef00,0,<,lef00
+lef00,1,<,lef00
+
+lef11, ,1,copn
+lef00, ,0,copn
+copn,0,>,cop
+copn,1,>,cop
+
+
+
+
+02, ,<,r
+r,l,0,r
+r,h,1,r
+r,0,<,r
+r,1,<,r
+r,#,>,right1
+right1,0,>,right1
+right1,1,>,right1
+right1, ,>,right2
+right2,0,>,right2
+right2,1,>,right2
+
+right2, ,<,main
+main,0, ,L
+main,1, ,L
+main1,0, ,R
+main1,1, ,R
+main1, ,c,nech //нечетное
+
+L,0,<,L
+L,1,<,L
+L, ,<,L1
+L1,0,<,L1
+L1,1,<,L1
+L1, ,>,main1
+
+R,0,>,R
+R,1,>,R
+R, ,>,R1
+R1,0,>,R1
+R1,1,>,R1
+R1, ,<,main
+
+main, ,c,c1
+c1,c,>,c1
+c1, ,c,c2
+c2,c,<,c3
+c3,c,<,lc //q lc* - копируем цифры w1 слева
+lc,c,<,lc 
+lc,1,<,lc
+lc,0,<,lc
+lc, ,<,lcc //lc идет до 1 пробела, lсс идет n пробелов до w1
+lcc, ,<,lcc
+lcc,0,<,lccc //lccc выполняется, когда нашли w1, lccc идет до начала w1
+lcc,1,<,lccc
+lcc,c,<,lccc
+lcc,h,<,lccc
+lccc,0,<,lccc
+lccc,1,<,lccc
+lccc,c,<,lccc
+lccc,h,<,lccc
+lccc,#,>,lcopy
+lcopy,0,c,lcopy0
+lcopy,1,h,lcopy1
+lcopy,c,>,lcopy
+lcopy,h,>,lcopy
+lcopy0,c,>,lcopy0
+lcopy0,h,>,lcopy0
+lcopy0,0,>,lcopy0
+lcopy0,1,>,lcopy0
+lcopy1,c,>,lcopy1
+lcopy1,h,>,lcopy1
+lcopy1,1,>,lcopy1
+lcopy1,0,>,lcopy1
+lcopy1, ,>,lcopy11 //Ищет w2
+lcopy0, ,>,lcopy00
+lcopy11, ,>,lcopy11
+lcopy00, ,>,lcopy00
+lcopy11,0,<,lcopy111
+lcopy00,0,<,lcopy000
+lcopy11,1,<,lcopy111
+lcopy00,1,<,lcopy000
+lcopy11,c, ,lcopy111
+lcopy00,c, ,lcopy000
+
+lcopy000, ,0,rc
+lcopy111, ,1,rc
+
+//переписать под rc
+rc,c,<,rc 
+rc,1,<,rc
+rc,0,<,rc
+rc, ,<,rcc //rc идет до 1 пробела, rcс идет n пробелов до w1
+rcc, ,<,rcc
+rcc,0,>,rccc //rccc выполняется, когда нашли w1
+rcc,1,>,rccc //rcccl идет от правой границы w1 через l и h
+rccc,c,<,rccc
+rccc,h,<,rccc
+rccc, ,<,rccc
+rccc,0,0,rcccl
+rccc,1,1,rcccl
+rcc,c,<,rcccl 
+rcc,h,<,rcccl
+rcccl,c,<,rcccl
+rcccl,h,<,rcccl
+rcccl,0,c,rcopy0
+rcccl,1,h,rcopy1
+
+
+rcopy0,c,>,rcopy0
+rcopy0,h,>,rcopy0
+rcopy1,c,>,rcopy1
+rcopy1,h,>,rcopy1
+rcopy0, ,>,rcopy00 //Идет до начала w2
+rcopy1, ,>,rcopy11
+rcopy00, ,>,rcopy00
+rcopy11, ,>,rcopy11
+rcopy00,0,>,rcopy000
+rcopy00,1,>,rcopy000
+rcopy11,0,>,rcopy111
+rcopy11,1,>,rcopy111
+rcopy00,c,>,rcopy000
+rcopy11,c,>,rcopy111
+rcopy000,1,>,rcopy000
+rcopy000,0,>,rcopy000
+rcopy111,1,>,rcopy111
+rcopy111,0,>,rcopy111
+rcopy111,c,1,lc
+rcopy000,c,0,lc
+rcopy000, ,0,lc
+rcopy111, ,1,lc
+
+lcopy, ,<,rfinish
+rfinish,c,0,rfinishl
+rfinishl,0,<,rfinish
+rfinish,h,1,rfinishl
+rfinishl,1,<,rfinish
+rfinish,#,>,gor1
+gor1,0,>,gor1
+gor1,1,>,gor1
+gor1, ,>,gor2
+gor2, ,>,gor2
+gor2,0,>,gor3
+gor2,1,>,gor3
+gor3,0,>,gor3
+gor3,1,>,gor3
+gor3, , ,finish
+finish, , ,finish 
+
+//обработка нечетных чисел - 10101 __с__ -> _1c__ -> _1c1_ -> 01c1_ -> 01c10 -> 01110
+//нужно найти центр w1: перед каждым копированием левой цифры проверять, стоит ли справа l/h, //если да, то мы нашли центр, делаем < и копируем центральную цифру
+// 10101 h0101
+nech,c,c,nleft
+nleft,c,<,nleft //nleft - ищем конец w2
+nleft,1,<,nleft
+nleft,0,<,nleft
+nleft, ,<,nlefts //nlefts - идем по пробелам до w1
+nlefts, ,<,nlefts
+nlefts,0,<,nleftss //nleftss - w1 найдено, идем до левой границы w1
+nlefts,1,<,nleftss
+nlefts,c,<,nleftss
+nlefts,h,<,nleftss
+nleftss,0,<,nleftss
+nleftss,1,<,nleftss
+nleftss,c,<,nleftss
+nleftss,h,<,nleftss
+nleftss,#,>,nl //nl - нашли левую границу
+nl,0,0,check //check - проверка, стоит ли справа число
+nl,1,1,check
+nl,c,>,nl
+nl,h,>,nl
+
+check,0,>,check1
+check,1,>,check1
+check1,0,<,checks //checks - слева не центр, копируем то, что слева и идем к w1
+check1,1,<,checks
+check1,c,<,checkf //checkf - слева центр, копируем его и ставим вместо C в слове w1
+check1,h,<,checkf
+checks,0,0,copyl //copyl копирует не центральный символ, для центрального нужно ввести новое //состояние
+checks,1,1,copyl
+
+checkf,0,0,copyc
+checkf,1,1,copyc
+
+copyc,0,c,copyc0
+copyc,1,h,copyc1
+
+copyc0,0,>,copyc0
+copyc0,1,>,copyc0
+//copyc0,c,>,copyc0
+copyc0,h,>,copyc0
+copyc0, ,>,copyc0
+copyc0,c,0,fr
+
+
+copyc1,0,>,copyc1
+copyc1,1,>,copyc1
+
+copyc1,h,>,copyc1
+copyc1,c,>,copyc1
+copyc1, ,>,copyc11
+copyc11, ,>,copyc11
+copyc11,0,>,copyc11
+copyc11,1,>,copyc11
+copyc11,c,1,fr
+
+copyl,0,c,copyl0
+copyl,1,h,copyl1
+
+copyl0,0,>,copyl0
+copyl0,1,>,copyl0
+copyl0,c,>,copyl0
+copyl0,h,>,copyl0
+
+
+copyl1,0,>,copyl1
+copyl1,1,>,copyl1
+copyl1,c,>,copyl1
+copyl1,h,>,copyl1
+
+copyl0, ,>,copyl00 //Нашли конец w1
+copyl1, ,>,copyl11
+
+copyl00, ,>,copyl00
+copyl11, ,>,copyl11
+
+copyl00,0,<,copyl000 //copyl000 - нашли левую границу w2
+copyl00,1,<,copyl000
+copyl00,c,<,copyl000
+copyl000, ,0,nright
+
+//nright,0,<,nright
+
+copyl11,0,<,copyl111
+copyl11,1,<,copyl111
+copyl11,c,<,copyl111
+copyl111, ,1,nright
+
+
+
+//копирование слева и копирование центральной цифры написаны, осталось дописать копирование справа
+
+
+
+nright,1,<,nright
+nright,0,<,nright
+nright, ,<,nrights
+nrights, ,<,nrights
+nrights,0,c,copyr0
+nrights,1,h,copyr1
+nrights,c,<,nrights
+nrights,h,<,nrights
+
+copyr0,c,>,copyr00
+copyr00,c,>,copyr00
+copyr00,h,>,copyr00
+copyr00, ,>,copyr000
+copyr000, ,>,copyr000
+copyr000,0,>,copyr0000
+copyr000,1,>,copyr0000
+copyr0000,0,>,copyr0000
+copyr0000,1,>,copyr0000
+copyr0000,c,>,copyr0000
+copyr0000, ,0,nleft
+
+copyr1,h,>,copyr11
+copyr11,c,>,copyr11
+copyr11,h,>,copyr11
+copyr11, ,>,copyr111
+copyr111, ,>,copyr111
+copyr111,0,>,copyr1111
+copyr111,1,>,copyr1111
+copyr1111,0,>,copyr1111
+copyr1111,1,>,copyr1111
+copyr1111,c,>,copyr1111
+copyr1111, ,1,nleft
+//rfinish вызывается в случае w1()w2
+fr,1,<,fr
+fr,0,<,fr
+fr, ,<,rfinish
+check1, ,<,o
+o,1,>,o1
+o,0,>,o0
+o1, ,>,o1
+o0, ,>,o0
+o1,c,1,finish
+o0,c,0,finish
+finish,0,>,finish
+finish,1,>,finish

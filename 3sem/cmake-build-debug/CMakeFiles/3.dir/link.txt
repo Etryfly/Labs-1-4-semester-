@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/3.dir/fundal/13/main.c.o  -o 3 

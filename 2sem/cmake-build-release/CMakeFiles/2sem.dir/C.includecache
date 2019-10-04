@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/2sem/23/Tree.c
+string.h
+/home/etryfly/Документы/Labs/2sem/23/string.h
+stdlib.h
+-
+stdio.h
+/home/etryfly/Документы/Labs/2sem/23/stdio.h
+

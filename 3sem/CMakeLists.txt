@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.6)
+project(fundal)
+set(CMAKE_CXX_STANDARD fundal/11)
+add_executable(3sem fundal/2/12/main.c)
+target_link_libraries(3sem m)

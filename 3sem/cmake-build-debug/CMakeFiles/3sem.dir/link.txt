@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/3sem.dir/fundal/2/12/main.c.o  -o 3sem -lm 

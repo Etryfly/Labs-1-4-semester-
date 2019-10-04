@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/2sem.dir/Arrays.cpp.o  -o 2sem -lm 
