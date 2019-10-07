@@ -25,12 +25,12 @@ int main() {
     while (!(feof(file))) {
 
         fscanf(file, "%d", &c);
-            //доделать обработку отрицательных и вещ. чисел
+
 
         if (i % 2 == 0) {
-            *ptr = c;
+            *ptr++ = c;
             ptr ++;
-            count ++;
+            count++;
         }
         i++;
     }

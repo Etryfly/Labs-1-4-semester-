@@ -6,13 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/etryfly/Документы/Labs/3sem/fundal/2/12/main.c
+/home/etryfly/Документы/Labs/3sem/fundal/3/1/main.c
 stdio.h
 -
-stdarg.h
--
 stdlib.h
--
-memory.h
 -
 

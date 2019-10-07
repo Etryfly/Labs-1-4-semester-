@@ -1,5 +1,5 @@
 
-
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <memory.h>
@@ -8,7 +8,7 @@ int abcCount(char* str) {
     char* ptr = str;
     int count = 0;
     while (*ptr) {
-        if ((*ptr >= 'a' && *ptr <= 'z') || (*ptr >= 'A' && *ptr <= 'Z')) {
+        if (isalpha(*ptr)) {
             count ++;
         }
         ptr++;
@@ -35,10 +35,11 @@ int main(int argc, char** argv) {
     }
 
     char ch;
+    char buf[BUFSIZ];
+    char *bufptr = buf;
+    int i;
     while (!feof(in)) {
-        char buf[BUFSIZ];
-        char *bufptr = buf;
-        int i = 0;
+         i = 0;
 
 
         while ((ch = fgetc(in))!= '\n') {
@@ -46,11 +47,10 @@ int main(int argc, char** argv) {
             *bufptr++ = ch;
             i++;
         }
+        *bufptr = 0;
 
         fprintf(out, "%d\n", abcCount(buf));
-        for (int j = 0; j < i; ++j) {
-            buf[j] = 0;
-        }
+
     }
 
     fclose(out);

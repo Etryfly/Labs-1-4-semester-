@@ -21,7 +21,7 @@ int substr(char* str, char* substr) {
 
         ptrStr++;
 
-        i++;
+         i++;
     }
 
     if (*ptrSubstr) return -1;
@@ -31,7 +31,7 @@ int substr(char* str, char* substr) {
 
 void pushBackNextInBuffer(char* buf, char c) {
     strcpy(buf, buf+1);
-    strcat(buf, &c);
+    buf[strlen(buf) - 1] = c;
 }
 
 void searchSubstr(char* sub, int n, ...) {
@@ -44,7 +44,7 @@ void searchSubstr(char* sub, int n, ...) {
 
         if (!(file = fopen(name, "r"))) {
             printf("Couldn't open file");
-            exit(-1);
+            continue;
         }
         char buf[strlen(sub)], *ptr = buf;
         while (!feof(file) && strlen(buf) <= strlen(sub)) {
@@ -59,7 +59,6 @@ void searchSubstr(char* sub, int n, ...) {
             } else {
                 printf("Substr in str start:%d File: %s", index, name);
                 fclose(file);
-                exit(0);
             }
         }
 

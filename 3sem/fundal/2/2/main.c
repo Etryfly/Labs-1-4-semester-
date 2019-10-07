@@ -25,7 +25,7 @@ int main() {
     while (!(feof(file))) {
 
         fscanf(file, "%d", &c);
-        //доделать обработку отрицательных и вещ. чисел
+
 
         if (c % 2 == 0) {
             *ptr = c;

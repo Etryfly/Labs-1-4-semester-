@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/3sem.dir/fundal/2/12/main.c.o"
+  "CMakeFiles/3sem.dir/fundal/3/1/main.c.o"
   "3sem.pdb"
   "3sem"
 )
