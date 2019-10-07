@@ -57,27 +57,27 @@ include CMakeFiles/3sem.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/3sem.dir/flags.make
 
-CMakeFiles/3sem.dir/fundal/3/1/main.c.o: CMakeFiles/3sem.dir/flags.make
-CMakeFiles/3sem.dir/fundal/3/1/main.c.o: ../fundal/3/1/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/3sem.dir/fundal/3/1/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/3sem.dir/fundal/3/1/main.c.o   -c /home/etryfly/Документы/Labs/3sem/fundal/3/1/main.c
+CMakeFiles/3sem.dir/fundal/3/2/main.c.o: CMakeFiles/3sem.dir/flags.make
+CMakeFiles/3sem.dir/fundal/3/2/main.c.o: ../fundal/3/2/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/3sem.dir/fundal/3/2/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/3sem.dir/fundal/3/2/main.c.o   -c /home/etryfly/Документы/Labs/3sem/fundal/3/2/main.c
 
-CMakeFiles/3sem.dir/fundal/3/1/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/3sem.dir/fundal/3/1/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/etryfly/Документы/Labs/3sem/fundal/3/1/main.c > CMakeFiles/3sem.dir/fundal/3/1/main.c.i
+CMakeFiles/3sem.dir/fundal/3/2/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/3sem.dir/fundal/3/2/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/etryfly/Документы/Labs/3sem/fundal/3/2/main.c > CMakeFiles/3sem.dir/fundal/3/2/main.c.i
 
-CMakeFiles/3sem.dir/fundal/3/1/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/3sem.dir/fundal/3/1/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/etryfly/Документы/Labs/3sem/fundal/3/1/main.c -o CMakeFiles/3sem.dir/fundal/3/1/main.c.s
+CMakeFiles/3sem.dir/fundal/3/2/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/3sem.dir/fundal/3/2/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/etryfly/Документы/Labs/3sem/fundal/3/2/main.c -o CMakeFiles/3sem.dir/fundal/3/2/main.c.s
 
 # Object files for target 3sem
 3sem_OBJECTS = \
-"CMakeFiles/3sem.dir/fundal/3/1/main.c.o"
+"CMakeFiles/3sem.dir/fundal/3/2/main.c.o"
 
 # External object files for target 3sem
 3sem_EXTERNAL_OBJECTS =
 
-3sem: CMakeFiles/3sem.dir/fundal/3/1/main.c.o
+3sem: CMakeFiles/3sem.dir/fundal/3/2/main.c.o
 3sem: CMakeFiles/3sem.dir/build.make
 3sem: CMakeFiles/3sem.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable 3sem"
