@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/etryfly/Документы/Labs/3sem/fundal/3/1/main.c
+/home/etryfly/Документы/Labs/3sem/fundal/3/8/main.c
+time.h
+-
 stdio.h
 -
 stdlib.h
