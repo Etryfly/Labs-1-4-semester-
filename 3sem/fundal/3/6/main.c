@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <memory.h>
 
 typedef struct student {
     char* name1;
@@ -47,35 +48,35 @@ int main(int argc, char* argv[]) {
 
     int size = 10;
     int curSize = 0;
-    char* name1;
-    char* name2;
-    char* name3;
     int group;
     int *score;
     Student *students = malloc(sizeof(Student) * size);
     Student *ptr = students;
     int midScore[5] = {0};
+    char buf1[250];
+    char buf2[250];
+    char buf3[250];
     while (!feof(file)) {
         if (size == curSize) {
             size *= 2;
             students = (Student *)realloc(students, sizeof(Student) * size);
             ptr = students + curSize;
         }
-        name1 = malloc(sizeof(char) * 250);
-        name2 = malloc(sizeof(char) * 250);
-        name3 = malloc(sizeof(char) * 250);
-        score = malloc(sizeof(int) * 6);
-        fscanf(file, "%s %s %s %d %d %d %d %d %d", name1, name2 ,name3, &group, &score[0], &score[1],&score[2],&score[3],&score[4]);
+        score = malloc(sizeof(int) * 5);
+        fscanf(file, "%s %s %s %d %d %d %d %d %d", buf1, buf2 ,buf3, &group, &score[0], &score[1],&score[2],&score[3],&score[4]);
 
+        ptr->name1 = malloc(sizeof(char) * (strlen(buf1) + 1));
+        ptr->name2 = malloc(sizeof(char) * (strlen(buf2) + 1));
+        ptr->name3 = malloc(sizeof(char) * (strlen(buf3) + 1));
+        strcpy(ptr->name1, buf1);
+        strcpy(ptr->name2, buf2);
+        strcpy(ptr->name3, buf3);
         ptr->group = group;
-        ptr->name1 = name1;
-        ptr->name2 = name2;
-        ptr->name3 = name3;
         ptr->score = score;
         ptr++;
         curSize++;
 
-        fprintf(out, "%s %s %s %f\n", name1, name2, name3, mid(score));
+        fprintf(out, "%s %s %s %f\n", buf1, buf2, buf3, mid(score));
         for (int i = 0; i < 5; ++i) {
             midScore[i] += score[i];
         }

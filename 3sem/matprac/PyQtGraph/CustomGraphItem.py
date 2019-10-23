@@ -97,7 +97,7 @@ pos = np.array([
     [15,5]
     ], dtype=float)
     
-## Define the set of connections in the graph
+## Define the set of connections IN the graph
 adj = np.array([
     [0,1],
     [1,3],
@@ -129,7 +129,7 @@ g.setData(pos=pos, adj=adj, pen=lines, size=1, symbol=symbols, pxMode=False, tex
 
 
 
-## Start Qt event loop unless running in interactive mode or using pyside.
+## Start Qt event loop unless running IN interactive mode or using pyside.
 if __name__ == '__main__':
     import sys
     if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):

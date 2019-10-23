@@ -11,7 +11,7 @@ win = pg.GraphicsWindow()
 win.setWindowTitle('pyqtgraph example: Scrolling Plots')
 
 
-# 1) Simplest approach -- update data in the array such that plot appears to scroll
+# 1) Simplest approach -- update data IN the array such that plot appears to scroll
 #    In these examples, the array size is fixed.
 p1 = win.addPlot()
 p2 = win.addPlot()
@@ -22,7 +22,7 @@ ptr1 = 0
 def update1():
     try:
         global data1, curve1, ptr1
-        data1[:-1] = data1[1:]  # shift data in the array one sample left
+        data1[:-1] = data1[1:]  # shift data IN the array one sample left
                                 # (see also: np.roll)
         data1[-1] = np.random.normal()
         curve1.setData(data1)
@@ -46,7 +46,7 @@ def update1():
         print(traceback.format_exception_only(Type, Value))
         exit(-11)
 
-# 2) Allow data to accumulate. In these examples, the array doubles in length
+# 2) Allow data to accumulate. In these examples, the array doubles IN length
 #    whenever it is full. 
 win.nextRow()
 p3 = win.addPlot()
@@ -93,7 +93,7 @@ def update2():
         exit(-11)
 
 
-# 3) Plot in chunks, adding one new plot curve for every 100 samples
+# 3) Plot IN chunks, adding one new plot curve for every 100 samples
 chunkSize = 100
 # Remove chunks after we have 10
 maxChunks = 10
@@ -157,7 +157,7 @@ timer.start(50)
 
 
 
-## Start Qt event loop unless running in interactive mode or using pyside.
+## Start Qt event loop unless running IN interactive mode or using pyside.
 if __name__ == '__main__':
     import sys
     QtGui.QApplication.instance().exec_()

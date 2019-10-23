@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int main() {
-    char* inFile = "/home/etryfly/Документы/Labs/3sem/fundal/13/in";
+    char* inFile = "/home/etryfly/Документы/Labs/3sem/fundal/13/IN";
     char* outFile = "/home/etryfly/Документы/Labs/3sem/fundal/13/out";
     char* tmpFile = "/home/etryfly/Документы/Labs/3sem/fundal/13/tmp";
 

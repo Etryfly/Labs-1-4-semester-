@@ -19,10 +19,14 @@ int countOfGroupR(int num, int r) {
 //110110(2) -> 54(10) -> 312(4)
 char* cc(int num, int r) {
     int tmp[BUFSIZ], *ptr = tmp;
-    char *result = malloc(sizeof(char) * BUFSIZ), *rPtr = result;
+
     int mask = 0;
     int len = countOfGroupR(num,r);
-
+    char *result = malloc(sizeof(char) * len), *rPtr = result;
+    if (num == 0) {
+        free(result);
+        return "0";
+    }
     for (int i = 0; i < r; ++i) {
         mask <<= 1;
         mask |= 1;
@@ -45,5 +49,7 @@ int main() {
 
     scanf("%d", &num);
     scanf("%d", &r);
-    printf("%s", cc(num,r));
+    char* result = cc(num,r);
+    printf("%s", result);
+    free(result);
 }

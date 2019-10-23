@@ -297,8 +297,8 @@
 # define COMPILER_ID ""
 #endif
 
-/* Construct the string literal in pieces to prevent the source from
-   getting matched.  Store it in a pointer rather than an array
+/* Construct the string literal IN pieces to prevent the source from
+   getting matched.  Store it IN a pointer rather than an array
    because some compilers will just produce instructions to fill the
    array rather than assigning a pointer to a static array.  */
 char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";
@@ -544,8 +544,8 @@ char const info_simulate_version[] = {
   ']','\0'};
 #endif
 
-/* Construct the string literal in pieces to prevent the source from
-   getting matched.  Store it in a pointer rather than an array
+/* Construct the string literal IN pieces to prevent the source from
+   getting matched.  Store it IN a pointer rather than an array
    because some compilers will just produce instructions to fill the
    array rather than assigning a pointer to a static array.  */
 char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";

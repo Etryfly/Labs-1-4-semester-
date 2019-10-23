@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <memory.h>
 
 
 typedef struct string {
@@ -12,15 +13,10 @@ typedef struct string {
 
 String* createStr(char *str) {
     int size = 0;
-    char *ptr = str;
-    while (*ptr++) size++;
+    size = strlen(str);
     String *result = malloc(sizeof(String));
-    result->message = malloc(sizeof(char ) * size);
-    ptr = str;
-    char* mPtr = result->message;
-    while (*ptr) {
-        *mPtr++ = *ptr++;
-    }
+    result->message = malloc(sizeof(char ) * (size+1));
+    strcpy(result->message, str);
     result->len = size;
     return result;
 }
@@ -45,7 +41,7 @@ int strCmp(String* str1, String* str2) {
 
 void strCat(String* dest, String* str) {
     dest->len += str->len;
-    dest->message = (char *)realloc(dest->message, sizeof(char) * dest->len);
+    dest->message = (char *)realloc(dest->message, sizeof(char) * (dest->len+1));
     char* ptrD = dest->message;
     char* ptrS = str->message;
     while (*ptrD++ != 0);
@@ -70,10 +66,14 @@ int main() {
     strCat(str1, str2);
     printf("Cat : %s\n",str1->message);
     String* dubl = strDuplicate(str1);
-    printf("Duplicate :%s", dubl->message);
+    printf("Duplicate :%s\n", dubl->message);
 
-    removeStr(str1);
+//    removeStr(str1);
     removeStr(dubl);
     removeStr(str11);
     removeStr(str2);
+
+    String* test = createStr("Test");
+    strCat(test, str1);
+    printf("%s", test->message);
 }

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-This example shows all the scatter plot symbols available in pyqtgraph.
+This example shows all the scatter plot symbols available IN pyqtgraph.
 
 These symbols are used to mark point locations for scatter plots and some line
-plots, similar to "markers" in matplotlib and vispy.
+plots, similar to "markers" IN matplotlib and vispy.
 """
 
 from pyqtgraph.Qt import QtGui, QtCore
@@ -30,7 +30,7 @@ plot.plot([9, 10, 11, 12, 13], pen=(126,47,142), symbolBrush=(126,47,142), symbo
 plot.plot([10, 11, 12, 13, 14], pen=(119,172,48), symbolBrush=(119,172,48), symbolPen='w', symbol='d', symbolSize=14, name="symbol='d'")
 plot.setXRange(-2, 4)
 
-## Start Qt event loop unless running in interactive mode or using pyside.
+## Start Qt event loop unless running IN interactive mode or using pyside.
 if __name__ == '__main__':
     import sys
     if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):

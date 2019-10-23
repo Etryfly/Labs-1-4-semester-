@@ -17,6 +17,10 @@ int main(int argc, char* argv[]) {
     int size = 10;
     int curSize = 0;
     FILE* file;
+    if (argc < 2) {
+        printf("Arguments missing");
+        return 3;
+    }
     if (!(file = fopen(argv[1], "w"))) {
         printf("Couldn't open file");
         return -1;
@@ -25,23 +29,25 @@ int main(int argc, char* argv[]) {
 
 
     int id = 0, len;
+    Message message;
+    char buf[100];
     while (1) {
-        Message *message = malloc(sizeof(Message));
-        message->id = id++;
+        message.id = id++;
 
-        message->mess = malloc(sizeof(char) * 100);
-        scanf("%s", message->mess);
-        len = strlen(message->mess);
 
-        message->len = len;
-        if (strcmp(message->mess, "stop") == 0){
-            free(message->mess);
-            free(message);
+        scanf("%s", buf);
+        message.mess = malloc(sizeof(char)*(strlen(buf) + 1));
+        strcpy(message.mess, buf);
+        len = strlen(buf);
+
+        message.len = len;
+        if (strcmp(message.mess, "stop") == 0){
+            free(message.mess);
+
             break;
         }
-        fprintf(file, "%d %s %d\n", message->id, message->mess, message->len);
-        free(message->mess);
-        free(message);
+        fprintf(file, "%d %s %d\n", message.id, message.mess, message.len);
+        free(message.mess);
     }
 
     fclose(file);
@@ -63,10 +69,11 @@ int main(int argc, char* argv[]) {
             ptr = messages + curSize;
         }
 
-        ptr->mess = (char *) malloc(sizeof(char) * 100);
 
-        fscanf(file, "%d %s %d", &id, ptr->mess, &len);
 
+        fscanf(file, "%d %s %d", &id, buf, &len);
+        ptr->mess = (char *) malloc(sizeof(char) * (strlen(buf)+1));
+        strcpy(ptr->mess, buf);
         ptr->id = id;
         ptr->len = len;
         fprintf(file, "%d %s %d\n", ptr->id, ptr->mess, ptr->len);

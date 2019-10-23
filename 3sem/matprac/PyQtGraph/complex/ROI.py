@@ -2,7 +2,7 @@
 """
 Demonstrates a variety of uses for ROI. This class provides a user-adjustable
 region of interest marker. It is possible to customize the layout and 
-function of the scale/rotate handles in very flexible ways. 
+function of the scale/rotate handles IN very flexible ways.
 """
 
 import pyqtgraph as pg
@@ -159,7 +159,7 @@ r4.sigRemoveRequested.connect(remove)
 
 
 
-## Start Qt event loop unless running in interactive mode or using pyside.
+## Start Qt event loop unless running IN interactive mode or using pyside.
 if __name__ == '__main__':
     import sys
     QtGui.QApplication.instance().exec_()

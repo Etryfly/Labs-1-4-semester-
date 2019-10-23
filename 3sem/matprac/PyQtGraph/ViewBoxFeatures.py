@@ -61,7 +61,7 @@ v4.addItem(l4)
 win.nextRow()
 
 sub5 = win.addLayout()
-sub5.addLabel("<b>Linked axes:</b> Data in this plot is always X-aligned to<br>the plot above.")
+sub5.addLabel("<b>Linked axes:</b> Data IN this plot is always X-aligned to<br>the plot above.")
 sub5.nextRow()
 v5 = sub5.addViewBox()
 v5.setXLink(v3)
@@ -83,7 +83,7 @@ v6.addItem(l6)
 
 
 
-## Start Qt event loop unless running in interactive mode or using pyside.
+## Start Qt event loop unless running IN interactive mode or using pyside.
 if __name__ == '__main__':
     import sys
     if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):

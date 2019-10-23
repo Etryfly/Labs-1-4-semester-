@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 
 
     if (!(in = fopen(argv[1], "r"))) {
-        printf("Couldn't open in");
+        printf("Couldn't open IN");
         exit(-1);
     }
 

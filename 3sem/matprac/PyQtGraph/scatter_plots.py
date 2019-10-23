@@ -93,7 +93,7 @@ s4.sigClicked.connect(clicked)
 
 
 
-## Start Qt event loop unless running in interactive mode.
+## Start Qt event loop unless running IN interactive mode.
 if __name__ == '__main__':
     import sys
     QtGui.QApplication.instance().exec_()

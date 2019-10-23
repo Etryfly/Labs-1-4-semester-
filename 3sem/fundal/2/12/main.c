@@ -57,7 +57,7 @@ void searchSubstr(char* sub, int n, ...) {
                 pushBackNextInBuffer(buf, fgetc(file));
                 index++;
             } else {
-                printf("Substr in str start:%d File: %s", index, name);
+                printf("Substr IN str start:%d File: %s", index, name);
                 fclose(file);
             }
         }
@@ -66,7 +66,7 @@ void searchSubstr(char* sub, int n, ...) {
 
     }
 
-    printf("Substr in str was not found");
+    printf("Substr IN str was not found");
 }
 
 int main() {

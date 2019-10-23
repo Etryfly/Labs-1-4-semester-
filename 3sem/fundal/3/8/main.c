@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <memory.h>
 
 #define SIZE_OF_NAMES 250
 
@@ -28,7 +29,7 @@ void addToPassengers(Passengers* passengers, int number, char* nameFrom, char* c
     if (passengers->size == passengers->curSize) {
         passengers->size *= 2;
         passengers->passengers = realloc(passengers->passengers, sizeof(Passenger) * passengers->size);
-        ptr = passengers->passengers + passengers->curSize;
+        ptr = passengers->passengers;
     }
     ptr += passengers->curSize;
     struct tm *timeFrom = malloc(sizeof(struct tm));
@@ -72,16 +73,21 @@ int main(int argc, char* argv[]) {
     int m1;
     int m2;
     int number;
-
+    char bufNameFrom[SIZE_OF_NAMES];
+    char bufNameTo[SIZE_OF_NAMES];
+    char bufCityFrom[SIZE_OF_NAMES];
+    char bufCityTo[SIZE_OF_NAMES];
     while (!feof(file)) {
-        char *nameFrom= malloc(sizeof(char) * SIZE_OF_NAMES);
-        char *nameTo = malloc(sizeof(char) * SIZE_OF_NAMES);
-        char *cityFrom = malloc(sizeof(char) * SIZE_OF_NAMES);
-        char *cityTo = malloc(sizeof(char) * SIZE_OF_NAMES);
 
-
-        fscanf(file, "%d %s %s %s %s %d:%d %d:%d\n", &number, nameFrom, cityFrom, nameTo, cityTo, &h1, &m1, &h2, &m2);
-
+        fscanf(file, "%d %s %s %s %s %d:%d %d:%d\n", &number, bufNameFrom, bufCityFrom, bufNameTo, bufCityTo, &h1, &m1, &h2, &m2);
+        char *nameFrom = malloc(sizeof(char) * (strlen(bufNameFrom)+1));
+        char *cityFrom = malloc(sizeof(char) * (strlen(bufCityFrom)+1));
+        char *nameTo = malloc(sizeof(char) * (strlen(bufNameTo)+1));
+        char *cityTo = malloc(sizeof(char) * (strlen(bufCityTo)+1));
+        strcpy(nameFrom,bufNameFrom);
+        strcpy(nameTo,bufNameTo);
+        strcpy(cityFrom,bufCityFrom);
+        strcpy(cityTo,bufCityTo);
         addToPassengers(passengers, number, nameFrom, cityFrom, nameTo, cityTo, h1, m1, h2, m2);
     }
     fclose(file);
@@ -104,12 +110,21 @@ int main(int argc, char* argv[]) {
 
         switch (command) {
             case 1: {
-                char *nameFrom = malloc(sizeof(char) * SIZE_OF_NAMES);
-                char *nameTo = malloc(sizeof(char) * SIZE_OF_NAMES);
-                char *cityFrom = malloc(sizeof(char) * SIZE_OF_NAMES);
-                char *cityTo = malloc(sizeof(char) * SIZE_OF_NAMES);
+//                char bufNameFrom[SIZE_OF_NAMES];
+//                char bufNameTo[SIZE_OF_NAMES];
+//                char bufCityFrom[SIZE_OF_NAMES];
+//                char bufCityTo[SIZE_OF_NAMES];
 
-                scanf("%d %s %s %s %s %d:%d %d:%d", &number, nameFrom, cityFrom, nameTo, cityTo, &h1, &m1, &h2, &m2);
+                scanf("%d %s %s %s %s %d:%d %d:%d", &number, bufNameFrom, bufCityFrom, bufNameTo, bufCityTo, &h1, &m1, &h2, &m2);
+
+                char *nameFrom = malloc(sizeof(char) * (strlen(bufNameFrom)+1));
+                char *cityFrom = malloc(sizeof(char) * (strlen(bufCityFrom)+1));
+                char *nameTo = malloc(sizeof(char) * (strlen(bufNameTo)+1));
+                char *cityTo = malloc(sizeof(char) * (strlen(bufCityTo)+1));
+                strcpy(nameFrom,bufNameFrom);
+                strcpy(nameTo,bufNameTo);
+                strcpy(cityFrom,bufCityFrom);
+                strcpy(cityTo,bufCityTo);
 
                 addToPassengers(passengers, number, nameFrom, cityFrom, nameTo, cityTo, h1, m1, h2, m2);
                 break;

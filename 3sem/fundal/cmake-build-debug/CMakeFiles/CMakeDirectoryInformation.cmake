@@ -5,7 +5,7 @@
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/etryfly/Документы/Labs/3sem")
 set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/etryfly/Документы/Labs/3sem/cmake-build-debug")
 
-# Force unix paths in dependencies.
+# Force unix paths IN dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)
 
 

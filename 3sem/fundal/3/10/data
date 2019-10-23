@@ -1,0 +1,9 @@
+{{read(A, 10);
+read(B, 2);
+{{}C:= A + B;
+write(c, 10);
+D:= ~A;}}}
+read(D,2);
+read(A,3);
+write(D, 10);
+write(A,10);

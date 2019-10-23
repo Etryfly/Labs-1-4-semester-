@@ -6,11 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/etryfly/Документы/Labs/3sem/fundal/3/8/main.c
-time.h
--
+/home/etryfly/Документы/Labs/3sem/fundal/4/1/main.c
 stdio.h
 -
+ctype.h
+-
 stdlib.h
+-
+string.h
 -
 

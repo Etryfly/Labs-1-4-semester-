@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/etryfly/Документы/Labs/3sem/fundal/3/8/main.c" "/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/3sem.dir/fundal/3/8/main.c.o"
+  "/home/etryfly/Документы/Labs/3sem/fundal/4/1/main.c" "/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/3sem.dir/fundal/4/1/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

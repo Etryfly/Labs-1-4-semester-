@@ -1,0 +1,4 @@
+READ(A,10)
+READ(B,2)
+C:=A+B
+WRITE(C,10)

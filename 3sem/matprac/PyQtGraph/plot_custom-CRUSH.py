@@ -84,7 +84,7 @@ try:
 except:
     pass
 
-## Start Qt event loop unless running in interactive mode or using pyside.
+## Start Qt event loop unless running IN interactive mode or using pyside.
 if __name__ == '__main__':
     import sys
     QtGui.QApplication.instance().exec_()

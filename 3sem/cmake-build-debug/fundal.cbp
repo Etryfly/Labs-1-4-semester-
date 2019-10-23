@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/etryfly/Документы/Labs/3sem/fundal/3/8/main.c">
+		<Unit filename="/home/etryfly/Документы/Labs/3sem/fundal/4/1/main.c">
 			<Option target="3sem"/>
 		</Unit>
 		<Unit filename="/home/etryfly/Документы/Labs/3sem/CMakeLists.txt">

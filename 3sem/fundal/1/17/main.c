@@ -44,7 +44,7 @@ int main() {
                 intInBase = intInBase * 10 + *ptr;
             }
 
-            printf("Int in base: %d, base: %d, int in ten: %d \n", intInBase, minBase, intInTen);
+            printf("Int IN base: %d, base: %d, int IN ten: %d \n", intInBase, minBase, intInTen);
             minBase = 0;
             intInBase = 0;
             intInTen = 0;

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 This example demonstrates many of the 2D plotting capabilities
-in pyqtgraph. All of the plots may be panned/scaled by dragging with 
+IN pyqtgraph. All of the plots may be panned/scaled by dragging with
 the left/right mouse buttons. Right click on any plot to show a context menu.
 """
 
@@ -93,7 +93,7 @@ lr.sigRegionChanged.connect(updatePlot)
 p9.sigXRangeChanged.connect(updateRegion)
 updatePlot()
 
-## Start Qt event loop unless running in interactive mode or using pyside.
+## Start Qt event loop unless running IN interactive mode or using pyside.
 if __name__ == '__main__':
     import sys
     if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
