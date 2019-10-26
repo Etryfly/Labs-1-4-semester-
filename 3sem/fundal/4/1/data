@@ -1,3 +1,5 @@
-Load A, in;
+Load a, IN;
 print a, all;
-print a, 2, 5;
+rand b, 10, 1, 5;
+print b, all;
+stat a;

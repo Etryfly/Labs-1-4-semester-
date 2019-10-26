@@ -12,69 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50d795e7-2d47-4462-99fc-86fc1713f5bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OS/6_process/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OS/7/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OS/ch/chown.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/3/10/data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/3/12/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/4/1/IN" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/4/1/data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fundal/4/2/data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OS/ch/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/OS/ch/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OS/fileCr/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/OS/fileCr/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/3sem" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/3sem" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/fundal.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/fundal.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/1/13/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/1/13/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/1/17/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/1/17/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/2/10/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/2/10/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/2/12/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/2/12/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/1/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/1/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/10/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/10/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/2/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/2/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/3/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/3/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/4/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/4/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/4/data" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/4/data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/4/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/4/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/6/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/6/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/6/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/6/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/7/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/7/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/8/data" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/8/data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/8/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/8/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/3/9/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/9/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/lec/algo1" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/lec/algo1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/CustomGraphItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/CustomGraphItem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/MouseSelection.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/MouseSelection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/ROI-simple.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/ROI-simple.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/ROI-view.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/ROI-view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/Scrolling_plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/Scrolling_plots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/ViewBox.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/ViewBox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/ViewBoxFeatures.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/ViewBoxFeatures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/axis/scroll2.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/axis/scroll2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/complex/ROI.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/complex/ROI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/complex/basic_plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/complex/basic_plotting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/crosshair.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/crosshair.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/crosshair_only.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/crosshair_only.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/dynamic_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/dynamic_plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/legend.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/legend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/plot_custom-CRUSH.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/plot_custom-CRUSH.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/scatter_charts.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/scatter_charts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/scatter_plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/scatter_plots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/PyQtGraph/symbol_scatter_charts.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/PyQtGraph/symbol_scatter_charts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matprac/scatter_charts.py" beforeDir="false" afterPath="$PROJECT_DIR$/matprac/scatter_charts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/4/1/data" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/1/data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/4/1/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/1/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/4/2/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/2/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,11 +51,53 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fundal/4/1/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="228" column="37" selection-start-line="228" selection-start-column="37" selection-end-line="228" selection-end-column="37" />
+            <state relative-caret-position="1879">
+              <caret line="344" column="76" selection-start-line="344" selection-start-column="38" selection-end-line="344" selection-end-column="76" />
+              <folding>
+                <element signature="e#32#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fundal/4/2/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
+              <folding>
+                <element signature="e#32#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fundal/4/2/data">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/stdlib.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="724" column="12" selection-start-line="724" selection-start-column="12" selection-end-line="724" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -121,34 +114,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fundal/4/1/data">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="30">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OS/7/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OS/1/1.c">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OS/2/2.c">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OS/3/3.c">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -199,8 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fundal/1/13/main.c" />
-        <option value="$PROJECT_DIR$/fundal/2/3/main.c" />
         <option value="$PROJECT_DIR$/fundal/2/6/main.c" />
         <option value="$PROJECT_DIR$/fundal/2/9/main.c" />
         <option value="$PROJECT_DIR$/fundal/2/11/main.c" />
@@ -246,10 +213,12 @@
         <option value="$PROJECT_DIR$/OS/6_process/main.cpp" />
         <option value="$PROJECT_DIR$/OS/7/main.cpp" />
         <option value="$PROJECT_DIR$/OS/ch/chown.c" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/fundal/4/1/IN" />
         <option value="$PROJECT_DIR$/fundal/4/1/data" />
         <option value="$PROJECT_DIR$/fundal/4/1/main.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/fundal/4/2/main.c" />
+        <option value="$PROJECT_DIR$/fundal/4/2/data" />
       </list>
     </option>
   </component>
@@ -296,49 +265,9 @@
             <path>
               <item name="fundal" type="b2602c69:ProjectViewProjectNode" />
               <item name="3sem" type="462c0819:PsiDirectoryNode" />
-              <item name="OS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fundal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3sem" type="462c0819:PsiDirectoryNode" />
-              <item name="OS" type="462c0819:PsiDirectoryNode" />
-              <item name="1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fundal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3sem" type="462c0819:PsiDirectoryNode" />
-              <item name="OS" type="462c0819:PsiDirectoryNode" />
+              <item name="fundal" type="462c0819:PsiDirectoryNode" />
+              <item name="4" type="462c0819:PsiDirectoryNode" />
               <item name="2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fundal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3sem" type="462c0819:PsiDirectoryNode" />
-              <item name="OS" type="462c0819:PsiDirectoryNode" />
-              <item name="3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fundal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3sem" type="462c0819:PsiDirectoryNode" />
-              <item name="OS" type="462c0819:PsiDirectoryNode" />
-              <item name="6_process" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fundal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3sem" type="462c0819:PsiDirectoryNode" />
-              <item name="OS" type="462c0819:PsiDirectoryNode" />
-              <item name="7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fundal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3sem" type="462c0819:PsiDirectoryNode" />
-              <item name="OS" type="462c0819:PsiDirectoryNode" />
-              <item name="ch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fundal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3sem" type="462c0819:PsiDirectoryNode" />
-              <item name="OS" type="462c0819:PsiDirectoryNode" />
-              <item name="fileCr" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -352,7 +281,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.valgrind" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -383,7 +312,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="3sem" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data" WORKING_DIR="file://$PROJECT_DIR$/fundal/4/1" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fundal" TARGET_NAME="3sem" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fundal" RUN_TARGET_NAME="3sem">
+    <configuration name="3sem" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data" WORKING_DIR="file://$PROJECT_DIR$/fundal/4/2" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fundal" TARGET_NAME="3sem" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fundal" RUN_TARGET_NAME="3sem">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -417,7 +346,8 @@
       <workItem from="1571415439279" duration="19954000" />
       <workItem from="1571763650576" duration="6967000" />
       <workItem from="1571820023164" duration="15612000" />
-      <workItem from="1571850270761" duration="6049000" />
+      <workItem from="1571850270761" duration="30459000" />
+      <workItem from="1572076591720" duration="16854000" />
     </task>
     <task id="LOCAL-00001" summary="3sem">
       <created>1568101400080</created>
@@ -517,17 +447,23 @@
       <option name="project" value="LOCAL" />
       <updated>1570616739686</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="4 lab">
+      <created>1571861239281</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1571861239282</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="387721000" />
+    <option name="totallyTimeSpent" value="428985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2518968" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25644916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -598,7 +534,8 @@
     <MESSAGE value="Almost all in 2 lab" />
     <MESSAGE value="2 lab done" />
     <MESSAGE value="3 lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 lab" />
+    <MESSAGE value="4 lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="4 lab" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -833,6 +770,46 @@
           <line>56</line>
           <option name="timeStamp" value="124" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/fundal/4/1/main.c</url>
+          <line>285</line>
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/fundal/4/1/main.c</url>
+          <line>337</line>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/fundal/4/1/main.c</url>
+          <line>404</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/fundal/4/1/main.c</url>
+          <line>399</line>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/fundal/4/1/main.c</url>
+          <line>392</line>
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/fundal/4/1/main.c</url>
+          <line>125</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/fundal/4/2/main.c</url>
+          <line>111</line>
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/fundal/4/2/main.c</url>
+          <line>98</line>
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -866,81 +843,53 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>fileName</expression-string>
+        <expression-string>vars[0]</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>arguments[1]</expression-string>
+        <expression-string>arguments[0][]</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>arguments[0]</expression-string>
+        <expression-string>arguments[0][1]</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>result[1]</expression-string>
+        <expression-string>var.data[7]</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>result[0]</expression-string>
+        <expression-string>var.data[6]</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>*resPtr--</expression-string>
+        <expression-string>var.data[5]</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>*resPtr</expression-string>
+        <expression-string>var.data[4]</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>seriesOfLExist(119, 3)</expression-string>
+        <expression-string>var.data[3]</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>strcmp(argv[2], &quot;/trace&quot;)</expression-string>
+        <expression-string>var.data[2]</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/math.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4815" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fundal/2/9/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#2#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fundal/2/11/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#2#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fundal/2/10/out">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/fundal/2/1/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1217,13 +1166,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/string.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8265">
@@ -1231,15 +1173,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OS/1/1.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fundal/4/1/TEST" />
     <entry file="file://$PROJECT_DIR$/OS/7/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OS/1/1.c">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/OS/2/2.c">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1266,8 +1209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fundal/4/1/data">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="30">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1278,10 +1221,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/stdlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="724" column="12" selection-start-line="724" selection-start-column="12" selection-end-line="724" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fundal/4/1/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="228" column="37" selection-start-line="228" selection-start-column="37" selection-end-line="228" selection-end-column="37" />
+        <state relative-caret-position="1879">
+          <caret line="344" column="76" selection-start-line="344" selection-start-column="38" selection-end-line="344" selection-end-column="76" />
+          <folding>
+            <element signature="e#32#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fundal/4/2/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="e#32#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fundal/4/2/data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
