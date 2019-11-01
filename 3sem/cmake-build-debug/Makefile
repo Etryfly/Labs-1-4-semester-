@@ -123,32 +123,32 @@ depend:
 	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/build
 .PHONY : 3sem/fast
 
-fundal/4/2/main.o: fundal/4/2/main.c.o
+fundal/4/4/main.o: fundal/4/4/main.c.o
 
-.PHONY : fundal/4/2/main.o
+.PHONY : fundal/4/4/main.o
 
 # target to build an object file
-fundal/4/2/main.c.o:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/fundal/4/2/main.c.o
-.PHONY : fundal/4/2/main.c.o
+fundal/4/4/main.c.o:
+	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/fundal/4/4/main.c.o
+.PHONY : fundal/4/4/main.c.o
 
-fundal/4/2/main.i: fundal/4/2/main.c.i
+fundal/4/4/main.i: fundal/4/4/main.c.i
 
-.PHONY : fundal/4/2/main.i
+.PHONY : fundal/4/4/main.i
 
 # target to preprocess a source file
-fundal/4/2/main.c.i:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/fundal/4/2/main.c.i
-.PHONY : fundal/4/2/main.c.i
+fundal/4/4/main.c.i:
+	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/fundal/4/4/main.c.i
+.PHONY : fundal/4/4/main.c.i
 
-fundal/4/2/main.s: fundal/4/2/main.c.s
+fundal/4/4/main.s: fundal/4/4/main.c.s
 
-.PHONY : fundal/4/2/main.s
+.PHONY : fundal/4/4/main.s
 
 # target to generate assembly for a file
-fundal/4/2/main.c.s:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/fundal/4/2/main.c.s
-.PHONY : fundal/4/2/main.c.s
+fundal/4/4/main.c.s:
+	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/fundal/4/4/main.c.s
+.PHONY : fundal/4/4/main.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... 3sem"
 	@echo "... edit_cache"
-	@echo "... fundal/4/2/main.o"
-	@echo "... fundal/4/2/main.i"
-	@echo "... fundal/4/2/main.s"
+	@echo "... fundal/4/4/main.o"
+	@echo "... fundal/4/4/main.i"
+	@echo "... fundal/4/4/main.s"
 .PHONY : help
 
 

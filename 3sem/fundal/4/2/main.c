@@ -180,7 +180,10 @@ int main(int argc, char* argv[])
         }
     }
 
-
+    for (int j = 0; j < size; ++j) {
+        free(vars[j].name);
+    }
+    free(vars);
     fclose(fIn);
     return 0;
 }
