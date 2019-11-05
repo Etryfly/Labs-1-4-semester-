@@ -35,6 +35,8 @@ int cmpChar(char *a, char *b) {
     for (int i = 0; i < strlen(a); ++i) {
         if (*aPtr > *bPtr) return 1;
         if (*aPtr < *bPtr) return -1;
+        aPtr++;
+        bPtr++;
     }
     if (strlen(a) < strlen(b)) return -1;
     return 0;
@@ -136,8 +138,8 @@ int main(int argc, char* argv[])
 
                     setVar(name, num);
                 } else {
-                    char first[250], *aPtr = first;
-                    char second[250], *bPtr = second;
+                    char first[250] = {0}, *aPtr = first;
+                    char second[250] = {0}, *bPtr = second;
                     while (isalpha(*b)) {
                         *aPtr++ = *b++;
                     }

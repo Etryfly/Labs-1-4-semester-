@@ -159,7 +159,10 @@ int main(int argc, char* argv[]) {
                         break;
                     }
 
-                    if (cur->next) cur = cur->next;
+                    if (cur->next) {
+
+                        cur = cur->next;
+                    } else break;
                 }
                 break;
 

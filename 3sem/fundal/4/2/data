@@ -2,4 +2,5 @@ myvar = 15;
 aab = 253;
 b = 2;
 c = aab * b;
+C = 5;
 print;

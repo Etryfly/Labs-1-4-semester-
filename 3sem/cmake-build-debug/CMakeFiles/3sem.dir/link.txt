@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/3sem.dir/fundal/4/4/main.c.o  -o 3sem -lm 
+/usr/bin/cc -g   CMakeFiles/3sem.dir/fundal/4/6/main.c.o  -o 3sem -lm 

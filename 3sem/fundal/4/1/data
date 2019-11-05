@@ -3,3 +3,7 @@ print a, all;
 rand b, 10, 1, 5;
 print b, all;
 stat a;
+permute a;
+print a, all;
+sort a+;
+print a, all;

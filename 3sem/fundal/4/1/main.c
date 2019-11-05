@@ -130,7 +130,6 @@ void freeArguments(char** arguments) {
         ptr++;
     }
     free(arguments);
-
 }
 
 
@@ -198,7 +197,6 @@ int main(int argc, char* argv[])
                             char *fileName = arguments[1];
                             FILE* IN;
                             if (!(IN = fopen(fileName, "r"))) {
-                                //free
                                 error(0);
                             }
                             int num = 0;
@@ -233,7 +231,6 @@ int main(int argc, char* argv[])
                             Var arr = getVar(varName[0]);
                             FILE* OUT;
                             if (!(OUT = fopen(fileName, "w"))) {
-                                // free
                                 error(0);
                             }
 
@@ -417,7 +414,7 @@ int main(int argc, char* argv[])
                                 }
                             }
 
-                            printf("%d %d %d %d %d %d %d %d", size, max, min, Imax, Imin, number, sr, d);
+                            printf("%d %d %d %d %d %d %d %d\n", size, max, min, Imax, Imin, number, sr, d);
                             freeArguments(arguments);
                             break;
                         } else error(8);
@@ -456,7 +453,6 @@ int main(int argc, char* argv[])
 
     for (int m = 0; m < 27; ++m) {
         free(vars[m].data);
-
     }
 
     fclose(fIn);
