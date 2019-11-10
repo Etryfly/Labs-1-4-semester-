@@ -2,25 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a07baa4-246e-4993-94b6-3c4d1f02f600" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../fundal/4/6/data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fundal/4/8/data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fundal/4/8/replace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fundal/4/8/tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/3sem" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/3sem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/3sem.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/fundal.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/fundal.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fundal/3/1/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../fundal/3/1/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fundal/3/2/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../fundal/3/2/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fundal/3/8/data" beforeDir="false" afterPath="$PROJECT_DIR$/../fundal/3/8/data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fundal/3/8/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../fundal/3/8/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fundal/3/9/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../fundal/3/9/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fundal/4/5/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fundal/4/6/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../fundal/4/6/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fundal/4/8/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../fundal/4/8/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fundal/lec/algo1" beforeDir="false" afterPath="$PROJECT_DIR$/../fundal/lec/algo1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtGraph/dynamic_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQtGraph/dynamic_plot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scatter_charts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="315">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="e#237#257#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -45,11 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyQtGraph/dynamic_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-              <folding>
-                <element signature="e#243#254#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="346">
+              <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -57,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PyQtGraph/crosshair.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="345">
               <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
             </state>
           </provider>
@@ -147,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,6 +171,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,6 +249,9 @@
       <module name="matprac" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQtGraph" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -304,17 +309,17 @@
       <workItem from="1569603514191" duration="398000" />
       <workItem from="1569664543928" duration="11591000" />
       <workItem from="1570875499485" duration="9206000" />
+      <workItem from="1573293655554" duration="602000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21195000" />
+    <option name="totallyTimeSpent" value="21797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2579666" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26251897" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -329,13 +334,13 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.285" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.28666666" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="291" height="541" id="Documentation" order="5" side_tool="true" weight="0.32852808" />
+      <window_info anchor="right" x="0" y="0" width="291" height="541" id="Documentation" order="5" side_tool="true" visible="true" weight="0.32852808" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,6 +367,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scatter_charts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyQtGraph/crosshair.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyQtGraph/legend.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1199943126/PyQt5/QtCore/QTimer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PyQtGraph/CustomGraphItem.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -390,40 +419,10 @@
     <entry file="file:///usr/local/lib/python3.7/site-packages/pyqtgraph/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scatter_charts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#237#257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1199943126/PyQt5/QtCore/QTimer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyQtGraph/legend.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyQtGraph/crosshair.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PyQtGraph/dynamic_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-          <folding>
-            <element signature="e#243#254#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="346">
+          <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
         </state>
       </provider>
     </entry>

@@ -12,23 +12,23 @@ void rec(int c, int max, int it) {
     if (pid == -1) {
         printf("Error");
         return;
-    } else if (pid == 0) {
-//        printf("child %d\n", c);
-    } else {
-//        printf("parent %d\n", c);
     }
-    if (c == 0) {
-        it ++;
+    if (pid != 0) {
+        if (c <= 0) {
+            it++;
         max = rand() % --max;
-        c = max;
-    } else {
-        c--;
-    }
+//            max--;
+            c = max;
+            printf("Done\n");
+        } else {
+            c--;
+        }
 
 
-    printf("c = %d, maxC = %d, it = %d\n", c, max, it);
+        printf("c = %d, maxC = %d, it = %d\n", c, max, it);
 //    sleep(3);
-    rec(c, max, it);
+        rec(c, max, it);
+    }
 }
 
 int main() {
