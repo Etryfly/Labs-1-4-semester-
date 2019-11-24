@@ -71,8 +71,12 @@ Var getVar(char* name) {
             return vars[c];
         }
     }
-
-    return vars[c];
+    if (strcmp(vars[c].name, name) == 0 ) {
+        return vars[c];
+    } else {
+        printf("Error\n");
+        exit(3);
+    }
 }
 
 void clearBuf(char* buf) {

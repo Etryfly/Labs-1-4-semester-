@@ -86,42 +86,52 @@ void treeToFile(FILE* file, TreeNode* root) {
     fprintf(file, "%s %d ", root->data, root->count);
     if (root->left) {
         fprintf(file, "1 ");
-        treeToFile(file, root->left);
+//        treeToFile(file, root->left);
     } else {
         fprintf(file, "0 ");
     }
 
     if (root->right) {
         fprintf(file, "1 ");
-        treeToFile(file, root->right);
+//        treeToFile(file, root->right);
     } else {
         fprintf(file, "0 ");
     }
+
+    treeToFile(file, root->left);
+    treeToFile(file, root->right);
 }
 
-TreeNode* fileToTree(FILE* file) {
+TreeNode* fileToTree(FILE* file, TreeNode* tree) {
     if (!(feof(file))) {
-        TreeNode* node = malloc(sizeof(TreeNode));
-        char strBuf[250];
-        int count;
-        fscanf(file, "%s %d", strBuf, &count);
-        char* str = malloc(sizeof(char) * (strlen(strBuf) + 1));
-        strcpy(str, strBuf);
-
-        node->count = count;
-        node->data = str;
-
-        int flag;
-        fscanf(file, "%d", &flag);
-        if (flag == 1) {
-            node->left = fileToTree(file);
-        } else {
-            fscanf(file, "%d", &flag);
-            if (flag == 1) {
-                node->right = fileToTree(file);
-            } else return node;
+        if (tree == NULL) {
+            tree = malloc(sizeof(TreeNode));
+            char strBuf[250];
+            int count;
+            fscanf(file, "%s %d", strBuf, &count);
+            char *str = malloc(sizeof(char) * (strlen(strBuf) + 1));
+            strcpy(str, strBuf);
+            tree->left = NULL;
+            tree->right = NULL;
+            tree->count = count;
+            tree->data = str;
         }
+        int l,r;
+        fscanf(file, "%d %d", &l, &r);
+        if (l) tree->left = fileToTree(file, tree->left);
+        if (r) tree->right = fileToTree(file, tree->right);
+        return tree;
     }
+}
+
+int treeSize = 0;
+
+void getTreeSize(TreeNode* root) {
+    if (root == NULL) return;
+    treeSize ++;
+    getTreeSize(root->left);
+    getTreeSize(root->right);
+
 }
 
 int main(int argc, char* argv[]) {
@@ -129,6 +139,7 @@ int main(int argc, char* argv[]) {
     int size = 0;
     TreeNode *root;
     while (action != 4) {
+        treeSize = 0;
         printf("1. Load text and build tree\n"
                "2. Print info\n"
                "3. Find and print deep of tree\n"
@@ -154,12 +165,14 @@ int main(int argc, char* argv[]) {
                 }
                 printf("Text loaded, tree built\n\n");
 
-
+                fclose(file);
 
             }
             break;
 
             case 2: {
+                getTreeSize(root);
+                size = treeSize;
                 printInfo(root);
 
                 TreeNode *arr[size];
@@ -168,15 +181,15 @@ int main(int argc, char* argv[]) {
                 }
                 fillArrWithTree(arr, root);
 
-                int realSize;
-                for (int l = 0; l < size; ++l) {
+                int l;
+                for (l = 0; l < size; ++l) {
                     if (arr[l] == NULL) {
-                        realSize = l;
+
                         break;
                     }
                 }
 
-                size = realSize;
+                size = l;
 
                 for (int k = 0; k < size; ++k) {
                     for (int i = size - 1; i > k; --i) {
@@ -232,6 +245,7 @@ int main(int argc, char* argv[]) {
                 } else {
                     treeToFile(saveFile, root);
                 }
+                fclose(saveFile);
                 break;
 
             case 5:
@@ -240,11 +254,12 @@ int main(int argc, char* argv[]) {
                 scanf("%s", nameBuf);
 
                 FILE* loadFile;
-                if (!(loadFile = fopen(nameBuf, "w"))) {
+                if (!(loadFile = fopen(nameBuf, "r"))) {
                     printf("Couldn't open %s\n", nameBuf);
                 } else {
-                    root = fileToTree(loadFile);
+                    root = fileToTree(loadFile, root);
                 }
+                fclose(loadFile);
                 break;
         }
     }

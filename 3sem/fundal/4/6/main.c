@@ -11,7 +11,9 @@ typedef struct Node {
 
 Node* createNode(char* data) {
     Node* node = malloc(sizeof(Node));
-    node->data = data;
+    char *d = malloc(sizeof(char) * (strlen(data) + 1));
+    strcpy(d, data);
+    node->data = d;
     node->next = NULL;
     node->prev = NULL;
 
@@ -56,6 +58,12 @@ Node* QUEUE_NodeDequeue(Node** head) {
     return result;
 }
 
+void nodeFree(Node* r) {
+
+    free(r->data);
+    free(r);
+}
+
 int main(int argc, char* argv[]) {
     FILE* file;
     if (argc < 2 || !(file = fopen(argv[1], "w"))) {
@@ -71,31 +79,31 @@ int main(int argc, char* argv[]) {
     int answ;
     while (strcmp(str, "STOP") != 0) {
 //        printf("%s\n", str);
-        char *data = malloc(sizeof(char) * (strlen(str) + 1));
-        strcpy(data, str);
-        Node* node = createNode(data);
-        if (head == NULL) head = node;
-        LIST_NodePush(node, &tailOrTop);
-        if (i == n) {
-            printf("Remove N/2? (1/0): ");
-            scanf("%d", &answ);
-            printf("\n");
-            if (answ == 1) {
-                for (int j = 0; j < n / 2; ++j) {
-                    Node* remove = STACK_NodePop(&tailOrTop);
-                    free(remove->data);
-                    free(remove);
+        if (strcmp(str, "RM") == 0) {
+            for (int j = 0; j < n/2; ++j) {
+                Node* remove = STACK_NodePop(&tailOrTop);
+                if (remove != NULL) {
+                    nodeFree(remove);
                 }
             }
-            Node* dequeue = QUEUE_NodeDequeue(&head);
-            while (dequeue != NULL) {
-                fprintf(file, "%s ", dequeue->data);
-                free(dequeue->data);
-                free(dequeue);
-                dequeue = QUEUE_NodeDequeue(&head);
+            i = n/2 - 1;
+        } else {
+
+            Node *node = createNode(str);
+            if (head == NULL) head = node;
+            LIST_NodePush(node, &tailOrTop);
+            if (i == n) {
+                Node *dequeue = QUEUE_NodeDequeue(&head);
+                while (dequeue != NULL) {
+                    fprintf(file, "%s ", dequeue->data);
+                    nodeFree(dequeue);
+                    dequeue = QUEUE_NodeDequeue(&head);
+                    tailOrTop = NULL;
+                }
+                i = 0;
             }
-            i = 0;
         }
+
         scanf("%s", str);
         i++;
     }

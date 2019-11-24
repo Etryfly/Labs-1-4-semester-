@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 #define HASHSIZE 128
+
 typedef struct HashNode {
     char* key;
     char* value;
@@ -105,8 +106,6 @@ int main() {
         fscanf(file, "%s", key);
         fscanf(file, "%s", key);
         fscanf(file, "%s", val);
-
-
         HashNode* node = createNode(key, val);
         insertNodeInTable(node, table);
     }

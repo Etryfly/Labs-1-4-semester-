@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.6)
 project(fundal)
 #set(CMAKE_CXX_STANDARD fundal/11)
-add_executable(3sem fundal/4/9/main.c)
+add_executable(3sem OS/semoph/server.c )
+add_executable(Client OS/semoph/client.c )
 target_link_libraries(3sem m)

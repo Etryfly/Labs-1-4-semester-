@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/etryfly/Документы/Labs/3sem/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/etryfly/clion-2018.3.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/etryfly/clion-2018.3.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -123,32 +123,72 @@ depend:
 	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/build
 .PHONY : 3sem/fast
 
-fundal/4/9/main.o: fundal/4/9/main.c.o
+#=============================================================================
+# Target rules for targets named Client
 
-.PHONY : fundal/4/9/main.o
+# Build rule for target.
+Client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Client
+.PHONY : Client
+
+# fast build rule for target.
+Client/fast:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
+.PHONY : Client/fast
+
+OS/semoph/client.o: OS/semoph/client.c.o
+
+.PHONY : OS/semoph/client.o
 
 # target to build an object file
-fundal/4/9/main.c.o:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/fundal/4/9/main.c.o
-.PHONY : fundal/4/9/main.c.o
+OS/semoph/client.c.o:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/OS/semoph/client.c.o
+.PHONY : OS/semoph/client.c.o
 
-fundal/4/9/main.i: fundal/4/9/main.c.i
+OS/semoph/client.i: OS/semoph/client.c.i
 
-.PHONY : fundal/4/9/main.i
+.PHONY : OS/semoph/client.i
 
 # target to preprocess a source file
-fundal/4/9/main.c.i:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/fundal/4/9/main.c.i
-.PHONY : fundal/4/9/main.c.i
+OS/semoph/client.c.i:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/OS/semoph/client.c.i
+.PHONY : OS/semoph/client.c.i
 
-fundal/4/9/main.s: fundal/4/9/main.c.s
+OS/semoph/client.s: OS/semoph/client.c.s
 
-.PHONY : fundal/4/9/main.s
+.PHONY : OS/semoph/client.s
 
 # target to generate assembly for a file
-fundal/4/9/main.c.s:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/fundal/4/9/main.c.s
-.PHONY : fundal/4/9/main.c.s
+OS/semoph/client.c.s:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/OS/semoph/client.c.s
+.PHONY : OS/semoph/client.c.s
+
+OS/semoph/server.o: OS/semoph/server.c.o
+
+.PHONY : OS/semoph/server.o
+
+# target to build an object file
+OS/semoph/server.c.o:
+	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/OS/semoph/server.c.o
+.PHONY : OS/semoph/server.c.o
+
+OS/semoph/server.i: OS/semoph/server.c.i
+
+.PHONY : OS/semoph/server.i
+
+# target to preprocess a source file
+OS/semoph/server.c.i:
+	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/OS/semoph/server.c.i
+.PHONY : OS/semoph/server.c.i
+
+OS/semoph/server.s: OS/semoph/server.c.s
+
+.PHONY : OS/semoph/server.s
+
+# target to generate assembly for a file
+OS/semoph/server.c.s:
+	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/OS/semoph/server.c.s
+.PHONY : OS/semoph/server.c.s
 
 # Help Target
 help:
@@ -156,12 +196,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 3sem"
-	@echo "... edit_cache"
-	@echo "... fundal/4/9/main.o"
-	@echo "... fundal/4/9/main.i"
-	@echo "... fundal/4/9/main.s"
+	@echo "... Client"
+	@echo "... OS/semoph/client.o"
+	@echo "... OS/semoph/client.i"
+	@echo "... OS/semoph/client.s"
+	@echo "... OS/semoph/server.o"
+	@echo "... OS/semoph/server.i"
+	@echo "... OS/semoph/server.s"
 .PHONY : help
 
 
