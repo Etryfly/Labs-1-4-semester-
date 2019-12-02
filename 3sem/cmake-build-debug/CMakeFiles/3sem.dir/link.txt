@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/3sem.dir/OS/semoph/server.c.o  -o 3sem -lm 
+/usr/bin/cc -g   CMakeFiles/3sem.dir/OS/socket/server.c.o  -o 3sem -lm 

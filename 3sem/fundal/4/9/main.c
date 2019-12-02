@@ -48,7 +48,6 @@ void printTree(TreeNode* root, int deep) {
     for (int j = 0; j < root->size; ++j) {
         printTree(root->childes[j], deep+1);
     }
-
 }
 
 void freeTree(TreeNode* root) {
@@ -106,6 +105,7 @@ int main(int argc, char* argv[]) {
             put(root);
         }
     }
+    fclose(file);
 
 
 }

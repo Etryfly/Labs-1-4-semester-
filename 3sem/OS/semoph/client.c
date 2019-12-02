@@ -96,7 +96,7 @@ int main(void)
             printf("Клиент: ошибка при выполнении %s\n","semop( semid, operations, 2 ) == -1.");
             return -1;
         }
-        printf("%d %d\n", operations[0].sem_op, operations[1].sem_op);
+//        printf("%d %d\n", operations[0].sem_op, operations[1].sem_op);
 
 
         snprintf( (char *) shm_address, SIZEOFSHMSEG, "%s", str );
@@ -120,7 +120,7 @@ int main(void)
             printf("Клиент: ошибка при изменении семафоров: %s\n","semop( semid, operations, 2 ) == -1.");
             return -1;
         }
-        printf("%d %d\n", operations[0].sem_op, operations[1].sem_op);
+//        printf("%d %d\n", operations[0].sem_op, operations[1].sem_op);
 
         printf("%s", (char *) shm_address);
 

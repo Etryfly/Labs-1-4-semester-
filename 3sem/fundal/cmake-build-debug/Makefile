@@ -27,7 +27,7 @@ SUFFIXES =
 $(VERBOSE).SILENT:
 
 
-# A target that is always out of date.
+# in target that is always out of date.
 cmake_force:
 
 .PHONY : cmake_force

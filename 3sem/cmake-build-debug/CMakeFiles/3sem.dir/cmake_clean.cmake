@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "3sem"
   "3sem.pdb"
-  "CMakeFiles/3sem.dir/OS/semoph/server.c.o"
+  "CMakeFiles/3sem.dir/OS/socket/server.c.o"
 )
 
 # Per-language clean rules from dependency scanning.

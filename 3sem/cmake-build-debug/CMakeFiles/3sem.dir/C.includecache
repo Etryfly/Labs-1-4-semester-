@@ -6,17 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/etryfly/Документы/Labs/3sem/OS/semoph/server.c
+/home/etryfly/Документы/Labs/3sem/fundal/4/9/main.c
 stdio.h
 -
-unistd.h
+stdlib.h
 -
-string.h
--
-sys/ipc.h
--
-sys/sem.h
--
-sys/shm.h
+ctype.h
 -
 

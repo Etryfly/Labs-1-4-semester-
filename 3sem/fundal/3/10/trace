@@ -1,4 +1,4 @@
-READ(A,10)
+READ(in,10)
 READ(B,2)
-C:=A+B
+C:=in+B
 WRITE(C,10)

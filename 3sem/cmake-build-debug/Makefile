@@ -111,84 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 3sem
+# Target rules for targets named server
 
 # Build rule for target.
-3sem: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 3sem
-.PHONY : 3sem
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-3sem/fast:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/build
-.PHONY : 3sem/fast
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 #=============================================================================
-# Target rules for targets named Client
+# Target rules for targets named client
 
 # Build rule for target.
-Client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Client
-.PHONY : Client
+client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client
+.PHONY : client
 
 # fast build rule for target.
-Client/fast:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
-.PHONY : Client/fast
+client/fast:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
+.PHONY : client/fast
 
-OS/semoph/client.o: OS/semoph/client.c.o
+OS/socket/client/client.o: OS/socket/client/client.c.o
 
-.PHONY : OS/semoph/client.o
-
-# target to build an object file
-OS/semoph/client.c.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/OS/semoph/client.c.o
-.PHONY : OS/semoph/client.c.o
-
-OS/semoph/client.i: OS/semoph/client.c.i
-
-.PHONY : OS/semoph/client.i
-
-# target to preprocess a source file
-OS/semoph/client.c.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/OS/semoph/client.c.i
-.PHONY : OS/semoph/client.c.i
-
-OS/semoph/client.s: OS/semoph/client.c.s
-
-.PHONY : OS/semoph/client.s
-
-# target to generate assembly for a file
-OS/semoph/client.c.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/OS/semoph/client.c.s
-.PHONY : OS/semoph/client.c.s
-
-OS/semoph/server.o: OS/semoph/server.c.o
-
-.PHONY : OS/semoph/server.o
+.PHONY : OS/socket/client/client.o
 
 # target to build an object file
-OS/semoph/server.c.o:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/OS/semoph/server.c.o
-.PHONY : OS/semoph/server.c.o
+OS/socket/client/client.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/OS/socket/client/client.c.o
+.PHONY : OS/socket/client/client.c.o
 
-OS/semoph/server.i: OS/semoph/server.c.i
+OS/socket/client/client.i: OS/socket/client/client.c.i
 
-.PHONY : OS/semoph/server.i
+.PHONY : OS/socket/client/client.i
 
 # target to preprocess a source file
-OS/semoph/server.c.i:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/OS/semoph/server.c.i
-.PHONY : OS/semoph/server.c.i
+OS/socket/client/client.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/OS/socket/client/client.c.i
+.PHONY : OS/socket/client/client.c.i
 
-OS/semoph/server.s: OS/semoph/server.c.s
+OS/socket/client/client.s: OS/socket/client/client.c.s
 
-.PHONY : OS/semoph/server.s
+.PHONY : OS/socket/client/client.s
 
 # target to generate assembly for a file
-OS/semoph/server.c.s:
-	$(MAKE) -f CMakeFiles/3sem.dir/build.make CMakeFiles/3sem.dir/OS/semoph/server.c.s
-.PHONY : OS/semoph/server.c.s
+OS/socket/client/client.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/OS/socket/client/client.c.s
+.PHONY : OS/socket/client/client.c.s
+
+OS/socket/server/server.o: OS/socket/server/server.c.o
+
+.PHONY : OS/socket/server/server.o
+
+# target to build an object file
+OS/socket/server/server.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/OS/socket/server/server.c.o
+.PHONY : OS/socket/server/server.c.o
+
+OS/socket/server/server.i: OS/socket/server/server.c.i
+
+.PHONY : OS/socket/server/server.i
+
+# target to preprocess a source file
+OS/socket/server/server.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/OS/socket/server/server.c.i
+.PHONY : OS/socket/server/server.c.i
+
+OS/socket/server/server.s: OS/socket/server/server.c.s
+
+.PHONY : OS/socket/server/server.s
+
+# target to generate assembly for a file
+OS/socket/server/server.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/OS/socket/server/server.c.s
+.PHONY : OS/socket/server/server.c.s
 
 # Help Target
 help:
@@ -198,14 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... 3sem"
-	@echo "... Client"
-	@echo "... OS/semoph/client.o"
-	@echo "... OS/semoph/client.i"
-	@echo "... OS/semoph/client.s"
-	@echo "... OS/semoph/server.o"
-	@echo "... OS/semoph/server.i"
-	@echo "... OS/semoph/server.s"
+	@echo "... server"
+	@echo "... client"
+	@echo "... OS/socket/client/client.o"
+	@echo "... OS/socket/client/client.i"
+	@echo "... OS/socket/client/client.s"
+	@echo "... OS/socket/server/server.o"
+	@echo "... OS/socket/server/server.i"
+	@echo "... OS/socket/server/server.s"
 .PHONY : help
 
 

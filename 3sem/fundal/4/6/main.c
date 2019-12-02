@@ -76,15 +76,15 @@ int main(int argc, char* argv[]) {
     Node* head = NULL;
     Node* tailOrTop = NULL;
 
-    int answ;
     while (strcmp(str, "STOP") != 0) {
 //        printf("%s\n", str);
         if (strcmp(str, "RM") == 0) {
             for (int j = 0; j < n/2; ++j) {
                 Node* remove = STACK_NodePop(&tailOrTop);
+
                 if (remove != NULL) {
                     nodeFree(remove);
-                }
+                } else break;
             }
             i = n/2 - 1;
         } else {

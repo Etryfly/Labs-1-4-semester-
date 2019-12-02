@@ -342,44 +342,51 @@ istream &operator>>(istream &in, Matrix &matrix) {
 
 int main() {
     srand(time(NULL));
+//
+//
+//    Matrix forTime("test", 3, 100);
+//
+//    auto begin = chrono::steady_clock::now();
+//
+//    for (int i = 0; i < 1000; ++i) {
+//        getDeterminant(forTime);
+//    }
+//
+//    auto end = chrono::steady_clock::now();
+//    auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+//    cout << "By value " << elapsed_ms.count() << endl;
+//
+////------------------------------------------
+//    begin = chrono::steady_clock::now();
+//
+//    for (int i = 0; i < 1000; ++i) {
+//        exp(forTime, 4);
+//    }
+//
+//    end = chrono::steady_clock::now();
+//
+//    elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+//    cout << "By ref " << elapsed_ms.count() << endl;
+//
+//
+//
+//    Matrix matrix("matr", 5, 10);
+//    matrix.print();
+//    cout << endl << getDeterminant(matrix) << " " << getTrace(matrix) << endl << endl;
+//    Matrix e = exp(matrix, 5);
+//    e.print();
+//    cout << endl;
+//    e = transpose(e);
+//    e.print();
+//    cout << endl;
+//    Matrix eReverse = reverse(e);
+//    Matrix result = eReverse * e;
+//    result.print();
 
-
-    Matrix forTime("test", 5, 100);
-
-    auto begin = chrono::steady_clock::now();
-
-    for (int i = 0; i < 10000; ++i) {
-        getDeterminant(forTime);
-    }
-
-    auto end = chrono::steady_clock::now();
-    auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-    cout << "By value " << elapsed_ms.count() << endl;
-
-//------------------------------------------
-    begin = chrono::steady_clock::now();
-
-    for (int i = 0; i < 10000; ++i) {
-        exp(forTime, 4);
-    }
-
-    end = chrono::steady_clock::now();
-
-    elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-    cout << "By ref " << elapsed_ms.count() << endl;
-
-
-
-    Matrix matrix("matr", 5, 100);
+    Matrix matrix("test", 2, 100);
     matrix.print();
-    cout << endl << getDeterminant(matrix) << " " << getTrace(matrix) << endl << endl;
-    Matrix e = exp(matrix, 5);
-    e.print();
-    cout << endl;
-    e = transpose(e);
-    e.print();
-    cout << endl;
-    Matrix eReverse = reverse(e);
-    Matrix result = eReverse * e;
-    result.print();
+    cout << getDeterminant(matrix) << endl;
+    Matrix rev = reverse(matrix);
+    Matrix res = rev * matrix;
+    res.print();
 }

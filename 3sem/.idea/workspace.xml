@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="fundal" targetName="3sem" />
-      <config projectName="fundal" targetName="Client" />
+      <config projectName="fundal" targetName="server" />
+      <config projectName="fundal" targetName="client" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -12,21 +12,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d795e7-2d47-4462-99fc-86fc1713f5bc" name="Default Changelist" comment="4 lab">
-      <change afterPath="$PROJECT_DIR$/OS/semoph/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OS/semoph/client.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OS/semoph/server.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OS/server/server_sem.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/4/5/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/4/5/data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/4/5/tree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/4/9/data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/5/1/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/5/2/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/5/3/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/5/4/main.cpp" afterDir="false" />
+    <list default="true" id="50d795e7-2d47-4462-99fc-86fc1713f5bc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/OS/5/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OS/socket/Package.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OS/socket/client/cat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OS/socket/client/client.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OS/socket/client/test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OS/socket/server/cat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OS/socket/server/server.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fundal/4/9/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fundal/5/2/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fundal/5/2/data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OS/4/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/OS/4/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OS/semoph/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/OS/semoph/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OS/semoph/client.c" beforeDir="false" afterPath="$PROJECT_DIR$/OS/semoph/client.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OS/semoph/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/OS/semoph/server.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/3sem" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/3sem" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/DependInfo.cmake" afterDir="false" />
@@ -38,20 +40,21 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/fundal.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/fundal.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/4/10/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/10/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/4/2/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/2/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/4/5/file" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/4/5/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/5/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/4/6/data" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/6/data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/3/10/data" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/10/data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/3/10/trace" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/10/trace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/4/5/data" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/5/data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/4/5/tree" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/5/tree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fundal/4/6/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/6/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/4/8/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/8/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/4/8/replace" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/8/replace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/4/8/tmp" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/8/tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/4/9/data" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/9/data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fundal/4/9/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/4/9/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundal/lec/algo1" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/lec/algo1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/5/1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/5/1/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/5/2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/5/2/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/3sem.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/3sem.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/cmake-build-debug/Makefile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,24 +87,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>fstat</find>
-      <find>va_start</find>
-      <find>tm</find>
-      <find>str</find>
-      <find>strf</find>
-      <find>create</find>
-      <find>format</find>
-      <find>strp</find>
-      <find>'</find>
-      <find>Ta</find>
-      <find>Задание</find>
-      <find>invali</find>
-      <find>msgrcv</find>
-      <find>from</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -113,7 +98,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/OS/socket" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -127,18 +112,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/OS/socket/client" />
+      <recent name="$PROJECT_DIR$/OS/socket/server" />
       <recent name="$PROJECT_DIR$/OS/2" />
       <recent name="$PROJECT_DIR$/OS/1" />
       <recent name="$PROJECT_DIR$/OS" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/2" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/OS/socket" />
       <recent name="$PROJECT_DIR$/OS/server" />
       <recent name="$PROJECT_DIR$/fundal/3/10" />
       <recent name="$PROJECT_DIR$/OS" />
       <recent name="$PROJECT_DIR$/fundal/2/2" />
-      <recent name="$PROJECT_DIR$/fundal/19" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,20 +138,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.Client">
-    <configuration name="3sem" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data" WORKING_DIR="file://$PROJECT_DIR$/fundal/4/6" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fundal" TARGET_NAME="3sem" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fundal" RUN_TARGET_NAME="3sem">
+  <component name="RunManager" selected="CMake Application.client">
+    <configuration name="3sem" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data" WORKING_DIR="file://$PROJECT_DIR$/fundal/5/1" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fundal" TARGET_NAME="3sem" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fundal" RUN_TARGET_NAME="3sem">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fundal" TARGET_NAME="Client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fundal" RUN_TARGET_NAME="Client">
+    <configuration name="client" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/OS/socket/client" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fundal" TARGET_NAME="client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fundal" RUN_TARGET_NAME="client">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="server" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/OS/socket/server" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fundal" TARGET_NAME="server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fundal" RUN_TARGET_NAME="server">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="CMake Application.3sem" />
-      <item itemvalue="CMake Application.Client" />
+      <item itemvalue="CMake Application.client" />
+      <item itemvalue="CMake Application.server" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -206,7 +197,9 @@
       <workItem from="1572981579713" duration="274000" />
       <workItem from="1572982104437" duration="8666000" />
       <workItem from="1573156643734" duration="19412000" />
-      <workItem from="1573316125595" duration="142309000" />
+      <workItem from="1573316125595" duration="266527000" />
+      <workItem from="1575135016523" duration="5580000" />
+      <workItem from="1575200047545" duration="23507000" />
     </task>
     <task id="LOCAL-00001" summary="3sem">
       <created>1568101400080</created>
@@ -341,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573383322315</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="4 lab">
+      <created>1574597336992</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1574597336992</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -669,7 +669,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/fundal/4/9/main.c</url>
-          <line>71</line>
+          <line>70</line>
           <option name="timeStamp" value="277" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -694,7 +694,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/fundal/4/6/main.c</url>
-          <line>80</line>
+          <line>79</line>
           <option name="timeStamp" value="287" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -722,6 +722,11 @@
           <line>110</line>
           <option name="timeStamp" value="295" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/OS/socket/client/client.c</url>
+          <line>93</line>
+          <option name="timeStamp" value="304" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -736,7 +741,8 @@
         <watch expression="root" />
         <watch expression="stack" />
         <watch expression="matrix.matrix[0][0]" language="ObjectiveC" />
-        <watch expression="(char *) shm_address" />
+        <watch expression="ost.data.first" />
+        <watch expression="polynomial" />
       </configuration>
     </watches-manager>
   </component>

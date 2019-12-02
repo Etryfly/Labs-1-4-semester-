@@ -97,14 +97,14 @@ int main(void) {
         if (semop(semid, operations, 3) == -1) { // Есть 0,0 Ждет 10 делает 00
             printf("Сервер: ошибка при выполнении %s\n", "semop( semid, operations, 2 ) == -1.");
         }
-        printf("%d %d\n", operations[0].sem_op, operations[1].sem_op);
+//        printf("%d %d\n", operations[0].sem_op, operations[1].sem_op);
         usleep(200);
         /*Обработать сообщение, полученное от клиента*/
         if (strcmp("STOP", (char*) shm_address) == 0) break;
         printf("%s", (char *) shm_address);
         //Обработка сообщения
 
-        snprintf( (char *) shm_address, SIZEOFSHMSEG, "%s", "RESPONSE" );
+        snprintf( (char *) shm_address, SIZEOFSHMSEG, "%d", strlen((char *) shm_address) );
         usleep(200);
         /* Установить 0 семафор в 0 (сегмент свободен)
            Установить 1 семафор в 1 (сегмент изменен).*/
@@ -126,7 +126,7 @@ int main(void) {
             printf("Клиент: ошибка при изменении семафоров: %s\n","semop( semid, operations, 3 ) == -1.");
             return -1;
         }
-        printf("%d %d\n", operations[0].sem_op, operations[1].sem_op);
+//        printf("%d %d\n", operations[0].sem_op, operations[1].sem_op);
 
     } /* Конец цикла обработки сообщений. */
 

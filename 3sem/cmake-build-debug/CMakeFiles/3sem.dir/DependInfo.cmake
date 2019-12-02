@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/etryfly/Документы/Labs/3sem/OS/semoph/server.c" "/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/3sem.dir/OS/semoph/server.c.o"
+  "/home/etryfly/Документы/Labs/3sem/OS/socket/server.c" "/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/3sem.dir/OS/socket/server.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
