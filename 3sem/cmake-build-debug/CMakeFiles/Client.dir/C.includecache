@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/3sem/OS/semoph/client.c
+stdio.h
+-
+unistd.h
+-
+string.h
+-
+sys/ipc.h
+-
+sys/sem.h
+-
+sys/shm.h
+-
+sys/types.h
+-
+

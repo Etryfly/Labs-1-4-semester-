@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Client.dir/OS/semoph/client.c.o  -o Client 

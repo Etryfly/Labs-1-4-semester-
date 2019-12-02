@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/3sem/OS/socket/Package.h
+
+/home/etryfly/Документы/Labs/3sem/OS/socket/client/client.c
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+stdio.h
+-
+stdlib.h
+-
+arpa/inet.h
+-
+../Package.h
+/home/etryfly/Документы/Labs/3sem/OS/socket/Package.h
+string.h
+-
+
