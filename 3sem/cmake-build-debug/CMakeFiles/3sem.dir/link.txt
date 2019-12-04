@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/3sem.dir/OS/socket/server.c.o  -o 3sem -lm 
+/usr/bin/c++  -g   CMakeFiles/3sem.dir/fundal/5/1/main.cpp.o  -o 3sem 

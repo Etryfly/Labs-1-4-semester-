@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/etryfly/Документы/Labs/3sem/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/etryfly/clion-2018.3.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/etryfly/clion-2018.3.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,84 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named server
+# Target rules for targets named fundal
 
 # Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
+fundal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fundal
+.PHONY : fundal
 
 # fast build rule for target.
-server/fast:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-.PHONY : server/fast
+fundal/fast:
+	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/build
+.PHONY : fundal/fast
 
-#=============================================================================
-# Target rules for targets named client
+fundal/3/12/main.o: fundal/3/12/main.c.o
 
-# Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 client
-.PHONY : client
-
-# fast build rule for target.
-client/fast:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-.PHONY : client/fast
-
-OS/socket/client/client.o: OS/socket/client/client.c.o
-
-.PHONY : OS/socket/client/client.o
+.PHONY : fundal/3/12/main.o
 
 # target to build an object file
-OS/socket/client/client.c.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/OS/socket/client/client.c.o
-.PHONY : OS/socket/client/client.c.o
+fundal/3/12/main.c.o:
+	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/fundal/3/12/main.c.o
+.PHONY : fundal/3/12/main.c.o
 
-OS/socket/client/client.i: OS/socket/client/client.c.i
+fundal/3/12/main.i: fundal/3/12/main.c.i
 
-.PHONY : OS/socket/client/client.i
-
-# target to preprocess a source file
-OS/socket/client/client.c.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/OS/socket/client/client.c.i
-.PHONY : OS/socket/client/client.c.i
-
-OS/socket/client/client.s: OS/socket/client/client.c.s
-
-.PHONY : OS/socket/client/client.s
-
-# target to generate assembly for a file
-OS/socket/client/client.c.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/OS/socket/client/client.c.s
-.PHONY : OS/socket/client/client.c.s
-
-OS/socket/server/server.o: OS/socket/server/server.c.o
-
-.PHONY : OS/socket/server/server.o
-
-# target to build an object file
-OS/socket/server/server.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/OS/socket/server/server.c.o
-.PHONY : OS/socket/server/server.c.o
-
-OS/socket/server/server.i: OS/socket/server/server.c.i
-
-.PHONY : OS/socket/server/server.i
+.PHONY : fundal/3/12/main.i
 
 # target to preprocess a source file
-OS/socket/server/server.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/OS/socket/server/server.c.i
-.PHONY : OS/socket/server/server.c.i
+fundal/3/12/main.c.i:
+	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/fundal/3/12/main.c.i
+.PHONY : fundal/3/12/main.c.i
 
-OS/socket/server/server.s: OS/socket/server/server.c.s
+fundal/3/12/main.s: fundal/3/12/main.c.s
 
-.PHONY : OS/socket/server/server.s
+.PHONY : fundal/3/12/main.s
 
 # target to generate assembly for a file
-OS/socket/server/server.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/OS/socket/server/server.c.s
-.PHONY : OS/socket/server/server.c.s
+fundal/3/12/main.c.s:
+	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/fundal/3/12/main.c.s
+.PHONY : fundal/3/12/main.c.s
 
 # Help Target
 help:
@@ -196,16 +156,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... server"
-	@echo "... client"
-	@echo "... OS/socket/client/client.o"
-	@echo "... OS/socket/client/client.i"
-	@echo "... OS/socket/client/client.s"
-	@echo "... OS/socket/server/server.o"
-	@echo "... OS/socket/server/server.i"
-	@echo "... OS/socket/server/server.s"
+	@echo "... fundal"
+	@echo "... edit_cache"
+	@echo "... fundal/3/12/main.o"
+	@echo "... fundal/3/12/main.i"
+	@echo "... fundal/3/12/main.s"
 .PHONY : help
 
 
