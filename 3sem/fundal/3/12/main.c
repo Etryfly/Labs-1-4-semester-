@@ -5,11 +5,12 @@
 #include <ctype.h>
 #include <memory.h>
 #include <stdlib.h>
+#include <math.h>
 
 #define STACK_SIZE 250
 
 
-#define IS_OPERATOR(c) (c == '-' || c == '+' || c == '/' || c == '*')
+#define IS_OPERATOR(c) (c == '-' || c == '+' || c == '/' || c == '*' || c == '%' || c == '^')
 
 typedef struct String {
     char data[BUFSIZ];
@@ -37,9 +38,11 @@ int isOpGreater(String left, char b) {
     int l = 0;
     int r = 0;
     char a = left.data[0];
-    if (a == '/' || a == '*') l = 2;
+    if (a == '/' || a == '*' || a == '%') l = 2;
+    if (a == '^' ) l = 3;
     if (a == '-' || a == '+') l = 1;
-    if (b == '/' || b == '*') r = 2;
+    if (b == '/' || b == '*' || b == '%') r = 2;
+    if (b == '^') r = 3;
     if (b == '-' || b == '+') r = 1;
     return l - r;
 }
@@ -123,7 +126,7 @@ int main(int argc, char *argv[]) {
                         while (*bufptr != '\n' && *bufptr != 0) bufptr++;
                         bufptr++;
                         flag = 1;
-                        continue;
+                        break;
 
                     }
                     if (topFromStack().data[0] != '(') {
@@ -152,14 +155,14 @@ int main(int argc, char *argv[]) {
                         while (*bufptr != '\n' && *bufptr != 0) bufptr++;
                         bufptr++;
                         flag = 1;
-                        continue;
+                        break;
                     }
                     popFromStack();
                 } else if (IS_OPERATOR(*bufptr)) {
                     if (ptr != -1) {
                         String top = topFromStack();
 
-                        if (isOpGreater(top, *bufptr) == 0 || isOpGreater(top, *bufptr) == 1) {
+                        if (isOpGreater(top, *bufptr) >= 0) {
                             *resptr++ = popFromStack().data[0];
                             *resptr++ = ' ';
                         }
@@ -172,6 +175,10 @@ int main(int argc, char *argv[]) {
                     //error
                 }
             }
+
+
+
+
             if (flag) {
 
                 continue;
@@ -238,6 +245,16 @@ int main(int argc, char *argv[]) {
 
                         case '/':
                             sprintf(str.data, "%d", l / r);
+                            break;
+
+
+                        case '%':
+                            sprintf(str.data, "%d", l % r);
+                            break;
+
+
+                        case '^':
+                            sprintf(str.data, "%f", pow(l,r));
                             break;
                     }
 

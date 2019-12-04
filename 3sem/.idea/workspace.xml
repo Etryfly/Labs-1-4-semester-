@@ -12,26 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50d795e7-2d47-4462-99fc-86fc1713f5bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fundal/3/11/N" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/3/11/Y" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/3/11/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/3/12/data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/3/12/data-err" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/3/12/data1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundal/3/12/data1-err" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3sem.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/fundal.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/fundal.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fundal.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fundal.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fundal.dir/fundal/3/12/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fundal.dir/fundal/3/12/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fundal.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fundal.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/fundal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/fundal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/3/12/data" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/12/data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/3/12/data-err" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/12/data-err" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundal/3/12/data1-err" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/12/data1-err" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fundal/3/12/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/fundal/3/12/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,7 +114,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="fundal" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data" WORKING_DIR="file://$PROJECT_DIR$/fundal/3/12" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fundal" TARGET_NAME="fundal" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fundal" RUN_TARGET_NAME="fundal">
+    <configuration name="fundal" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data data1" WORKING_DIR="file://$PROJECT_DIR$/fundal/3/12" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fundal" TARGET_NAME="fundal" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fundal" RUN_TARGET_NAME="fundal">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -182,7 +171,7 @@
       <workItem from="1575135016523" duration="5580000" />
       <workItem from="1575200047545" duration="24068000" />
       <workItem from="1575303820622" duration="31142000" />
-      <workItem from="1575472675206" duration="4762000" />
+      <workItem from="1575472675206" duration="5462000" />
     </task>
     <task id="LOCAL-00001" summary="3sem">
       <created>1568101400080</created>
@@ -741,11 +730,6 @@
           <url>file://$PROJECT_DIR$/fundal/3/11/main.c</url>
           <line>125</line>
           <option name="timeStamp" value="318" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/fundal/3/12/main.c</url>
-          <line>103</line>
-          <option name="timeStamp" value="424" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

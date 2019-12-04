@@ -5,4 +5,4 @@ add_executable(fundal fundal/3/12/main.c)
 #add_executable(server OS/socket/server/server.c)
 #add_executable(client OS/socket/client/client.c)
 
-#target_link_libraries(3sem m)
+target_link_libraries(fundal m)
