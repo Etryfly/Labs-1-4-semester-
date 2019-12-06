@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/3sem/fundal/3/12/main.c
+zconf.h
+-
+stdio.h
+-
+ctype.h
+-
+memory.h
+-
+stdlib.h
+-
+math.h
+-
+

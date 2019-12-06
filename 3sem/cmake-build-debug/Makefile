@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fundal
+# Target rules for targets named fundal3.12
 
 # Build rule for target.
-fundal: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fundal
-.PHONY : fundal
+fundal3.12: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fundal3.12
+.PHONY : fundal3.12
 
 # fast build rule for target.
-fundal/fast:
-	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/build
-.PHONY : fundal/fast
+fundal3.12/fast:
+	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/build
+.PHONY : fundal3.12/fast
+
+#=============================================================================
+# Target rules for targets named fundal4.7
+
+# Build rule for target.
+fundal4.7: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fundal4.7
+.PHONY : fundal4.7
+
+# fast build rule for target.
+fundal4.7/fast:
+	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/build
+.PHONY : fundal4.7/fast
 
 fundal/3/12/main.o: fundal/3/12/main.c.o
 
@@ -129,7 +142,7 @@ fundal/3/12/main.o: fundal/3/12/main.c.o
 
 # target to build an object file
 fundal/3/12/main.c.o:
-	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/fundal/3/12/main.c.o
+	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/fundal/3/12/main.c.o
 .PHONY : fundal/3/12/main.c.o
 
 fundal/3/12/main.i: fundal/3/12/main.c.i
@@ -138,7 +151,7 @@ fundal/3/12/main.i: fundal/3/12/main.c.i
 
 # target to preprocess a source file
 fundal/3/12/main.c.i:
-	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/fundal/3/12/main.c.i
+	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/fundal/3/12/main.c.i
 .PHONY : fundal/3/12/main.c.i
 
 fundal/3/12/main.s: fundal/3/12/main.c.s
@@ -147,8 +160,35 @@ fundal/3/12/main.s: fundal/3/12/main.c.s
 
 # target to generate assembly for a file
 fundal/3/12/main.c.s:
-	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/fundal/3/12/main.c.s
+	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/fundal/3/12/main.c.s
 .PHONY : fundal/3/12/main.c.s
+
+fundal/4/7/main.o: fundal/4/7/main.c.o
+
+.PHONY : fundal/4/7/main.o
+
+# target to build an object file
+fundal/4/7/main.c.o:
+	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/fundal/4/7/main.c.o
+.PHONY : fundal/4/7/main.c.o
+
+fundal/4/7/main.i: fundal/4/7/main.c.i
+
+.PHONY : fundal/4/7/main.i
+
+# target to preprocess a source file
+fundal/4/7/main.c.i:
+	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/fundal/4/7/main.c.i
+.PHONY : fundal/4/7/main.c.i
+
+fundal/4/7/main.s: fundal/4/7/main.c.s
+
+.PHONY : fundal/4/7/main.s
+
+# target to generate assembly for a file
+fundal/4/7/main.c.s:
+	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/fundal/4/7/main.c.s
+.PHONY : fundal/4/7/main.c.s
 
 # Help Target
 help:
@@ -157,11 +197,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... fundal"
+	@echo "... fundal3.12"
 	@echo "... edit_cache"
+	@echo "... fundal4.7"
 	@echo "... fundal/3/12/main.o"
 	@echo "... fundal/3/12/main.i"
 	@echo "... fundal/3/12/main.s"
+	@echo "... fundal/4/7/main.o"
+	@echo "... fundal/4/7/main.i"
+	@echo "... fundal/4/7/main.s"
 .PHONY : help
 
 

@@ -27,8 +27,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="fundal">
-				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal" prefix_auto="0" extension_auto="0"/>
+			<Target title="fundal3.12">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal3.12" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -44,14 +44,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal3.12"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="fundal/fast">
-				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal" prefix_auto="0" extension_auto="0"/>
+			<Target title="fundal3.12/fast">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal3.12" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -67,7 +67,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal3.12/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -83,9 +83,58 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="fundal4.7">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal4.7" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal4.7"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fundal4.7/fast">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal4.7" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal4.7/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/etryfly/Документы/Labs/3sem/fundal/3/12/main.c">
-			<Option target="fundal"/>
+			<Option target="fundal3.12"/>
+		</Unit>
+		<Unit filename="/home/etryfly/Документы/Labs/3sem/fundal/4/7/main.c">
+			<Option target="fundal4.7"/>
 		</Unit>
 		<Unit filename="/home/etryfly/Документы/Labs/3sem/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

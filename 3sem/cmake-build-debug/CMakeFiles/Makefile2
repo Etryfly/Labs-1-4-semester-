@@ -53,12 +53,14 @@ CMAKE_BINARY_DIR = /home/etryfly/Документы/Labs/3sem/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/fundal.dir/all
+all: CMakeFiles/fundal3.12.dir/all
+all: CMakeFiles/fundal4.7.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/fundal.dir/clean
+clean: CMakeFiles/fundal3.12.dir/clean
+clean: CMakeFiles/fundal4.7.dir/clean
 
 .PHONY : clean
 
@@ -68,31 +70,58 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/fundal.dir
+# Target rules for target CMakeFiles/fundal3.12.dir
 
 # All Build rule for target.
-CMakeFiles/fundal.dir/all:
-	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/depend
-	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target fundal"
-.PHONY : CMakeFiles/fundal.dir/all
+CMakeFiles/fundal3.12.dir/all:
+	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/depend
+	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target fundal3.12"
+.PHONY : CMakeFiles/fundal3.12.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/fundal.dir/rule: cmake_check_build_system
+CMakeFiles/fundal3.12.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fundal.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fundal3.12.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/fundal.dir/rule
+.PHONY : CMakeFiles/fundal3.12.dir/rule
 
 # Convenience name for target.
-fundal: CMakeFiles/fundal.dir/rule
+fundal3.12: CMakeFiles/fundal3.12.dir/rule
 
-.PHONY : fundal
+.PHONY : fundal3.12
 
 # clean rule for target.
-CMakeFiles/fundal.dir/clean:
-	$(MAKE) -f CMakeFiles/fundal.dir/build.make CMakeFiles/fundal.dir/clean
-.PHONY : CMakeFiles/fundal.dir/clean
+CMakeFiles/fundal3.12.dir/clean:
+	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/clean
+.PHONY : CMakeFiles/fundal3.12.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/fundal4.7.dir
+
+# All Build rule for target.
+CMakeFiles/fundal4.7.dir/all:
+	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/depend
+	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target fundal4.7"
+.PHONY : CMakeFiles/fundal4.7.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/fundal4.7.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fundal4.7.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/fundal4.7.dir/rule
+
+# Convenience name for target.
+fundal4.7: CMakeFiles/fundal4.7.dir/rule
+
+.PHONY : fundal4.7
+
+# clean rule for target.
+CMakeFiles/fundal4.7.dir/clean:
+	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/clean
+.PHONY : CMakeFiles/fundal4.7.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
