@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/a.dir/OS/4/main.c.o  -o a 

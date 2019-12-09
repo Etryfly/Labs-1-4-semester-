@@ -74,7 +74,7 @@ int main(int argc, char *argv[]) {
                     error();
                 }
 
-
+                char objName[50];
                 switch (commandId) {
                     case 0:
                         if (boat != 0) error();
@@ -83,13 +83,15 @@ int main(int argc, char *argv[]) {
                             b++;
                         }
                         b++;
-                        char objName[50];
+
                         sscanf(b, "%s", objName);
                         int binObj = objToNum(objName);
                         if (binObj == 0) error();
                         boat = binObj;
-                        if (side == 0) left -= binObj;
-                        else right -= binObj;
+
+                        if (side == 0 && left >= binObj) left -= binObj;
+                        else if (side == 1 && right >= binObj) right -= binObj;
+                        else error();
                         break;
 
                     case 1:

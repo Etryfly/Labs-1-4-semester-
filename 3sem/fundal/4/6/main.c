@@ -27,9 +27,9 @@ void LIST_NodePush(Node* node, Node** tail) {
     }
 
     Node* cur = *tail;
-    while (cur->next != NULL) {
-        cur = cur->next;
-    }
+//    while (cur->next != NULL) {
+//        cur = cur->next;
+//    }
     cur->next = node;
     node->prev = cur;
     *tail = node;

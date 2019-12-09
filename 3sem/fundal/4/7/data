@@ -1,6 +1,5 @@
-a=()in;
-b=()in;
-[(a,b)rem=c; []
-(c)out;]
-ABC=(A,B)sum;
-(abc)out;
+A = ()in;
+B = ()in;
+C = (A,b)sum;
+(c)out;
+[D = ()in;]

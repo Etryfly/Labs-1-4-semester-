@@ -48,6 +48,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/fundal3.12.dir/DependInfo.cmake"
-  "CMakeFiles/fundal4.7.dir/DependInfo.cmake"
+  "CMakeFiles/fundal5.3.dir/DependInfo.cmake"
+  "CMakeFiles/fundal4.10.dir/DependInfo.cmake"
+  "CMakeFiles/server.dir/DependInfo.cmake"
+  "CMakeFiles/ls.dir/DependInfo.cmake"
+  "CMakeFiles/client.dir/DependInfo.cmake"
+  "CMakeFiles/chown.dir/DependInfo.cmake"
   )

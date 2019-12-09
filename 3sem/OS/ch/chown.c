@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
     pwd = getpwnam(argv[1]);
     uid = pwd->pw_uid;
     printf("%s %d\n", pwd->pw_name, uid);
-    if ( chown(argv[2], uid, -1) == -1) {
+    if (chown(argv[2], uid, uid) == -1) {
         perror("chown");
     }
 }

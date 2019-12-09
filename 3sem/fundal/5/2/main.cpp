@@ -14,13 +14,6 @@ public:
     DATA_TYPE degree ;
     Node* next;
 
-    ~Node() {
-//        delete this;
-    }
-
-
-
-
     Node(DATA_TYPE k, DATA_TYPE degree) : k{k}, degree{degree} {
         next = nullptr;
     }
@@ -290,7 +283,7 @@ public:
             for (int j = 0; j < right.data.getSize(); ++j) {
                 DATA_TYPE k = left.k * right.data.get(j).k;
                 DATA_TYPE degree = left.degree + right.data.get(j).degree;
-                result.add(*new Node(k, degree));
+                result.add(Node(k, degree));
             }
         }
 //        result.simplify();
@@ -345,38 +338,39 @@ public:
 
 
 
-    friend Polynomial& operator % (const Polynomial& left, const Polynomial & right);
-    friend Polynomial& operator / (const Polynomial& left, const Polynomial & right);
-    friend Polynomial& operator + (const Polynomial& left, const Polynomial & right);
-    friend Polynomial& operator - (const Polynomial& left, const Polynomial & right);
-    friend Polynomial& operator * (const Polynomial& left, const Polynomial & right);
+    friend Polynomial operator % (const Polynomial& left, const Polynomial & right);
+    friend Polynomial operator / (const Polynomial& left, const Polynomial & right);
+    friend Polynomial operator + (const Polynomial& left, const Polynomial & right);
+    friend Polynomial operator - (const Polynomial& left, const Polynomial & right);
+    friend Polynomial operator * (const Polynomial& left, const Polynomial & right);
     friend std::istream& operator >> (std::istream& in, Polynomial &polynomial);
     friend std::ostream& operator << (std::ostream& out, const Polynomial &polynomial);
 };
 
-Polynomial& operator*(const Polynomial& left, const Polynomial& right) {
-    Polynomial *tmp = new Polynomial(left);
-    return *tmp *= right;
+Polynomial operator*(const Polynomial& left, const Polynomial& right) {
+    Polynomial tmp = left;
+    return tmp *= right;
 }
 
-Polynomial& operator+(const Polynomial& left, const Polynomial& right) {
-    Polynomial *tmp = new Polynomial(left);
-    return *tmp += right;
+Polynomial operator+(const Polynomial& left, const Polynomial& right) {
+    Polynomial tmp = left;
+    tmp += right;
+    return tmp;
 }
 
-Polynomial& operator-(const Polynomial& left, const Polynomial& right) {
-    Polynomial *tmp = new Polynomial(left);
-    return *tmp -= right;
+Polynomial operator-(const Polynomial& left, const Polynomial& right) {
+    Polynomial tmp = left;
+    return tmp -= right;
 }
 
-Polynomial &operator%(const Polynomial &left, const Polynomial &right) {
-    Polynomial *tmp = new Polynomial(left);
-    return *tmp %= right;
+Polynomial operator%(const Polynomial &left, const Polynomial &right) {
+    Polynomial tmp = left;
+    return tmp %= right;
 }
 
-Polynomial& operator / (const Polynomial &left, const Polynomial &right) {
-    Polynomial *tmp = new Polynomial(left);
-    return *tmp /= right;
+Polynomial operator / (const Polynomial &left, const Polynomial &right) {
+    Polynomial tmp = left;
+    return tmp /= right;
 }
 
 std::istream &operator>>(std::istream &in, Polynomial &polynomial) {
@@ -405,8 +399,8 @@ const char* commands[COMMANDS_SIZE] = {
         "Add", "Sub", "Mult", "Div", "Mod", "Eval", "Diff"
 };
 
-Polynomial& getPolUpToSep(char* buf, char sep) {
-    Polynomial *result = new Polynomial;
+Polynomial getPolUpToSep(char* buf, char sep) {
+    Polynomial result;
     double k = 0;
     double degree = 0;
     char *b = buf;
@@ -440,10 +434,10 @@ Polynomial& getPolUpToSep(char* buf, char sep) {
                 degree = 0;
 
             }
-            result->add(Node(k, degree));
+            result.add(Node(k, degree));
         }
     }
-        return *result;
+        return result;
 }
 
 int main(int argc, char* argv[]) {

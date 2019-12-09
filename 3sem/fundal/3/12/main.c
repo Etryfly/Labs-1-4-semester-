@@ -1,5 +1,3 @@
-
-
 #include <zconf.h>
 #include <stdio.h>
 #include <ctype.h>
@@ -75,18 +73,35 @@ void error(char* bufptr, char* name, int j, char* buf) {
     fclose(err);
 }
 
+void freeBuf(char* buf) {
+    char* p = buf;
+    while (*p) *p++ = 0;
+}
+
 int main(int argc, char *argv[]) {
     FILE *file;
     int j;
+    char *n;
+    int l;
+    int flag = 0;
+    int r;
+    char c;
+    char *t;
+    char result[STACK_SIZE], *resptr = result;
+    char buf[BUFSIZ] = {0}, *bufptr = buf;
     for (int i = 1; i < argc; ++i) {
         if (!(file = fopen(argv[i], "r"))) {
             printf("Couldn't open %s\n", argv[i]);
             continue;
         }
         printf("\n\n\n\n%s\n", argv[i]);
-        char c;
-        char result[STACK_SIZE], *resptr = result;
-        char buf[BUFSIZ] = {0}, *bufptr = buf;
+
+//        char result[STACK_SIZE], *resptr = result;
+//        char buf[BUFSIZ] = {0}, *bufptr = buf;
+        resptr = result;
+        bufptr = buf;
+        freeBuf(result);
+        freeBuf(buf);
         while (!feof(file)) {
             fscanf(file, "%c", &c);
             if (feof(file)) break;
@@ -100,9 +115,9 @@ int main(int argc, char *argv[]) {
         j = 0;
         while (*bufptr) {
 
-            int flag = 0;
+            flag = 0;
             resptr = result;
-            char *t = bufptr;
+            t = bufptr;
             while (*t != '\n' && *t != 0) {
                 printf("%c", *t++);
             }
@@ -131,7 +146,7 @@ int main(int argc, char *argv[]) {
                     }
                     if (topFromStack().data[0] != '(') {
                         while (ptr != -1 && topFromStack().data[0] != '(') {
-                            char *n;
+
                             if (isdigit(topFromStack().data[0])) {
                                 String str = popFromStack();
                                 n = str.data;
@@ -191,7 +206,7 @@ int main(int argc, char *argv[]) {
                     flag = 1;
                     break;
                 }
-                char *n;
+
                 if (isdigit(topFromStack().data[0])) {
                     String str = popFromStack();
                     n = str.data;
@@ -225,8 +240,7 @@ int main(int argc, char *argv[]) {
                 } else if (IS_OPERATOR(*resptr)) {
                     String right = popFromStack();
                     String left = popFromStack();
-                    int l;
-                    int r;
+
                     sscanf(left.data, "%d", &l);
                     sscanf(right.data, "%d", &r);
                     String str;
@@ -275,5 +289,3 @@ int main(int argc, char *argv[]) {
         }
     }
 }
-
-

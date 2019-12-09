@@ -17,16 +17,13 @@
 int main(int s, char** args) {
     DIR *dir;
     dir = opendir("./");
-
     struct dirent *entry;
 
     while ((entry = readdir(dir)) != NULL) {
         struct stat entryInfo;
         char buf[BUFSIZ] = {0};
-        strcat(buf, "/home/etryfly/Документы/Labs/3sem/OS/fileCr/");
+        strcat(buf,"/home/etryfly/Документы/Labs/3sem/OS/fileCr/");
         strcat(buf, entry->d_name);
-
-
 
         FILE* file = fopen(buf, "r");
 
@@ -78,9 +75,7 @@ int main(int s, char** args) {
 
         printf("%23s ", ctime(&entryInfo.st_mtim));
 
-
         printf("%s\n", entry->d_name);
         fclose(file);
     }
-
 }

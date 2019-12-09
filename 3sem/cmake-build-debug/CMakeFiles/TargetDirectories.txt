@@ -1,4 +1,8 @@
 /home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/fundal3.12.dir
+/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/fundal5.3.dir
 /home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/fundal4.7.dir
+/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/fundal4.10.dir
+/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/server.dir
+/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/ls.dir
+/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/client.dir
+/home/etryfly/Документы/Labs/3sem/cmake-build-debug/CMakeFiles/chown.dir

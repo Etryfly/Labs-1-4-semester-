@@ -111,84 +111,244 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fundal3.12
+# Target rules for targets named fundal5.3
 
 # Build rule for target.
-fundal3.12: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fundal3.12
-.PHONY : fundal3.12
+fundal5.3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fundal5.3
+.PHONY : fundal5.3
 
 # fast build rule for target.
-fundal3.12/fast:
-	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/build
-.PHONY : fundal3.12/fast
+fundal5.3/fast:
+	$(MAKE) -f CMakeFiles/fundal5.3.dir/build.make CMakeFiles/fundal5.3.dir/build
+.PHONY : fundal5.3/fast
 
 #=============================================================================
-# Target rules for targets named fundal4.7
+# Target rules for targets named fundal4.10
 
 # Build rule for target.
-fundal4.7: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fundal4.7
-.PHONY : fundal4.7
+fundal4.10: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fundal4.10
+.PHONY : fundal4.10
 
 # fast build rule for target.
-fundal4.7/fast:
-	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/build
-.PHONY : fundal4.7/fast
+fundal4.10/fast:
+	$(MAKE) -f CMakeFiles/fundal4.10.dir/build.make CMakeFiles/fundal4.10.dir/build
+.PHONY : fundal4.10/fast
 
-fundal/3/12/main.o: fundal/3/12/main.c.o
+#=============================================================================
+# Target rules for targets named server
 
-.PHONY : fundal/3/12/main.o
+# Build rule for target.
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+#=============================================================================
+# Target rules for targets named ls
+
+# Build rule for target.
+ls: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ls
+.PHONY : ls
+
+# fast build rule for target.
+ls/fast:
+	$(MAKE) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/build
+.PHONY : ls/fast
+
+#=============================================================================
+# Target rules for targets named client
+
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
+.PHONY : client/fast
+
+#=============================================================================
+# Target rules for targets named chown
+
+# Build rule for target.
+chown: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chown
+.PHONY : chown
+
+# fast build rule for target.
+chown/fast:
+	$(MAKE) -f CMakeFiles/chown.dir/build.make CMakeFiles/chown.dir/build
+.PHONY : chown/fast
+
+OS/ch/chown.o: OS/ch/chown.c.o
+
+.PHONY : OS/ch/chown.o
 
 # target to build an object file
-fundal/3/12/main.c.o:
-	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/fundal/3/12/main.c.o
-.PHONY : fundal/3/12/main.c.o
+OS/ch/chown.c.o:
+	$(MAKE) -f CMakeFiles/chown.dir/build.make CMakeFiles/chown.dir/OS/ch/chown.c.o
+.PHONY : OS/ch/chown.c.o
 
-fundal/3/12/main.i: fundal/3/12/main.c.i
+OS/ch/chown.i: OS/ch/chown.c.i
 
-.PHONY : fundal/3/12/main.i
+.PHONY : OS/ch/chown.i
 
 # target to preprocess a source file
-fundal/3/12/main.c.i:
-	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/fundal/3/12/main.c.i
-.PHONY : fundal/3/12/main.c.i
+OS/ch/chown.c.i:
+	$(MAKE) -f CMakeFiles/chown.dir/build.make CMakeFiles/chown.dir/OS/ch/chown.c.i
+.PHONY : OS/ch/chown.c.i
 
-fundal/3/12/main.s: fundal/3/12/main.c.s
+OS/ch/chown.s: OS/ch/chown.c.s
 
-.PHONY : fundal/3/12/main.s
+.PHONY : OS/ch/chown.s
 
 # target to generate assembly for a file
-fundal/3/12/main.c.s:
-	$(MAKE) -f CMakeFiles/fundal3.12.dir/build.make CMakeFiles/fundal3.12.dir/fundal/3/12/main.c.s
-.PHONY : fundal/3/12/main.c.s
+OS/ch/chown.c.s:
+	$(MAKE) -f CMakeFiles/chown.dir/build.make CMakeFiles/chown.dir/OS/ch/chown.c.s
+.PHONY : OS/ch/chown.c.s
 
-fundal/4/7/main.o: fundal/4/7/main.c.o
+OS/fileCr/ls.o: OS/fileCr/ls.c.o
 
-.PHONY : fundal/4/7/main.o
+.PHONY : OS/fileCr/ls.o
 
 # target to build an object file
-fundal/4/7/main.c.o:
-	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/fundal/4/7/main.c.o
-.PHONY : fundal/4/7/main.c.o
+OS/fileCr/ls.c.o:
+	$(MAKE) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/OS/fileCr/ls.c.o
+.PHONY : OS/fileCr/ls.c.o
 
-fundal/4/7/main.i: fundal/4/7/main.c.i
+OS/fileCr/ls.i: OS/fileCr/ls.c.i
 
-.PHONY : fundal/4/7/main.i
+.PHONY : OS/fileCr/ls.i
 
 # target to preprocess a source file
-fundal/4/7/main.c.i:
-	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/fundal/4/7/main.c.i
-.PHONY : fundal/4/7/main.c.i
+OS/fileCr/ls.c.i:
+	$(MAKE) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/OS/fileCr/ls.c.i
+.PHONY : OS/fileCr/ls.c.i
 
-fundal/4/7/main.s: fundal/4/7/main.c.s
+OS/fileCr/ls.s: OS/fileCr/ls.c.s
 
-.PHONY : fundal/4/7/main.s
+.PHONY : OS/fileCr/ls.s
 
 # target to generate assembly for a file
-fundal/4/7/main.c.s:
-	$(MAKE) -f CMakeFiles/fundal4.7.dir/build.make CMakeFiles/fundal4.7.dir/fundal/4/7/main.c.s
-.PHONY : fundal/4/7/main.c.s
+OS/fileCr/ls.c.s:
+	$(MAKE) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/OS/fileCr/ls.c.s
+.PHONY : OS/fileCr/ls.c.s
+
+OS/socket/client/client.o: OS/socket/client/client.c.o
+
+.PHONY : OS/socket/client/client.o
+
+# target to build an object file
+OS/socket/client/client.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/OS/socket/client/client.c.o
+.PHONY : OS/socket/client/client.c.o
+
+OS/socket/client/client.i: OS/socket/client/client.c.i
+
+.PHONY : OS/socket/client/client.i
+
+# target to preprocess a source file
+OS/socket/client/client.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/OS/socket/client/client.c.i
+.PHONY : OS/socket/client/client.c.i
+
+OS/socket/client/client.s: OS/socket/client/client.c.s
+
+.PHONY : OS/socket/client/client.s
+
+# target to generate assembly for a file
+OS/socket/client/client.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/OS/socket/client/client.c.s
+.PHONY : OS/socket/client/client.c.s
+
+OS/socket/server/server.o: OS/socket/server/server.c.o
+
+.PHONY : OS/socket/server/server.o
+
+# target to build an object file
+OS/socket/server/server.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/OS/socket/server/server.c.o
+.PHONY : OS/socket/server/server.c.o
+
+OS/socket/server/server.i: OS/socket/server/server.c.i
+
+.PHONY : OS/socket/server/server.i
+
+# target to preprocess a source file
+OS/socket/server/server.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/OS/socket/server/server.c.i
+.PHONY : OS/socket/server/server.c.i
+
+OS/socket/server/server.s: OS/socket/server/server.c.s
+
+.PHONY : OS/socket/server/server.s
+
+# target to generate assembly for a file
+OS/socket/server/server.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/OS/socket/server/server.c.s
+.PHONY : OS/socket/server/server.c.s
+
+fundal/4/10/main.o: fundal/4/10/main.c.o
+
+.PHONY : fundal/4/10/main.o
+
+# target to build an object file
+fundal/4/10/main.c.o:
+	$(MAKE) -f CMakeFiles/fundal4.10.dir/build.make CMakeFiles/fundal4.10.dir/fundal/4/10/main.c.o
+.PHONY : fundal/4/10/main.c.o
+
+fundal/4/10/main.i: fundal/4/10/main.c.i
+
+.PHONY : fundal/4/10/main.i
+
+# target to preprocess a source file
+fundal/4/10/main.c.i:
+	$(MAKE) -f CMakeFiles/fundal4.10.dir/build.make CMakeFiles/fundal4.10.dir/fundal/4/10/main.c.i
+.PHONY : fundal/4/10/main.c.i
+
+fundal/4/10/main.s: fundal/4/10/main.c.s
+
+.PHONY : fundal/4/10/main.s
+
+# target to generate assembly for a file
+fundal/4/10/main.c.s:
+	$(MAKE) -f CMakeFiles/fundal4.10.dir/build.make CMakeFiles/fundal4.10.dir/fundal/4/10/main.c.s
+.PHONY : fundal/4/10/main.c.s
+
+fundal/5/3/main.o: fundal/5/3/main.cpp.o
+
+.PHONY : fundal/5/3/main.o
+
+# target to build an object file
+fundal/5/3/main.cpp.o:
+	$(MAKE) -f CMakeFiles/fundal5.3.dir/build.make CMakeFiles/fundal5.3.dir/fundal/5/3/main.cpp.o
+.PHONY : fundal/5/3/main.cpp.o
+
+fundal/5/3/main.i: fundal/5/3/main.cpp.i
+
+.PHONY : fundal/5/3/main.i
+
+# target to preprocess a source file
+fundal/5/3/main.cpp.i:
+	$(MAKE) -f CMakeFiles/fundal5.3.dir/build.make CMakeFiles/fundal5.3.dir/fundal/5/3/main.cpp.i
+.PHONY : fundal/5/3/main.cpp.i
+
+fundal/5/3/main.s: fundal/5/3/main.cpp.s
+
+.PHONY : fundal/5/3/main.s
+
+# target to generate assembly for a file
+fundal/5/3/main.cpp.s:
+	$(MAKE) -f CMakeFiles/fundal5.3.dir/build.make CMakeFiles/fundal5.3.dir/fundal/5/3/main.cpp.s
+.PHONY : fundal/5/3/main.cpp.s
 
 # Help Target
 help:
@@ -197,15 +357,31 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... fundal3.12"
+	@echo "... fundal5.3"
 	@echo "... edit_cache"
-	@echo "... fundal4.7"
-	@echo "... fundal/3/12/main.o"
-	@echo "... fundal/3/12/main.i"
-	@echo "... fundal/3/12/main.s"
-	@echo "... fundal/4/7/main.o"
-	@echo "... fundal/4/7/main.i"
-	@echo "... fundal/4/7/main.s"
+	@echo "... fundal4.10"
+	@echo "... server"
+	@echo "... ls"
+	@echo "... client"
+	@echo "... chown"
+	@echo "... OS/ch/chown.o"
+	@echo "... OS/ch/chown.i"
+	@echo "... OS/ch/chown.s"
+	@echo "... OS/fileCr/ls.o"
+	@echo "... OS/fileCr/ls.i"
+	@echo "... OS/fileCr/ls.s"
+	@echo "... OS/socket/client/client.o"
+	@echo "... OS/socket/client/client.i"
+	@echo "... OS/socket/client/client.s"
+	@echo "... OS/socket/server/server.o"
+	@echo "... OS/socket/server/server.i"
+	@echo "... OS/socket/server/server.s"
+	@echo "... fundal/4/10/main.o"
+	@echo "... fundal/4/10/main.i"
+	@echo "... fundal/4/10/main.s"
+	@echo "... fundal/5/3/main.o"
+	@echo "... fundal/5/3/main.i"
+	@echo "... fundal/5/3/main.s"
 .PHONY : help
 
 

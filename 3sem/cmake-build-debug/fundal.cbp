@@ -27,8 +27,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="fundal3.12">
-				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal3.12" prefix_auto="0" extension_auto="0"/>
+			<Target title="fundal5.3">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal5.3" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -44,14 +44,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal3.12"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal5.3"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="fundal3.12/fast">
-				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal3.12" prefix_auto="0" extension_auto="0"/>
+			<Target title="fundal5.3/fast">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal5.3" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -67,7 +67,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal3.12/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal5.3/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -83,8 +83,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="fundal4.7">
-				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal4.7" prefix_auto="0" extension_auto="0"/>
+			<Target title="fundal4.10">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal4.10" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -100,14 +100,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal4.7"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal4.10"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="fundal4.7/fast">
-				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal4.7" prefix_auto="0" extension_auto="0"/>
+			<Target title="fundal4.10/fast">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/fundal4.10" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -123,18 +123,214 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal4.7/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 fundal4.10/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server/fast">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ls">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/ls" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 ls"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ls/fast">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/ls" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 ls/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 client"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="client/fast">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 client/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chown">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/chown" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 chown"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chown/fast">
+				<Option output="/home/etryfly/Документы/Labs/3sem/cmake-build-debug/chown" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/etryfly/Документы/Labs/3sem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 chown/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/etryfly/Документы/Labs/3sem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/etryfly/Документы/Labs/3sem/fundal/3/12/main.c">
-			<Option target="fundal3.12"/>
+		<Unit filename="/home/etryfly/Документы/Labs/3sem/OS/ch/chown.c">
+			<Option target="chown"/>
 		</Unit>
-		<Unit filename="/home/etryfly/Документы/Labs/3sem/fundal/4/7/main.c">
-			<Option target="fundal4.7"/>
+		<Unit filename="/home/etryfly/Документы/Labs/3sem/OS/fileCr/ls.c">
+			<Option target="ls"/>
+		</Unit>
+		<Unit filename="/home/etryfly/Документы/Labs/3sem/OS/socket/client/client.c">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/etryfly/Документы/Labs/3sem/OS/socket/server/server.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/etryfly/Документы/Labs/3sem/fundal/4/10/main.c">
+			<Option target="fundal4.10"/>
+		</Unit>
+		<Unit filename="/home/etryfly/Документы/Labs/3sem/fundal/5/3/main.cpp">
+			<Option target="fundal5.3"/>
 		</Unit>
 		<Unit filename="/home/etryfly/Документы/Labs/3sem/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
