@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ls
+
+# Build rule for target.
+ls: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ls
+.PHONY : ls
+
+# fast build rule for target.
+ls/fast:
+	$(MAKE) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/build
+.PHONY : ls/fast
+
+#=============================================================================
+# Target rules for targets named chown
+
+# Build rule for target.
+chown: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chown
+.PHONY : chown
+
+# fast build rule for target.
+chown/fast:
+	$(MAKE) -f CMakeFiles/chown.dir/build.make CMakeFiles/chown.dir/build
+.PHONY : chown/fast
+
+#=============================================================================
 # Target rules for targets named fundal5.3
 
 # Build rule for target.
@@ -137,6 +163,32 @@ fundal4.10/fast:
 .PHONY : fundal4.10/fast
 
 #=============================================================================
+# Target rules for targets named fundal5.2
+
+# Build rule for target.
+fundal5.2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fundal5.2
+.PHONY : fundal5.2
+
+# fast build rule for target.
+fundal5.2/fast:
+	$(MAKE) -f CMakeFiles/fundal5.2.dir/build.make CMakeFiles/fundal5.2.dir/build
+.PHONY : fundal5.2/fast
+
+#=============================================================================
+# Target rules for targets named fundal5.4
+
+# Build rule for target.
+fundal5.4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fundal5.4
+.PHONY : fundal5.4
+
+# fast build rule for target.
+fundal5.4/fast:
+	$(MAKE) -f CMakeFiles/fundal5.4.dir/build.make CMakeFiles/fundal5.4.dir/build
+.PHONY : fundal5.4/fast
+
+#=============================================================================
 # Target rules for targets named server
 
 # Build rule for target.
@@ -150,19 +202,6 @@ server/fast:
 .PHONY : server/fast
 
 #=============================================================================
-# Target rules for targets named ls
-
-# Build rule for target.
-ls: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ls
-.PHONY : ls
-
-# fast build rule for target.
-ls/fast:
-	$(MAKE) -f CMakeFiles/ls.dir/build.make CMakeFiles/ls.dir/build
-.PHONY : ls/fast
-
-#=============================================================================
 # Target rules for targets named client
 
 # Build rule for target.
@@ -174,19 +213,6 @@ client: cmake_check_build_system
 client/fast:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
-
-#=============================================================================
-# Target rules for targets named chown
-
-# Build rule for target.
-chown: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chown
-.PHONY : chown
-
-# fast build rule for target.
-chown/fast:
-	$(MAKE) -f CMakeFiles/chown.dir/build.make CMakeFiles/chown.dir/build
-.PHONY : chown/fast
 
 OS/ch/chown.o: OS/ch/chown.c.o
 
@@ -323,6 +349,33 @@ fundal/4/10/main.c.s:
 	$(MAKE) -f CMakeFiles/fundal4.10.dir/build.make CMakeFiles/fundal4.10.dir/fundal/4/10/main.c.s
 .PHONY : fundal/4/10/main.c.s
 
+fundal/5/2/main.o: fundal/5/2/main.cpp.o
+
+.PHONY : fundal/5/2/main.o
+
+# target to build an object file
+fundal/5/2/main.cpp.o:
+	$(MAKE) -f CMakeFiles/fundal5.2.dir/build.make CMakeFiles/fundal5.2.dir/fundal/5/2/main.cpp.o
+.PHONY : fundal/5/2/main.cpp.o
+
+fundal/5/2/main.i: fundal/5/2/main.cpp.i
+
+.PHONY : fundal/5/2/main.i
+
+# target to preprocess a source file
+fundal/5/2/main.cpp.i:
+	$(MAKE) -f CMakeFiles/fundal5.2.dir/build.make CMakeFiles/fundal5.2.dir/fundal/5/2/main.cpp.i
+.PHONY : fundal/5/2/main.cpp.i
+
+fundal/5/2/main.s: fundal/5/2/main.cpp.s
+
+.PHONY : fundal/5/2/main.s
+
+# target to generate assembly for a file
+fundal/5/2/main.cpp.s:
+	$(MAKE) -f CMakeFiles/fundal5.2.dir/build.make CMakeFiles/fundal5.2.dir/fundal/5/2/main.cpp.s
+.PHONY : fundal/5/2/main.cpp.s
+
 fundal/5/3/main.o: fundal/5/3/main.cpp.o
 
 .PHONY : fundal/5/3/main.o
@@ -350,6 +403,33 @@ fundal/5/3/main.cpp.s:
 	$(MAKE) -f CMakeFiles/fundal5.3.dir/build.make CMakeFiles/fundal5.3.dir/fundal/5/3/main.cpp.s
 .PHONY : fundal/5/3/main.cpp.s
 
+fundal/5/4/main.o: fundal/5/4/main.cpp.o
+
+.PHONY : fundal/5/4/main.o
+
+# target to build an object file
+fundal/5/4/main.cpp.o:
+	$(MAKE) -f CMakeFiles/fundal5.4.dir/build.make CMakeFiles/fundal5.4.dir/fundal/5/4/main.cpp.o
+.PHONY : fundal/5/4/main.cpp.o
+
+fundal/5/4/main.i: fundal/5/4/main.cpp.i
+
+.PHONY : fundal/5/4/main.i
+
+# target to preprocess a source file
+fundal/5/4/main.cpp.i:
+	$(MAKE) -f CMakeFiles/fundal5.4.dir/build.make CMakeFiles/fundal5.4.dir/fundal/5/4/main.cpp.i
+.PHONY : fundal/5/4/main.cpp.i
+
+fundal/5/4/main.s: fundal/5/4/main.cpp.s
+
+.PHONY : fundal/5/4/main.s
+
+# target to generate assembly for a file
+fundal/5/4/main.cpp.s:
+	$(MAKE) -f CMakeFiles/fundal5.4.dir/build.make CMakeFiles/fundal5.4.dir/fundal/5/4/main.cpp.s
+.PHONY : fundal/5/4/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -357,13 +437,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... ls"
+	@echo "... chown"
 	@echo "... fundal5.3"
 	@echo "... edit_cache"
 	@echo "... fundal4.10"
+	@echo "... fundal5.2"
+	@echo "... fundal5.4"
 	@echo "... server"
-	@echo "... ls"
 	@echo "... client"
-	@echo "... chown"
 	@echo "... OS/ch/chown.o"
 	@echo "... OS/ch/chown.i"
 	@echo "... OS/ch/chown.s"
@@ -379,9 +461,15 @@ help:
 	@echo "... fundal/4/10/main.o"
 	@echo "... fundal/4/10/main.i"
 	@echo "... fundal/4/10/main.s"
+	@echo "... fundal/5/2/main.o"
+	@echo "... fundal/5/2/main.i"
+	@echo "... fundal/5/2/main.s"
 	@echo "... fundal/5/3/main.o"
 	@echo "... fundal/5/3/main.i"
 	@echo "... fundal/5/3/main.s"
+	@echo "... fundal/5/4/main.o"
+	@echo "... fundal/5/4/main.i"
+	@echo "... fundal/5/4/main.s"
 .PHONY : help
 
 

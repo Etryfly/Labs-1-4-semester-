@@ -229,6 +229,7 @@ Monom operator*(const Monom &left, const Monom &right) {
     freeSpaceInd = r.count;
 
     r.ks *= l.ks;
+    l.ks = r.ks;
     if (l.count != r.count) {
         Monom tmp = r;
         r.count = l.count;
@@ -428,6 +429,10 @@ public:
             if (*ptr == 0) {
                 *b++ = c;
             } else {
+                if (c == '-') {
+                    action = '-';
+                    c = *ptr++;
+                }
                 while (c != '+' && c != '-' ) {
                     if (*ptr == 0) {
                         *b++ = c;
@@ -520,7 +525,8 @@ public:
 //                cout << " * ";
 //                right.list.get(j)->print();
 //                cout << " = ";
-//                t = t * *right.list.get(j);
+
+                t = t * *right.list.get(j);
 //                t.print();
 //                cout << endl;
 

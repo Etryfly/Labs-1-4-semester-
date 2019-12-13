@@ -4,6 +4,8 @@ project(fundal)
 
 add_executable(fundal4.10 fundal/4/10/main.c)
 add_executable(fundal5.3 fundal/5/3/main.cpp)
+add_executable(fundal5.2 fundal/5/2/main.cpp)
+add_executable(fundal5.4 fundal/5/4/main.cpp)
 add_executable(server OS/socket/server/server.c)
 add_executable(client OS/socket/client/client.c)
 add_executable(chown OS/ch/chown.c)
