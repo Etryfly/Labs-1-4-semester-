@@ -1,0 +1,4 @@
+READ(in,10)
+READ(B,2)
+C:=in+B
+WRITE(C,10)

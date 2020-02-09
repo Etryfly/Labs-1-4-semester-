@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/fundal4.7.dir/fundal/4/7/main.c.o  -o fundal4.7 -lm 

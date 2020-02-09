@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/3sem/OS/fileCr/ls.c
+dirent.h
+-
+stdio.h
+-
+zconf.h
+-
+memory.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+dirent.h
+-
+unistd.h
+-
+time.h
+-
+pwd.h
+-
+grp.h
+-
+

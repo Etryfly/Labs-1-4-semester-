@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/fundal4.6.dir/fundal/4/6/main.c.o  -o fundal4.6 

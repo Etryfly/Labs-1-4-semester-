@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/3sem.dir/3/3.c.o CMakeFiles/3sem.dir/4/1.c.o  -o 3sem 

@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/fundal3.12.dir/fundal/3/12/main.c.o  -o fundal3.12 -lm 

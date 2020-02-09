@@ -1,0 +1,3 @@
+/home/etryfly/Документы/Labs/2sem/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/etryfly/Документы/Labs/2sem/cmake-build-release/CMakeFiles/2sem.dir
+/home/etryfly/Документы/Labs/2sem/cmake-build-release/CMakeFiles/edit_cache.dir

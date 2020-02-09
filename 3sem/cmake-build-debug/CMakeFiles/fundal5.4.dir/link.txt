@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/fundal5.4.dir/fundal/5/4/main.cpp.o  -o fundal5.4 

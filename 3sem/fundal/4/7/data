@@ -1,0 +1,5 @@
+A = ()in;
+B = ()in;
+C = (A,b)sum;
+(c)out;
+[D = ()in;]

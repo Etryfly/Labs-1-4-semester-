@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/4.dir/fundal/14/main.c.o  -o 4 

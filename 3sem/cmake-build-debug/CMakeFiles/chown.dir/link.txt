@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/chown.dir/OS/ch/chown.c.o  -o chown 

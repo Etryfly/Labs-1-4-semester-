@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/5.dir/fundal/15/main.c.o  -o 5 

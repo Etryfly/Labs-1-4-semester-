@@ -1,0 +1,9 @@
+{{read(in, 10);
+read(B, 2);
+{{}C:= in + B;
+write(c, 10);
+D:= ~in;}}}
+read(D,2);
+read(in,3);
+write(D, 10);
+write(in,10);
