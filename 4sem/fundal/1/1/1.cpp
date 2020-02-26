@@ -3,19 +3,33 @@
 
 #include "framework.h"
 #include "1.h"
+#include <boost/date_time.hpp>
+using namespace boost::local_time;
+using namespace std;
+
 
 #define MAX_LOADSTRING 100
+#define ID_BUTTON 666
+#define ID_TEXTBOX1 667
+#define ID_TEXTBOX2 668
+#define ID_TEXTBOX3 669
 
 // Global Variables:
 HINSTANCE hInst;                                // current instance
 WCHAR szTitle[MAX_LOADSTRING];                  // The title bar text
 WCHAR szWindowClass[MAX_LOADSTRING];            // the main window class name
+HWND textBox1;
+HWND textBox2;
+HWND textBox3;
+HWND button;
+boost::posix_time::ptime date_time;
 
 // Forward declarations of functions included in this code module:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -100,6 +114,22 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
+   textBox1 = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
+       20, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX1, NULL, NULL);
+
+   textBox2 = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
+       200, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX2, NULL, NULL);
+
+   textBox3 = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
+       380, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX3, NULL, NULL);
+
+   button = CreateWindow(_T("button"), _T("Принять"), WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
+       100, 200, 120, 20, hWnd, (HMENU)ID_BUTTON, NULL, NULL);
+
+   
+
+   
+
    if (!hWnd)
    {
       return FALSE;
@@ -109,6 +139,38 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    UpdateWindow(hWnd);
 
    return TRUE;
+}
+
+void fillTextBoxWithPtime(boost::posix_time::ptime time) {
+    std::stringstream stream1;
+    std::stringstream stream2;
+    boost::posix_time::time_facet* facet1 = new boost::posix_time::time_facet();
+    facet1->format("%d.%m.%Y");
+    stream1.imbue(std::locale(std::locale::classic(), facet1));
+    stream1 << time;
+    string str1 = stream1.str();
+    wstring ws1(str1.begin(), str1.end());
+
+    boost::posix_time::time_facet* facet2 = new boost::posix_time::time_facet();
+    facet2->format("%H:%M:%S:%f");
+    stream2.imbue(std::locale(std::locale::classic(), facet2));
+    stream2 << time;
+    string str2 = stream2.str();
+
+    wstring ws2(str2.begin(), str2.end());
+
+   // const int len = GetWindowTextLength(textBox1) + 1;
+    //char* text = new char[len];
+    //GetWindowText(textBox1, text, len);
+    //Append the text to box 2.
+    SendMessage(textBox1, EM_SETSEL, -1, -1);
+    SendMessage(textBox1, EM_REPLACESEL, 0, (LPARAM)str1.c_str());
+    SetWindowText(textBox1, ws1.c_str());
+
+    SendMessage(textBox2, EM_SETSEL, -1, -1);
+    SendMessage(textBox2, EM_REPLACESEL, 0, (LPARAM)str2.c_str());
+    SetWindowText(textBox2, ws2.c_str());
+    //delete[] text;
 }
 
 //
@@ -123,6 +185,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+
+    static int interval = 0;
     switch (message)
     {
     case WM_COMMAND:
@@ -131,28 +195,116 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             // Parse the menu selections:
             switch (wmId)
             {
+            case ID_BUTTON: {
+                try {
+                    int len = GetWindowTextLength(textBox1) + 1;
+                    wchar_t* text = new wchar_t[len];
+                    GetWindowText(textBox1, &text[0], len);
+                    wstring ws(text);
+
+                    string str(ws.begin(), ws.end());
+                    std::vector<std::string> results;
+
+                    boost::split(results, text, [](char c) {return c == '.'; });
+                    if (results.size() != 3) throw exception();
+
+                    tm pt_tm;
+                    pt_tm.tm_mday = atoi(results[0].c_str());
+                    pt_tm.tm_mon = atoi(results[1].c_str()) - 1;
+                    pt_tm.tm_year = atoi(results[2].c_str()) - 1900;
+                    pt_tm.tm_sec = 0;
+                    pt_tm.tm_min = 0;
+                    pt_tm.tm_hour = 0;
+                    pt_tm.tm_wday = 0;
+                    pt_tm.tm_yday = 0;
+                    pt_tm.tm_isdst = 0;
+
+                    delete text;
+
+                    date_time = boost::posix_time::ptime_from_tm(pt_tm);
+
+                    len = GetWindowTextLength(textBox2) + 1;
+                    text = new wchar_t[len];
+                    GetWindowText(textBox2, &text[0], len);
+                    ws = wstring(text);
+
+
+                    str = string(ws.begin(), ws.end());
+
+
+                    boost::split(results, text, [](char c) {return c == ':'; });
+                    if (results.size() != 4) throw exception();
+                    delete text;
+                    date_time += boost::posix_time::hours(atoi(results[0].c_str()));
+                    date_time += boost::posix_time::minutes(atoi(results[1].c_str()));
+                    date_time += boost::posix_time::seconds(atoi(results[2].c_str()));
+                    date_time += boost::posix_time::milliseconds(atoi(results[3].c_str()));
+
+
+
+                    len = GetWindowTextLength(textBox3) + 1;
+                    text = new wchar_t[len];
+                    GetWindowText(textBox3, &text[0], len);
+                    ws = wstring(text);
+                    delete text;
+
+                    str = string(ws.begin(), ws.end());
+                    interval = stoi(str);
+                }
+                catch (exception const& e) {
+                    MessageBox(hWnd, TEXT("Операция выполнена успешно!"), TEXT("Ошибка во входных данных"), MB_OK | MB_ICONASTERISK);
+                    break;
+                }
+               // date_time += boost::posix_time::milliseconds(interval);
+
+                
+                SetTimer(hWnd, 1, interval, NULL);
+                break;
+            }
             case IDM_ABOUT:
                 DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
                 break;
             case IDM_EXIT:
                 DestroyWindow(hWnd);
                 break;
+
+            
+
+            case IDM_TIME: {
+                boost::posix_time::ptime timeLocal = boost::posix_time::second_clock::local_time();
+                fillTextBoxWithPtime(timeLocal);
+                break;
+            }
             default:
                 return DefWindowProc(hWnd, message, wParam, lParam);
             }
         }
         break;
+
+    case WM_TIMER:
+  
+        date_time += boost::posix_time::milliseconds(interval);
+        fillTextBoxWithPtime(date_time);
+        break;
+    
     case WM_PAINT:
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: Add any drawing code that uses hdc here...
+           
+            TextOut(hdc, 20, 10, _T("Дата"), 5);
+            TextOut(hdc, 200, 10, _T("Время"), 6);
+            TextOut(hdc, 380, 10, _T("Интервал"), 9);
+            
+            
             EndPaint(hWnd, &ps);
         }
         break;
     case WM_DESTROY:
         PostQuitMessage(0);
         break;
+
+    
     default:
         return DefWindowProc(hWnd, message, wParam, lParam);
     }
