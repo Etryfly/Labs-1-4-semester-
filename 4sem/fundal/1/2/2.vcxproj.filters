@@ -27,6 +27,9 @@
     <ClInclude Include="2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Figure.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2.cpp">

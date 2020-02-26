@@ -3,6 +3,8 @@
 
 #include "framework.h"
 #include "2.h"
+#include "Figure.h"
+#include <cmath>
 
 #define MAX_LOADSTRING 100
 
@@ -10,6 +12,11 @@
 HINSTANCE hInst;                                // current instance
 WCHAR szTitle[MAX_LOADSTRING];                  // The title bar text
 WCHAR szWindowClass[MAX_LOADSTRING];            // the main window class name
+const int PI = 3.1415;
+int maxXCoord;
+int maxYCoord;
+int move = 1;
+int changeStyle = 1;
 
 // Forward declarations of functions included in this code module:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -99,6 +106,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+   SetTimer(hWnd, 1, 50, NULL);
 
    if (!hWnd)
    {
@@ -123,6 +131,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+    static int x, y, size = 60, len = 10, angle = 60;
+    static Figure* figure = new Circle(hWnd, size);
     switch (message)
     {
     case WM_COMMAND:
@@ -134,6 +144,37 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             case IDM_ABOUT:
                 DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
                 break;
+
+            case IDM_STOP1:
+                move = (move == 1) ? 0 : 1;
+                break;
+
+            case IDM_STOP2:
+                changeStyle = (changeStyle == 1) ? 0 : 1;
+                break;
+
+            case IDM_CIRCLE:
+                delete figure;
+                figure = new Circle(hWnd, size);
+                
+                break;
+
+            case IDM_TRIANGLE:
+                delete figure;
+                figure = new Triangle(hWnd, size);
+
+                break;
+
+            case IDM_RHOMB:
+                delete figure;
+                figure = new Rhomb(hWnd, size);
+                break;
+
+            case IDM_PENTAGON:
+                delete figure;
+                figure = new Pentagon(hWnd, size);
+
+                break;
             case IDM_EXIT:
                 DestroyWindow(hWnd);
                 break;
@@ -142,14 +183,35 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
         break;
-    case WM_PAINT:
-        {
-            PAINTSTRUCT ps;
-            HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: Add any drawing code that uses hdc here...
-            EndPaint(hWnd, &ps);
+
+    case WM_TIMER: {
+        if (move) {
+            x += len * cos(angle * PI / 180);
+            y += len * sin(angle * PI / 180);
+            RECT rect = { 0 };
+            GetClientRect(hWnd, &rect);
+            maxXCoord = rect.right - rect.left - size;
+            maxYCoord = rect.bottom - rect.top - size;
+
+            if (x > maxXCoord || y > maxYCoord || x < 0 || y < 0) {
+                angle += 120;
+            }
         }
+        InvalidateRect(hWnd, NULL, TRUE);
         break;
+    }
+    case WM_PAINT:{
+        
+        if (changeStyle) {
+            figure->setRandomBrush();
+            figure->setRandomPen();
+        }
+        figure->setXY(x, y);
+        figure->draw();
+       // delete figure;
+        break;
+    }
+       
     case WM_DESTROY:
         PostQuitMessage(0);
         break;
