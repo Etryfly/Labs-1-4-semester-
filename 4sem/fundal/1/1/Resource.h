@@ -9,6 +9,7 @@
 #define IDD_ABOUTBOX			103
 #define IDM_ABOUT				104
 #define IDM_EXIT				105
+#define IDM_TIME				789
 #define IDI_MY1			107
 #define IDI_SMALL				108
 #define IDC_MY1			109
