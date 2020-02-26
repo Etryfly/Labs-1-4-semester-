@@ -3,3 +3,11 @@
 ################################################################################
 
 *.opendb
+/.vs
+/1sem/out/build/x64-Debug
+/2sem/out/build/x64-Debug
+/3sem/out/build/x64-Debug
+/4sem/fundal/1/.vs/1/v16/ipch/AutoPCH/dfeec56018326b90
+/4sem/fundal/1/1/.vs/1/v16
+/4sem/fundal/1/.vs/1/v16
+/4sem/out/build/x64-Debug
