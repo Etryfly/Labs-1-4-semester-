@@ -9,6 +9,14 @@
 #define IDD_ABOUTBOX			103
 #define IDM_ABOUT				104
 #define IDM_EXIT				105
+#define IDM_BR				666
+#define IDM_STOP1				667
+#define IDM_STOP2				668
+#define IDM_CIRCLE				987
+#define IDM_TRIANGLE				986
+#define IDM_PENTAGON				985
+#define IDM_RHOMB				984
+
 #define IDI_MY2			107
 #define IDI_SMALL				108
 #define IDC_MY2			109
