@@ -157,14 +157,12 @@ void fillTextBoxWithPtime(boost::posix_time::ptime time) {
     stream2 << time;
     string str2 = stream2.str();
 
-    wstring ws2(str2.begin(), str2.end() - 3);
+    wstring ws2(str2.begin(), str2.end());
 
    // const int len = GetWindowTextLength(textBox1) + 1;
     //char* text = new char[len];
     //GetWindowText(textBox1, text, len);
     //Append the text to box 2.
-   
-    
     SendMessage(textBox1, EM_SETSEL, -1, -1);
     SendMessage(textBox1, EM_REPLACESEL, 0, (LPARAM)str1.c_str());
     SetWindowText(textBox1, ws1.c_str());

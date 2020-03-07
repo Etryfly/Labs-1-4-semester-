@@ -1,6 +1,4 @@
 #pragma once
-#include "stdio.h"
-
 
 class Figure {
 
@@ -12,71 +10,22 @@ protected:
 	HDC hdc;
 	HBRUSH hb;
 	HPEN hp;
-	char hbColor[100];
-	char hpColor[100];
-	char penStyle[100];
 
 public:
 	Figure(HWND hWnd, int size) : hwnd{ hWnd }, size{ size } {
 		
 	}
 
-	
+	COLORREF getRandomColor() {
+		return RGB(rand() * 255, rand() * 255, rand() * 255);
+	}
 
 	void setRandomBrush() {
-		int r = rand() % 255;
-		int g = rand() % 255;
-		int b = rand() % 255;
-		sprintf_s(hbColor, "%d, %d, %d", r, g, b);
-		hb = CreateSolidBrush(RGB(r,g,b));
-	}
-
-	
-	char* getHBColor() {
-		return hbColor;
-	}
-
-	char* getPenStyle() {
-		return penStyle;
-	}
-
-	char* getPenColor() {
-		return hpColor;
+		hb = CreateSolidBrush(getRandomColor());
 	}
 
 	void setRandomPen() {
-
-		int r = rand() % 255;
-		int g = rand() % 255;
-		int b = rand() % 255;
-		sprintf_s(hpColor, "%d, %d, %d", r, g, b);
-		int style = (rand() % 6) - 1;
-		switch (style) {
-		case 0:
-			strcpy_s(penStyle, "SOLID");
-			break;
-
-		case 1:
-			strcpy_s(penStyle, "DASH");
-			break;
-
-		case 2:
-			strcpy_s(penStyle, "DOT");
-			break;
-
-		case 3:
-			strcpy_s(penStyle, "DASHDOT");
-			break;
-
-		case 4:
-			strcpy_s(penStyle, "DASHDOTDOT");
-			break;
-
-		case 5:
-			strcpy_s(penStyle, "NULL");
-			break;
-		}
-		hp = CreatePen(style ,1, RGB(r,g,b));
+		hp = CreatePen(rand() * 7 - 1,1, getRandomColor());
 	}
 
 	virtual void draw() = 0;
@@ -102,7 +51,6 @@ public:
 		EndPaint(hwnd, &ps);
 	}
 };
-
 
 class Triangle : public Figure {
 public:
