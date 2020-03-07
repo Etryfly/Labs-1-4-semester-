@@ -5,11 +5,6 @@
 #include "2.h"
 #include "Figure.h"
 #include <cmath>
-#include <CommCtrl.h>
-#include "atlstr.h"
-
-#pragma warning(disable:4996)
-#pragma comment(lib, "ComCtl32.Lib")
 
 #define MAX_LOADSTRING 100
 
@@ -18,14 +13,11 @@ HINSTANCE hInst;                                // current instance
 WCHAR szTitle[MAX_LOADSTRING];                  // The title bar text
 WCHAR szWindowClass[MAX_LOADSTRING];            // the main window class name
 const int PI = 3.1415;
-const int ID_TIMER1 = 1;
-const int ID_TIMER2 = 2;
 int maxXCoord;
 int maxYCoord;
 int move = 1;
 int changeStyle = 1;
-int br = 0;
-HWND hStatus;
+
 // Forward declarations of functions included in this code module:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
@@ -72,14 +64,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 
 
-const wchar_t* getWC(const char* c) {
-    const size_t cSize = strlen(c) + 1;
-    wchar_t* wc = new wchar_t[cSize];
-    mbstowcs(wc, c, cSize);
-    return wc;
-}
-
-
 //
 //  FUNCTION: MyRegisterClass()
 //
@@ -122,11 +106,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
-   SetTimer(hWnd, ID_TIMER1, 2, NULL);
-   SetTimer(hWnd, ID_TIMER2, 2000, NULL);
-
-   
-   hStatus = CreateStatusWindow(WS_CHILD | WS_VISIBLE, L"", hWnd, 4000);
+   SetTimer(hWnd, 1, 50, NULL);
 
    if (!hWnd)
    {
@@ -151,124 +131,80 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    static int x = 50, y = 50, size = 60, len = 5, dx = 5, dy = 5;
+    static int x, y, size = 60, len = 10, angle = 60;
     static Figure* figure = new Circle(hWnd, size);
     switch (message)
     {
     case WM_COMMAND:
-    {
-        int wmId = LOWORD(wParam);
-        // Parse the menu selections:
-        switch (wmId)
         {
-        case IDM_ABOUT:
-            DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
-            break;
+            int wmId = LOWORD(wParam);
+            // Parse the menu selections:
+            switch (wmId)
+            {
+            case IDM_ABOUT:
+                DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                break;
 
-        case IDM_BR:
-            br = (br == 1) ? 0 : 1;
-            break;
-        case IDM_STOP1:
-            move = (move == 1) ? 0 : 1;
-            break;
+            case IDM_STOP1:
+                move = (move == 1) ? 0 : 1;
+                break;
 
-        case IDM_STOP2:
-            changeStyle = (changeStyle == 1) ? 0 : 1;
-            break;
+            case IDM_STOP2:
+                changeStyle = (changeStyle == 1) ? 0 : 1;
+                break;
 
-        case IDM_CIRCLE:
-            delete figure;
-            figure = new Circle(hWnd, size);
+            case IDM_CIRCLE:
+                delete figure;
+                figure = new Circle(hWnd, size);
+                
+                break;
 
-            break;
+            case IDM_TRIANGLE:
+                delete figure;
+                figure = new Triangle(hWnd, size);
 
-        case IDM_TRIANGLE:
-            delete figure;
-            figure = new Triangle(hWnd, size);
+                break;
 
-            break;
+            case IDM_RHOMB:
+                delete figure;
+                figure = new Rhomb(hWnd, size);
+                break;
 
-        case IDM_RHOMB:
-            delete figure;
-            figure = new Rhomb(hWnd, size);
-            break;
+            case IDM_PENTAGON:
+                delete figure;
+                figure = new Pentagon(hWnd, size);
 
-        case IDM_PENTAGON:
-            delete figure;
-            figure = new Pentagon(hWnd, size);
-
-            break;
-        case IDM_EXIT:
-            DestroyWindow(hWnd);
-            break;
-        default:
-            return DefWindowProc(hWnd, message, wParam, lParam);
+                break;
+            case IDM_EXIT:
+                DestroyWindow(hWnd);
+                break;
+            default:
+                return DefWindowProc(hWnd, message, wParam, lParam);
+            }
         }
-    }
-    break;
+        break;
 
     case WM_TIMER: {
-        int wmId = LOWORD(wParam);
-        switch (wmId) {
-        case ID_TIMER1: {
-            if (move) {
-                x += dx;
-                y += dy;
-                RECT rect = { 0 };
-                GetClientRect(hWnd, &rect);
-                maxXCoord = rect.right - rect.left - size;
-                maxYCoord = rect.bottom - rect.top - size;
+        if (move) {
+            x += len * cos(angle * PI / 180);
+            y += len * sin(angle * PI / 180);
+            RECT rect = { 0 };
+            GetClientRect(hWnd, &rect);
+            maxXCoord = rect.right - rect.left - size;
+            maxYCoord = rect.bottom - rect.top - size;
 
-                
-
-                if (br) {
-                    int rnd = (rand() * 31) % 50;
-                    if (rnd > 45) {
-                        dx = rand() % 2*dx - dx + 4* ((rand() % 2) - 1);
-                        dy = rand() % 2*dy - dy + 4* ((rand() % 2) - 1);
-                    }
-                }
-
-                if (x > maxXCoord || x < len) {
-                    dx = -dx;
-                }
-
-                if (y < len || y > maxYCoord - 10) {
-                    dy = -dy;
-                }
+            if (x > maxXCoord || y > maxYCoord || x < 0 || y < 0) {
+                angle += 120;
             }
-            InvalidateRect(hWnd, NULL, TRUE);
-            break;
-        
         }
- 
-
-        case ID_TIMER2:
-            LONG_PTR pParts[5];
-
-            pParts[0] = 200;
-            pParts[1] = 200 + 100;
-            pParts[2] = 200 + 100 + 100;
-            //pParts[3] = 200 + 100 + 100 + 100;
-            //pParts[4] = 200 + 100 + 100 + 100 + 100;
-
-
-            SendMessage(hStatus, SB_SETPARTS, 3, (LPARAM) &pParts);
-            SendMessage(hStatus, SB_SETTEXT, 0, (LPARAM) getWC(figure->getHBColor()));
-            SendMessage(hStatus, SB_SETTEXT, 1, (LPARAM) getWC(figure->getPenColor()));
-            SendMessage(hStatus, SB_SETTEXT, 2, (LPARAM)getWC(figure->getPenStyle()));
-
-            break;
-        }
-}
+        InvalidateRect(hWnd, NULL, TRUE);
+        break;
+    }
     case WM_PAINT:{
         
-        if (changeStyle && br) {
-            int rnd = (rand() * 31) % 50;
-            if (rnd > 30) {
-                figure->setRandomBrush();
-                figure->setRandomPen();
-            }
+        if (changeStyle) {
+            figure->setRandomBrush();
+            figure->setRandomPen();
         }
         figure->setXY(x, y);
         figure->draw();
