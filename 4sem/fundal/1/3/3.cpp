@@ -3,7 +3,7 @@
 #include "framework.h"
 #include "3.h"
 #include "Ball.h"
-
+#include <shobjidl.h> 
 #include <CommCtrl.h>
 #include "atlstr.h"
 #include <vector>
@@ -26,6 +26,7 @@ int maxYCoord;
 HWND hStatus;
 HWND hRadiusEdit;
 HWND hVelocityEdit;
+POINT cursorPos;
 HWND hMassEdit;
 HWND hButton;
 Ball* editingBall;
@@ -199,7 +200,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
             }
             else {
                 isEdit = 0;
-                EnableMenuItem(GetSystemMenu(hWnd, FALSE), IDM_STOP, MF_ENABLED | MF_DEFAULT);
+                EnableMenuItem(GetMenu(hWnd), IDM_STOP, MF_ENABLED | MF_DEFAULT);
                 DrawMenuBar(hWnd);
             }
             
@@ -212,11 +213,35 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
             wchar_t* text = new wchar_t[len];
             GetWindowText(hRadiusEdit, &text[0], len);
             wstring ws(text);
-
+            delete text;
             string str(ws.begin(), ws.end());
+
+            editingBall->radius = stoi(str);
+
+
+            len = GetWindowTextLength(hMassEdit) + 1;
+            text = new wchar_t[len];
+            GetWindowText(hMassEdit, &text[0], len);
+            ws = wstring(text);
+            delete text;
+            str = string(ws.begin(), ws.end());
+
+            editingBall->mass = stoi(str);
+
+            len = GetWindowTextLength(hVelocityEdit) + 1;
+            text = new wchar_t[len];
+            GetWindowText(hVelocityEdit, &text[0], len);
+          //  ws = wstring(text);
+         
+          //  str = string(ws.begin(), ws.end());
+
             std::vector<std::string> results;
 
             boost::split(results, text, [](char c) {return c == ','; });
+            delete text;
+            editingBall->velocity.x = stoi(results[0]);
+            editingBall->velocity.y = stoi(results[1]);
+            InvalidateRect(hWnd, NULL, TRUE);
             ShowWindow(hRadiusEdit, SW_HIDE);
             ShowWindow( hMassEdit, SW_HIDE);
             ShowWindow( hVelocityEdit, SW_HIDE);
@@ -227,6 +252,121 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
         case IDM_STOP:
             startStop();
             break;
+
+        case IDM_SAVE: {
+            HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED |
+                COINIT_DISABLE_OLE1DDE);
+            if (SUCCEEDED(hr))
+            {
+                IFileSaveDialog* pFileSave;
+
+                // Create the FileOpenDialog object.
+                hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_ALL,
+                    IID_IFileSaveDialog, reinterpret_cast<void**>(&pFileSave));
+
+                if (SUCCEEDED(hr))
+                {
+                    // Show the Open dialog box.
+                    hr = pFileSave->Show(NULL);
+
+                    // Get the file name from the dialog box.
+                    if (SUCCEEDED(hr))
+                    {
+                        IShellItem* pItem;
+                        hr = pFileSave->GetResult(&pItem);
+                        if (SUCCEEDED(hr))
+                        {
+                            PWSTR pszFilePath;
+                            hr = pItem->GetDisplayName(SIGDN_FILESYSPATH, &pszFilePath);
+
+                            // Display the file name to the user.
+                            if (SUCCEEDED(hr))  
+                            {
+                                ofstream of(pszFilePath);
+                                of << BallsCount << " ";
+                                for (Ball* b : balls) {
+                                   
+                                    of << b->center.x << " "
+                                        << b->center.y << " "
+                                        << b->velocity.x << " " 
+                                        << b->velocity.y << " "
+                                        << b->mass << " "
+                                        << b->radius << " " << endl;
+                                }
+                                of.close();
+                                CoTaskMemFree(pszFilePath);
+                            }
+                            pItem->Release();
+                        }
+                    }
+                    pFileSave->Release();
+                }
+                CoUninitialize();
+            }
+            break;
+        }
+                     
+
+        case IDM_OPEN: {
+            HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED |
+                COINIT_DISABLE_OLE1DDE);
+            if (SUCCEEDED(hr))
+            {
+                IFileOpenDialog* pFileOpen;
+
+                // Create the FileOpenDialog object.
+                hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL,
+                    IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
+
+                if (SUCCEEDED(hr))
+                {
+                    // Show the Open dialog box.
+                    hr = pFileOpen->Show(NULL);
+
+                    // Get the file name from the dialog box.
+                    if (SUCCEEDED(hr))
+                    {
+                        IShellItem* pItem;
+                        hr = pFileOpen->GetResult(&pItem);
+                        if (SUCCEEDED(hr))
+                        {
+                            PWSTR pszFilePath;
+                            hr = pItem->GetDisplayName(SIGDN_FILESYSPATH, &pszFilePath);
+
+                            // Display the file name to the user.
+                            if (SUCCEEDED(hr))
+                            {
+                                ifstream fi(pszFilePath);
+
+                                fi >> BallsCount;
+                                if (balls.size() != 0) balls.clear();
+                                double radius;
+                                double x, y;
+                                double mass;
+                                for (int i = 0; i < BallsCount; ++i) {
+
+
+                                    fi >> x >> y;
+                                    Vector center(x, y);
+                                    fi >> x >> y;
+                                    Vector velocity(x, y);
+                                    fi >> mass >> radius;
+                                    balls.push_back(new Ball(hWnd, radius, velocity, center));
+                                }
+                                fi.close();
+                                CoTaskMemFree(pszFilePath);
+                            }
+                            pItem->Release();
+                        }
+                    }
+                    pFileOpen->Release();
+                }
+                CoUninitialize();
+            }
+            break;
+        }
+            
+
         case IDM_EXIT:
             DestroyWindow(hWnd);
             break;
@@ -240,7 +380,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
         ofs.open("log");
         SetTimer(hWnd, ID_TIMER1, delta_time, NULL);
 
-        BallsCount = 8;
+        BallsCount = 7;
         RECT rect = { 0 };
         GetClientRect(hWnd, &rect);
         maxXCoord = rect.right - rect.left - size;
@@ -257,53 +397,95 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
 
     case WM_LBUTTONDOWN:
             if (isEdit) {
-            move = 1;
+                cursorPos;
+                GetCursorPos(&cursorPos);
+                ScreenToClient(hWnd, &cursorPos);
+                for (Ball* b : balls) {
+                    double distance = sqrt(pow(cursorPos.x - b->center.x, 2) +
+                        pow(cursorPos.y - b->center.y, 2));
+                    if (distance < b->radius) {
+
+                        move = 1;
+                        editingBall = b;
+                    }
+                }
             }
         break;
 
     case WM_MOUSEMOVE:
         if (isEdit && move) {
-            POINT cursorPos;
             GetCursorPos(&cursorPos);
             ScreenToClient(hWnd, &cursorPos);
-            for (Ball* b : balls) {
-                double distance = sqrt(pow(cursorPos.x - b->center.x, 2) +
-                    pow(cursorPos.y - b->center.y, 2));
-                if (distance < b->radius) {
-                    // MessageBox(hWnd, TEXT("Операция выполнена успешно!"), TEXT("Ошибка во входных данных"), MB_OK | MB_ICONASTERISK);
-                    b->center.x = cursorPos.x;
-                    b->center.y = cursorPos.y;
-                    InvalidateRect(hWnd, NULL, TRUE);
-                }
-            }
+            editingBall->center.x = cursorPos.x;
+            editingBall->center.y = cursorPos.y;
+            InvalidateRect(hWnd, NULL, TRUE);
         }
         break;
 
 
     case WM_RBUTTONDOWN: {
-        for (Ball* b : balls) {
+        if (isEdit) {
+            ShowWindow(hRadiusEdit, SW_HIDE);
+            ShowWindow(hMassEdit, SW_HIDE);
+            ShowWindow(hVelocityEdit, SW_HIDE);
+            ShowWindow(hButton, SW_HIDE);
 
+            GetCursorPos(&cursorPos);
+            ScreenToClient(hWnd, &cursorPos);
+
+            for (Ball* b : balls) {
+
+                double distance = sqrt(pow(cursorPos.x - b->center.x, 2) +
+                    pow(cursorPos.y - b->center.y, 2));
+                if (distance < b->radius) {
+
+                    hRadiusEdit = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
+                        20, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX1, NULL, NULL);
+
+                    hMassEdit = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
+                        200, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX2, NULL, NULL);
+
+                    hVelocityEdit = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
+                        380, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX3, NULL, NULL);
+
+                    hButton = CreateWindow(_T("button"), _T("Принять"), WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
+                        100, 200, 120, 20, hWnd, (HMENU)ID_BUTTON, NULL, NULL);
+
+                    editingBall = b;
+
+                    string str1 = to_string((int)b->radius);
+                    wstring ws1(str1.begin(), str1.end());
+
+                    SendMessage(hRadiusEdit, EM_SETSEL, -1, -1);
+                    SendMessage(hRadiusEdit, EM_REPLACESEL, 0, (LPARAM)str1.c_str());
+                    SetWindowText(hRadiusEdit, ws1.c_str());
+
+                    str1 = to_string((int)b->velocity.x) + "," + to_string((int)b->velocity.y);
+                    ws1 = wstring(str1.begin(), str1.end());
+
+                    SendMessage(hVelocityEdit, EM_SETSEL, -1, -1);
+                    SendMessage(hVelocityEdit, EM_REPLACESEL, 0, (LPARAM)str1.c_str());
+                    SetWindowText(hVelocityEdit, ws1.c_str());
+
+                    str1 = to_string((int)b->mass);
+                    ws1 = wstring(str1.begin(), str1.end());
+
+                    SendMessage(hMassEdit, EM_SETSEL, -1, -1);
+                    SendMessage(hMassEdit, EM_REPLACESEL, 0, (LPARAM)str1.c_str());
+                    SetWindowText(hMassEdit, ws1.c_str());
+                    break;
+                }
+            }
         }
-
-        hRadiusEdit = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
-            20, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX1, NULL, NULL);
-
-        hMassEdit = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
-            200, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX2, NULL, NULL);
-
-        hVelocityEdit = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
-            380, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX3, NULL, NULL);
-
-        hButton = CreateWindow(_T("button"), _T("Принять"), WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
-            100, 200, 120, 20, hWnd, (HMENU)ID_BUTTON, NULL, NULL);
     }
      break;
 
 
-    case WM_LBUTTONUP:
+    case WM_LBUTTONUP: {
         move = 0;
         InvalidateRect(hWnd, NULL, TRUE);
         break;
+    }
 
     case WM_TIMER: {
         for (Ball* ball : balls) {
@@ -372,14 +554,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
             
                
                 
-        }
-        
-       
-
-                
-            InvalidateRect(hWnd, NULL, TRUE);
-            break;
-
+        }    
+        InvalidateRect(hWnd, NULL, TRUE);
+        break;
     }
 
     case WM_PAINT: {
@@ -394,10 +571,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
         break;
     }
 
-    case WM_DESTROY:
+    case WM_DESTROY: {
         ofs.close();
         PostQuitMessage(0);
         break;
+    }
+
     default:
         return DefWindowProc(hWnd, message, wParam, lParam);
     }
