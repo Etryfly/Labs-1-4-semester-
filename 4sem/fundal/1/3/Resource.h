@@ -10,6 +10,8 @@
 #define IDM_ABOUT				104
 #define IDM_EXIT				105
 #define IDM_STOP				666
+#define IDM_OPEN				656
+#define IDM_SAVE				657
 #define IDM_EDIT				888
 #define ID_TE				888
 #define IDI_MY3			107
