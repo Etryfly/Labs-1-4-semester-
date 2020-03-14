@@ -26,3 +26,9 @@
 /4sem/OS/LEC_ASS/Debug
 /4sem/fundal/1/2/Debug/2.vcxproj.FileListAbsolute.txt
 /4sem/fundal/1/2/Debug/3.exe
+*.obj
+*.res
+*.vcxproj
+*.filters
+*.user
+*.aps

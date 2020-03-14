@@ -12,7 +12,7 @@ public:
 
 	}
 
-	double getLength() {
+	double getLength() const {
 		double l = sqrt(x * x + y * y);
 		return l;
 	}
@@ -157,6 +157,8 @@ public:
 
 	
 	void checkBorders(int x, int y, int maxXCoord, int maxYCoord) {
+		x /= sqrt(2);
+		y /= sqrt(2);
 		if (center.x <= radius || center.x >= maxXCoord) {
 			velocity.x *= -1;
 			if (center.x >= maxXCoord) {
