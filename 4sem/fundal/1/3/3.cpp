@@ -492,8 +492,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                       
             RECT rect = { 0 };
             GetClientRect(hWnd, &rect);
-            maxXCoord = rect.right - rect.left -  ball->radius;
-            maxYCoord = rect.bottom - rect.top -  ball->radius;
+            maxXCoord = rect.right - rect.left -  ball->radius / sqrt(2);
+            maxYCoord = rect.bottom - rect.top -  ball->radius / sqrt(2);
 
             ball->center = ball->center + ball->velocity;
 
@@ -573,6 +573,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
 
     case WM_DESTROY: {
         ofs.close();
+        while (balls.size()) {
+            delete balls[balls.size() - 1];
+            balls.pop_back();
+        }
         PostQuitMessage(0);
         break;
     }
