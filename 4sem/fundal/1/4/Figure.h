@@ -29,6 +29,10 @@ public:
 		hb = CreateSolidBrush(getRandomColor());
 	}
 
+	void setBrush(int R, int G, int B) {
+		hb = CreateSolidBrush(RGB(R, G, B));
+	}
+
 	
 
 	void addPoint(POINT p) {
