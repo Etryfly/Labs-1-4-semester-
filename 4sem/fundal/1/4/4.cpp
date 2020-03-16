@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "4.h"
 #include "Figure.h"
+#include <Commctrl.h>
 #pragma warning(disable:4996)
 
 #define MAX_LOADSTRING 100
@@ -31,6 +32,7 @@ ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK    DlgProc(HWND, UINT, WPARAM, LPARAM);
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -70,7 +72,47 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     return (int) msg.wParam;
 }
 
-
+int isPointInsidePolygon(POINT* p, int Number, int x, int y)
+{
+    int i1, i2, n, N, S, S1, S2, S3, flag;
+    N = Number;
+    for (n = 0; n < N; n++)
+    {
+        flag = 0;
+        i1 = n < N - 1 ? n + 1 : 0;
+        while (flag == 0)
+        {
+            i2 = i1 + 1;
+            if (i2 >= N)
+                i2 = 0;
+            if (i2 == (n < N - 1 ? n + 1 : 0))
+                break;
+            S = abs(p[i1].x * (p[i2].y - p[n].y) +
+                p[i2].x * (p[n].y - p[i1].y) +
+                p[n].x * (p[i1].y - p[i2].y));
+            S1 = abs(p[i1].x * (p[i2].y - y) +
+                p[i2].x * (y - p[i1].y) +
+                x * (p[i1].y - p[i2].y));
+            S2 = abs(p[n].x * (p[i2].y - y) +
+                p[i2].x * (y - p[n].y) +
+                x * (p[n].y - p[i2].y));
+            S3 = abs(p[i1].x * (p[n].y - y) +
+                p[n].x * (y - p[i1].y) +
+                x * (p[i1].y - p[n].y));
+            if (S == S1 + S2 + S3)
+            {
+                flag = 1;
+                break;
+            }
+            i1 = i1 + 1;
+            if (i1 >= N)
+                i1 = 0;
+        }
+        if (flag == 0)
+            break;
+    }
+    return flag;
+}
 
 //
 //  FUNCTION: MyRegisterClass()
@@ -155,6 +197,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             case IDM_DRAW_BY_CLICK:
                 drawByClick = drawByClick == 0 ? 1 : 0;
                 break;
+
+            case IDM_SETTINGS: {
+                DialogBox(hInst, MAKEINTRESOURCE(IDD_DIALOG1), NULL, DlgProc);
+                
+                break;
+            }
 
             case IDM_RANDOM: {
                 
@@ -252,8 +300,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             InvalidateRect(hWnd, NULL, TRUE);
             break;
-        }
-        else if (figure) {
+        } else if (figure) {
             POINT cursorPos;
             GetCursorPos(&cursorPos);
             ScreenToClient(hWnd, &cursorPos);
@@ -317,7 +364,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                             -figure->points[i].y);
                     }
                     
-                }
+            }
             
             
             if (figure && isMove) {   
@@ -387,4 +434,82 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     }
     return (INT_PTR)FALSE;
+}
+
+BOOL __stdcall DlgProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam)
+{
+    HWND sliderBar1 = GetDlgItem(hDlg, IDC_SLIDER1);
+    HWND sliderBar2 = GetDlgItem(hDlg, IDC_SLIDER2);
+    HWND sliderBar3 = GetDlgItem(hDlg, IDC_SLIDER3);
+    HWND sliderBar4 = GetDlgItem(hDlg, IDC_SLIDER4);
+
+    static int angles = 1;
+    static int r = 0, g = 0, b = 0;
+    switch (Msg)
+    {
+    case WM_INITDIALOG:
+        SendMessage(sliderBar1, TBM_SETRANGEMIN, false, 1);   //минимум
+        SendMessage(sliderBar1, TBM_SETRANGEMAX, false, 255); //максимум
+        SendMessage(sliderBar1, TBM_SETTICFREQ, false, 1);   //шаг
+        SendMessage(sliderBar2, TBM_SETRANGEMIN, false, 1);   //минимум
+        SendMessage(sliderBar2, TBM_SETRANGEMAX, false, 255); //максимум
+        SendMessage(sliderBar2, TBM_SETTICFREQ, false, 1);   //шаг
+        SendMessage(sliderBar3, TBM_SETRANGEMIN, false, 1);   //минимум
+        SendMessage(sliderBar3, TBM_SETRANGEMAX, false, 255); //максимум
+        SendMessage(sliderBar3, TBM_SETTICFREQ, false, 1);   //шаг
+
+        SendMessage(sliderBar4, TBM_SETRANGEMIN, false, 1);   //минимум
+        SendMessage(sliderBar4, TBM_SETRANGEMAX, false, 7); //максимум
+        SendMessage(sliderBar4, TBM_SETTICFREQ, false, 1);   //шаг
+        return (INT_PTR) TRUE;
+
+    case WM_HSCROLL:
+    {
+        if (sliderBar1 == (HWND)lParam)
+        {
+            int curNumb = SendMessage(sliderBar1, TBM_GETPOS, 0, 0); // ѕолучаем текущее положение слайдера
+            r = curNumb;
+        }
+
+        if (sliderBar2 == (HWND)lParam)
+        {
+            int curNumb = SendMessage(sliderBar2, TBM_GETPOS, 0, 0); // ѕолучаем текущее положение слайдера
+            g = curNumb;
+        }
+
+        if (sliderBar3 == (HWND)lParam)
+        {
+            int curNumb = SendMessage(sliderBar3, TBM_GETPOS, 0, 0); // ѕолучаем текущее положение слайдера
+            b = curNumb;
+        }
+
+        if (sliderBar4 == (HWND)lParam)
+        {
+            int curNumb = SendMessage(sliderBar4, TBM_GETPOS, 0, 0); // ѕолучаем текущее положение слайдера
+            angles = curNumb;
+        }
+
+        break;
+    }
+
+    case WM_COMMAND:
+        switch (LOWORD(wParam)) {
+            // case ID_DO_TERN:
+            //     int curNumb = SendMessage(sliderBar, TBM_GETPOS, 0, 0);
+            //     wchar_t buff[100];
+           //      wsprintfW(buff, L"%d", curNumb); // ѕреобразуем число к строке
+            //     MessageBox(hWnd, buff, L"„исло!", MB_OK); // ¬ыводим выбранное значение
+            //     EndDialog(hDlg, LOWORD(wParam));
+            //     return static_cast<LRESULT>(true);
+            //     break;
+
+        case IDC_BUTTON1: {
+            EndDialog(hDlg, LOWORD(wParam));
+            return (INT_PTR)TRUE;
+        }
+        }
+        break;
+       
+    }
+    return static_cast<LRESULT>(false);
 }
