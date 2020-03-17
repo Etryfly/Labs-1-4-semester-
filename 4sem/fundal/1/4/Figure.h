@@ -59,6 +59,28 @@ public:
 		}
 	}
 
+	void setAngles(int count) {
+		int firstX = points[0].x;
+		int firstY = points[0].y;
+		points.clear();
+
+		RECT rect = { 0 };
+		GetClientRect(hwnd, &rect);
+		int maxXCoord = rect.right - rect.left;
+		int maxYCoord = rect.bottom - rect.top;
+
+
+		for (size_t i = 1; i < count; i++)
+		{
+			POINT p;
+			p.x = rand() % maxXCoord;
+			p.y = rand() % maxYCoord;
+			addPoint(p);
+		}
+	}
+
+	
+
 
 
 

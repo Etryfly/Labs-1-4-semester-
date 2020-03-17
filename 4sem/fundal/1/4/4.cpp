@@ -26,6 +26,7 @@ bool isDeform = 0;
 int oldX;
 int oldY;
 POINT* pointUnderEdit;
+int listBoxCount = 0;
 
 // Forward declarations of functions included in this code module:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -157,6 +158,17 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
+   HMENU h = GetMenu(hWnd);
+   int b = EnableMenuItem(h, IDM_SETTINGS, MF_DISABLED | MF_GRAYED);
+   DrawMenuBar(hWnd);
+   hListBox = CreateWindow(_T("listbox"), NULL,
+       WS_CHILD | WS_VISIBLE | LBS_STANDARD |
+       LBS_WANTKEYBOARDINPUT,
+       30, 30, 200, 100,
+       hWnd, (HMENU)ID_LIST, hInst, NULL);
+   ShowWindow(hListBox, SW_HIDE);
+
+
    if (!hWnd)
    {
       return FALSE;
@@ -230,12 +242,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     figures.push_back(f);
                 }
                 EndPaint(hWnd, &ps);
-                hListBox = CreateWindow(_T("listbox"), NULL,
-                    WS_CHILD | WS_VISIBLE | LBS_STANDARD |
-                    LBS_WANTKEYBOARDINPUT,
-                    30, 30, 200, 100,
-                    hWnd, (HMENU)ID_LIST, hInst, NULL);
-                for (int i = 0; i < figures.size(); ++i) {
+                ShowWindow(hListBox, SW_SHOW);
+
+
+
+
+                for (int i = listBoxCount; i < figures.size(); ++i) {
                     wchar_t num[sizeof(i)];
                     _swprintf(num, L"%d", i);
                     
@@ -245,6 +257,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     
                 }
                 InvalidateRect(hWnd, NULL, TRUE);
+                listBoxCount = figures.size();
+
+                HMENU h = GetMenu(hWnd);
+                int  b = EnableMenuItem(h, IDM_DRAW_BY_CLICK, MF_DISABLED | MF_GRAYED);
+                DrawMenuBar(hWnd);
+
+                drawByClick = 0;
+
+
+
+
+                figureUnderEdit = NULL;
+
                
                 break;
             }
@@ -265,7 +290,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                                     figures[n]->draw(hdc);
                                     figure = figures[n];
                                     EndPaint(hWnd, &ps);
-                            
+
+                                    HMENU h = GetMenu(hWnd);
+                                    int b = EnableMenuItem(h, IDM_SETTINGS, MF_ENABLED | MF_DEFAULT);
+                                    DrawMenuBar(hWnd);
 
                                 }
                         
@@ -321,8 +349,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             }
 
-            if (!isDeform && cursorPos.x > figure->points[0].x&& cursorPos.x < figure->points[1].x &&
-                 cursorPos.y < figure->points[3].y&& cursorPos.y > figure->points[0].y) {
+            if (!isDeform && isPointInsidePolygon(figure->points.data(), figure->points.size(), cursorPos.x, cursorPos.y)) {
             
             isMove = 1;
             oldX = cursorPos.x;
@@ -458,9 +485,14 @@ BOOL __stdcall DlgProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam)
         SendMessage(sliderBar3, TBM_SETRANGEMAX, false, 255); //максимум
         SendMessage(sliderBar3, TBM_SETTICFREQ, false, 1);   //шаг
 
-        SendMessage(sliderBar4, TBM_SETRANGEMIN, false, 1);   //минимум
+        SendMessage(sliderBar4, TBM_SETRANGEMIN, false, 3);   //минимум
         SendMessage(sliderBar4, TBM_SETRANGEMAX, false, 7); //максимум
         SendMessage(sliderBar4, TBM_SETTICFREQ, false, 1);   //шаг
+
+        r = 1;
+        g = 1;
+        b = 1;
+        angles = figure->points.size();
         return (INT_PTR) TRUE;
 
     case WM_HSCROLL:
@@ -504,6 +536,10 @@ BOOL __stdcall DlgProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam)
             //     break;
 
         case IDC_BUTTON1: {
+            figure->setBrush(r, g, b);
+            if (figure->points.size() != angles) {
+                figure->setAngles(angles);
+            }
             EndDialog(hDlg, LOWORD(wParam));
             return (INT_PTR)TRUE;
         }
