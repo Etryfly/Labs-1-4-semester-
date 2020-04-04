@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -lboost_locale -rdynamic CMakeFiles/4.dir/4/main.cpp.o  -o 4 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/4.dir/4/main.cpp.o  -o 4 

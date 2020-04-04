@@ -13,18 +13,24 @@ using namespace std;
 
 
 std::vector<string> split(string str) {
+
     string buf;
     std::vector<string> result;
-    for (int i = 0; i < str.size(); ++i) {
-        if (str[i]== ' '){
+    if (str == "") return result;
+        for (int i = 0; i < str.size(); ++i) {
+        if (str[i]== ' ' || str[i] == '\t' || str[i] == 0 || i == str.size()){
             result.push_back(buf);
             buf.clear();
         } else {
             buf+=str[i];
         }
     }
+
+    result.push_back(buf);
+
     return result;
 }
+
 
 void importDictionary(std::vector<string> *dictionary) {
     std::ifstream istream("zdb-win.txt");
@@ -54,8 +60,8 @@ int getGlCount(string str) {
     std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
     std::wstring wide = converter.from_bytes(str);
     int count = 0;
-    for (int j = 0; j < str.size(); ++j) {
-        if (std::strchr("аоуыиеёэюя", str[j])) {
+    for (int j = 0; j < wide.size(); ++j) {
+        if (std::wcschr(L"аоуыиеёэюя", wide[j])) {
             count ++;
         }
     }
@@ -64,30 +70,38 @@ int getGlCount(string str) {
 
 string getWordWithEqualSize(string str, std::vector<string> dictionary) {
 
-
+    vector<string> rng;
     std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
 
     std::wstring wide = converter.from_bytes(str);
-
-    for (int i = 0; i < dictionary.size(); ++i) {
+    int size = getGlCount(str);
+    int i,j;
+    for (i = 0; i < dictionary.size(); ++i) {
         wstring tmp = converter.from_bytes(dictionary[i]);
         if (compareStr(tmp, wide)) {
 
-            for (int j = i; j < dictionary.size(); ++j) {
-                if (getGlCount(dictionary[j]) == getGlCount(str) && i != j) {
-                    return dictionary[j];
+            for (j = i; j < dictionary.size(); ++j) {
+                if (getGlCount(dictionary[j]) == size && i != j) {
+                    rng.push_back(dictionary[j]);
                 }
             }
-
-            return "Error";
 
         }
     }
 
-
-    for (int k = dictionary.size(); k > 0 ; --k) {
-        if (dictionary[k].size() == str.size()) return dictionary[k];
+    if (rng.size() == 0) {
+        for (j = 0; j < i; ++j) {
+            if (getGlCount(dictionary[j]) == size) {
+                rng.push_back(dictionary[j]);
+            }
+        }
     }
+
+    if (rng.size() == 0) {
+        return dictionary[rand() % dictionary.size() - 1];
+    }
+
+    return rng[rand() % rng.size()/2];
 
 
 }
