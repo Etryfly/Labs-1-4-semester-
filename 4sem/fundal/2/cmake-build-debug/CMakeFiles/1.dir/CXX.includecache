@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/4sem/fundal/2/1/main.cpp
+fstream
+-
+vector
+-
+algorithm
+-
+boost/locale.hpp
+-
+boost/algorithm/string.hpp
+-
+codecvt
+-
+
