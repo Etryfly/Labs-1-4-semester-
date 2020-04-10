@@ -203,6 +203,33 @@ depend:
 	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2/main.cpp.s
 .PHONY : 2/main.cpp.s
 
+4/Entry.o: 4/Entry.cpp.o
+
+.PHONY : 4/Entry.o
+
+# target to build an object file
+4/Entry.cpp.o:
+	$(MAKE) -f CMakeFiles/4.dir/build.make CMakeFiles/4.dir/4/Entry.cpp.o
+.PHONY : 4/Entry.cpp.o
+
+4/Entry.i: 4/Entry.cpp.i
+
+.PHONY : 4/Entry.i
+
+# target to preprocess a source file
+4/Entry.cpp.i:
+	$(MAKE) -f CMakeFiles/4.dir/build.make CMakeFiles/4.dir/4/Entry.cpp.i
+.PHONY : 4/Entry.cpp.i
+
+4/Entry.s: 4/Entry.cpp.s
+
+.PHONY : 4/Entry.s
+
+# target to generate assembly for a file
+4/Entry.cpp.s:
+	$(MAKE) -f CMakeFiles/4.dir/build.make CMakeFiles/4.dir/4/Entry.cpp.s
+.PHONY : 4/Entry.cpp.s
+
 4/main.o: 4/main.cpp.o
 
 .PHONY : 4/main.o
@@ -247,6 +274,9 @@ help:
 	@echo "... 2/main.o"
 	@echo "... 2/main.i"
 	@echo "... 2/main.s"
+	@echo "... 4/Entry.o"
+	@echo "... 4/Entry.i"
+	@echo "... 4/Entry.s"
 	@echo "... 4/main.o"
 	@echo "... 4/main.i"
 	@echo "... 4/main.s"

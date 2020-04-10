@@ -182,6 +182,12 @@
 		<Unit filename="/home/etryfly/Документы/Labs/4sem/fundal/2/2/main.cpp">
 			<Option target="2"/>
 		</Unit>
+		<Unit filename="/home/etryfly/Документы/Labs/4sem/fundal/2/4/Entry.cpp">
+			<Option target="4"/>
+		</Unit>
+		<Unit filename="/home/etryfly/Документы/Labs/4sem/fundal/2/4/Entry.h">
+			<Option target="4"/>
+		</Unit>
 		<Unit filename="/home/etryfly/Документы/Labs/4sem/fundal/2/4/RBTree.h">
 			<Option target="4"/>
 		</Unit>

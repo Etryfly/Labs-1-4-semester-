@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/etryfly/Документы/Labs/4sem/fundal/2/4/Entry.cpp" "/home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles/4.dir/4/Entry.cpp.o"
-  "/home/etryfly/Документы/Labs/4sem/fundal/2/4/main.cpp" "/home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles/4.dir/4/main.cpp.o"
+  "/home/etryfly/Документы/Labs/4sem/fundal/2/shit.cpp" "/home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles/shit.dir/shit.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
