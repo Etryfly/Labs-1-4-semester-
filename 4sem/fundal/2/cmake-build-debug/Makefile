@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
 # Target rules for targets named 4
 
 # Build rule for target.
@@ -148,6 +161,33 @@ depend:
 2/fast:
 	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/build
 .PHONY : 2/fast
+
+1.o: 1.cpp.o
+
+.PHONY : 1.o
+
+# target to build an object file
+1.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/1.cpp.o
+.PHONY : 1.cpp.o
+
+1.i: 1.cpp.i
+
+.PHONY : 1.i
+
+# target to preprocess a source file
+1.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/1.cpp.i
+.PHONY : 1.cpp.i
+
+1.s: 1.cpp.s
+
+.PHONY : 1.s
+
+# target to generate assembly for a file
+1.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/1.cpp.s
+.PHONY : 1.cpp.s
 
 1/main.o: 1/main.cpp.o
 
@@ -203,33 +243,6 @@ depend:
 	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2/main.cpp.s
 .PHONY : 2/main.cpp.s
 
-4/Entry.o: 4/Entry.cpp.o
-
-.PHONY : 4/Entry.o
-
-# target to build an object file
-4/Entry.cpp.o:
-	$(MAKE) -f CMakeFiles/4.dir/build.make CMakeFiles/4.dir/4/Entry.cpp.o
-.PHONY : 4/Entry.cpp.o
-
-4/Entry.i: 4/Entry.cpp.i
-
-.PHONY : 4/Entry.i
-
-# target to preprocess a source file
-4/Entry.cpp.i:
-	$(MAKE) -f CMakeFiles/4.dir/build.make CMakeFiles/4.dir/4/Entry.cpp.i
-.PHONY : 4/Entry.cpp.i
-
-4/Entry.s: 4/Entry.cpp.s
-
-.PHONY : 4/Entry.s
-
-# target to generate assembly for a file
-4/Entry.cpp.s:
-	$(MAKE) -f CMakeFiles/4.dir/build.make CMakeFiles/4.dir/4/Entry.cpp.s
-.PHONY : 4/Entry.cpp.s
-
 4/main.o: 4/main.cpp.o
 
 .PHONY : 4/main.o
@@ -263,20 +276,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... test"
 	@echo "... 4"
 	@echo "... edit_cache"
 	@echo "... 1"
 	@echo "... rebuild_cache"
 	@echo "... 2"
+	@echo "... 1.o"
+	@echo "... 1.i"
+	@echo "... 1.s"
 	@echo "... 1/main.o"
 	@echo "... 1/main.i"
 	@echo "... 1/main.s"
 	@echo "... 2/main.o"
 	@echo "... 2/main.i"
 	@echo "... 2/main.s"
-	@echo "... 4/Entry.o"
-	@echo "... 4/Entry.i"
-	@echo "... 4/Entry.s"
 	@echo "... 4/main.o"
 	@echo "... 4/main.i"
 	@echo "... 4/main.s"

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/etryfly/Документы/Labs/4sem/fundal/2/2/main.cpp
-iostream
--
-map
--
+/home/etryfly/Документы/Labs/4sem/fundal/2/1.cpp
 vector
 -
-fstream
+iostream
+-
+string
+-
+cmath
 -
 

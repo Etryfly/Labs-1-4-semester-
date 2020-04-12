@@ -8,27 +8,25 @@
 #define BLACK false
 
 
-template <class T>
+template <class Key, class Data>
 class RBTree {
 private:
-    RBTree * root;
+
     RBTree * right;
     RBTree * left;
     RBTree * parent;
-    T* data;
+    Key* key;
+    Data* data;
+
     bool color;
 
-    RBTree(T d) {
-        color = RED;
-        left = nullptr;
-        right = nullptr;
-        data = d;
-        parent = nullptr;
-    }
 
-    void leftRotate() {
-        RBTree* root = this;
-        RBTree<T> *tmp = root->left;
+
+
+
+    void leftRotate(RBTree* node) {
+        RBTree* root = node;
+        RBTree<Key, Data> *tmp = root->left;
         root->left = tmp->right;
         if (tmp->right != nullptr) {
             tmp->right->parent = root;
@@ -42,9 +40,9 @@ private:
         root->parent = tmp;
     }
 
-    void rightRotate() {
-        RBTree* root = this;
-        RBTree<T> *tmp = root->right;
+    void rightRotate(RBTree* node) {
+        RBTree* root = node;
+        RBTree<Key, Data> *tmp = root->right;
         root->right = tmp->left;
         if (tmp->left != nullptr) {
             tmp->left->parent = root;
@@ -58,124 +56,163 @@ private:
         root->parent = tmp;
     }
 
-    void fixup() {
-        while (this->parent != nullptr && this->parent->color == RED) {
-            if (this->parent == this->parent->parent->left) {
-                RBTree* uncle = this->parent->parent->right;
+    void fixup(RBTree* node) {
+        while (node->parent != nullptr && node->parent->color == RED) {
+            if (node->parent == node->parent->parent->left) {
+                RBTree* uncle = node->parent->parent->right;
                 if (uncle->color == RED) {
-                    this->parent->color = BLACK;
+                    node->parent->color = BLACK;
                     uncle->color = BLACK;
-                    this->parent->parent->color = RED;
-                    this = this->parent->parent;
+                    node->parent->parent->color = RED;
+                    node = node->parent->parent;
                 } else {
-                    if (this == this->parent->right) {
-                        this = this->parent;
-                        leftRotate(this);
+                    if (node == node->parent->right) {
+                        node = node->parent;
+                        leftRotate(node);
                     }
-                    this->parent->color = BLACK;
-                    this->parent->parent->color = RED;
-                    rightRotate(this->parent->parent);
+                    node->parent->color = BLACK;
+                    node->parent->parent->color = RED;
+                    rightRotate(node->parent->parent);
                 }
             } else {
-                RBTree* uncle = this->parent->parent->left;
+                RBTree* uncle = node->parent->parent->left;
                 if (uncle->color == RED) {
-                    this->parent->color = BLACK;
+                    node->parent->color = BLACK;
                     uncle->color = BLACK;
-                    this->parent->parent->color = RED;
-                    this = this->parent->parent;
+                    node->parent->parent->color = RED;
+                    node = node->parent->parent;
                 } else {
-                    if (this == this->parent->left) {
-                        this = this->parent;
-                        rightRotate(this);
+                    if (node == node->parent->left) {
+                        node = node->parent;
+                        rightRotate(node);
                     }
-                    this->parent->color = BLACK;
-                    this->parent->parent->color = RED;
-                    leftRotate(this->parent->parent);
+                    node->parent->color = BLACK;
+                    node->parent->parent->color = RED;
+                    leftRotate(node->parent->parent);
                 }
             }
         }
-        this->color = BLACK;
+        node->color = BLACK;
     }
 
 
 
 
 
-    void deleteFixup(RBTree *x) {
-
-        /*************************************
-         *  maintain Red-Black tree balance  *
-         *  after deleting node x            *
-         *************************************/
-
-        while (x != root && x->color == BLACK) {
-            if (x == x->parent->left) {
-                RBTree *w = x->parent->right;
-                if (w->color == RED) {
-                    w->color = BLACK;
-                    x->parent->color = RED;
-                    rotateLeft (x->parent);
-                    w = x->parent->right;
-                }
-                if (w->left->color == BLACK && w->right->color == BLACK) {
-                    w->color = RED;
-                    x = x->parent;
-                } else {
-                    if (w->right->color == BLACK) {
-                        w->left->color = BLACK;
-                        w->color = RED;
-                        rotateRight (w);
-                        w = x->parent->right;
+    void deleteFixup(RBTree* z) {
+        while(z->data != root->data && z->color == BLACK) {
+            auto sibling = root;
+            if(z->parent->left == z) {
+                if(z->parent->right){ sibling = z->parent->right; }
+                if(sibling) {
+                    //CASE -- 1
+                    if(sibling->color == RED) {
+                        sibling->color = BLACK;
+                        z->parent->color = RED;
+                        leftRotate(z->parent);
+                        sibling = z->parent->right;
                     }
-                    w->color = x->parent->color;
-                    x->parent->color = BLACK;
-                    w->right->color = BLACK;
-                    rotateLeft (x->parent);
-                    x = root;
+                    //CASE -- 2
+                    if(sibling->left == nullptr && sibling->right == nullptr) {
+                        sibling->color = RED;
+                        z = z->parent;
+                    }
+                    else if(sibling->left->color == BLACK && sibling->right->color == BLACK) {
+                        sibling->color = RED;
+                        z = z->parent;
+                    }
+                        //CASE -- 3
+                    else if(sibling->right->color == BLACK) {
+                        sibling->left->color = BLACK;
+                        sibling->color = RED;
+                        rightRotate(sibling);
+                        sibling = z->parent->right;
+                    } else {
+                        sibling->color = z->parent->color;
+                        z->parent->color = "BLACK";
+                        if(sibling->right){ sibling->right->color = "BLACK"; }
+                        leftRotate(z->parent);
+                        z = root;
+                    }
                 }
             } else {
-                RBTree *w = x->parent->left;
-                if (w->color == RED) {
-                    w->color = BLACK;
-                    x->parent->color = RED;
-                    rotateRight (x->parent);
-                    w = x->parent->left;
-                }
-                if (w->right->color == BLACK && w->left->color == BLACK) {
-                    w->color = RED;
-                    x = x->parent;
-                } else {
-                    if (w->left->color == BLACK) {
-                        w->right->color = BLACK;
-                        w->color = RED;
-                        rotateLeft (w);
-                        w = x->parent->left;
+                if(z->parent->right == z){
+                    if(z->parent->left){ sibling = z->parent->left; }
+                    if(sibling) {
+                        //CASE -- 1
+                        if(sibling->color == RED){
+                            sibling->color = BLACK;
+                            z->parent->color = RED;
+                            rightRotate(z->parent);
+                            sibling = z->parent->left;
+                        }
+                        //CASE -- 2
+                        if(sibling->left == nullptr && sibling->right == nullptr) {
+                            sibling->color = RED;
+                            z = z->parent;
+                        }
+                        else if(sibling->left->color == BLACK && sibling->right->color == BLACK) {
+                            sibling->color = RED;
+                            z = z->parent;
+                        }
+                            //CASE -- 3
+                        else if(sibling->left->color == BLACK) {
+                            sibling->right->color = BLACK;
+                            sibling->color = RED;
+                            rightRotate(sibling);
+                            sibling = z->parent->left;
+                        } else {
+                            sibling->color = z->parent->color;
+                            z->parent->color = BLACK;
+                            if(sibling->left){ sibling->left->color = BLACK; }
+                            leftRotate(z->parent);
+                            z = root;
+                        }
                     }
-                    w->color = x->parent->color;
-                    x->parent->color = BLACK;
-                    w->left->color = BLACK;
-                    rotateRight (x->parent);
-                    x = root;
                 }
+
             }
         }
-        x->color = BLACK;
+        z->color = BLACK;
     }
 
 public:
-    RBTree add(T d) {
+
+    RBTree * root;
+
+    RBTree(Key k , Data* d) {
+        color = RED;
+        left = nullptr;
+        right = nullptr;
+        data = d;
+        key = new std::string(k);
+        parent = nullptr;
+    }
+
+    RBTree() {
+        root = nullptr;
+        right = nullptr;
+        left = nullptr;
+        data = nullptr;
+        key = nullptr;
+        parent = nullptr;
+        color = BLACK;
+    }
+
+    RBTree *add(Key k, Data* d) {
         if (root == nullptr) {
-            root = new RBTree(d);
+            root = new RBTree(k, d);
             root->color = BLACK;
             root->parent = nullptr;
+            root->root = root;
         } else {
             RBTree* node;
             RBTree* parent;
             for (node = root; node != nullptr; ) {
                 parent = node;
-                if (d < node->data) {
+                if (k < *node->key) {
                     node = node->left;
-                } else if (d > node->data) {
+                } else if (k > *node->key) {
                     node = node->right;
                 } else {
                     return root;
@@ -183,12 +220,12 @@ public:
 
             }
 
-            node = new RBTree(d);
+            node = new RBTree(k, d);
             node->parent = parent;
             node->root = root;
 
             if (parent != nullptr) {
-                if (d < parent->data) {
+                if (k < *parent->key) {
                     parent->left = node;
                 } else {
                     parent->right = node;
@@ -196,9 +233,11 @@ public:
             } else {
                 root = node;
             }
+            node->root = node->parent->root;
+            fixup(node);
         }
 
-        fixup();
+
         return root;
     }
 
@@ -246,7 +285,7 @@ public:
         free (y);
     }
 
-    RBTree *findNode(T data) {
+    RBTree *findNode(Key key) {
 
         /*******************************
          *  find node containing data  *
@@ -254,16 +293,36 @@ public:
 
         RBTree *current = root;
         while(current != nullptr)
-            if(compEQ(data, current->data))
+            if(key == *current->key)
                 return (current);
             else
-                current = compLT (data, current->data) ?
+                current = (key < *current->key) ?
                           current->left : current->right;
         return(0);
     }
+
+    Data* getData() {
+        return data;
+    }
+
+    void setData(Data* d) {
+        data = d;
+    }
+
+    void printTree(RBTree* tree) {
+        if (tree == nullptr) return;
+        std::cout << *tree->data << std::endl;
+
+        printTree(tree->left);
+        printTree(tree->right);
+    }
+
+    void getAsVector(std::vector<RBTree*> *v, RBTree* root) {
+        if (root == nullptr) return;
+        v->push_back(root);
+        getAsVector(v, root->left);
+        getAsVector(v, root->right);
+    }
 };
-
-
-
 
 #endif //INC_2_RBTREE_H

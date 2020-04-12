@@ -6,17 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/etryfly/Документы/Labs/4sem/fundal/2/1/main.cpp
-fstream
+/home/etryfly/Документы/Labs/4sem/fundal/2/4/ex.c
+ctype.h
 -
-vector
+string.h
 -
-algorithm
--
-boost/locale.hpp
--
-boost/algorithm/string.hpp
--
-codecvt
+stdio.h
 -
 

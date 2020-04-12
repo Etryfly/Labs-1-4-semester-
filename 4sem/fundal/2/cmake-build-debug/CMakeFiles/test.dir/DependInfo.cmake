@@ -1,15 +1,15 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
+  "CXX"
   )
 # The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/home/etryfly/Документы/Labs/4sem/fundal/2/fuck.c" "/home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles/fuck.dir/fuck.c.o"
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/etryfly/Документы/Labs/4sem/fundal/2/1.cpp" "/home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles/test.dir/1.cpp.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # Targets to which this target links.
