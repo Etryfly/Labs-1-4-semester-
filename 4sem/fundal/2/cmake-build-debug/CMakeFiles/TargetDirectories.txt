@@ -1,4 +1,3 @@
-/home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles/test.dir
 /home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles/4.dir
 /home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles/1.dir
