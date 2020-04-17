@@ -213,7 +213,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 		int wmId = LOWORD(wParam);
 		switch (wmId) {
 		case ID_TIMER1: {
-			if (move) {
+			
 				RECT rect = { 0 };
 				GetClientRect(hWnd, &rect);
 				maxXCoord = rect.right - rect.left ;
@@ -228,7 +228,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 						dy = rand() % 2 * dy - dy + 4 * ((rand() % 2) - 1);
 					}
 				}
-
+				
 
 				if (changeStyle) {
 					int rnd = (rand() * 31) % 50;
@@ -237,6 +237,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 						figure->setRandomPen();
 					}
 				}
+
+				if (move) {
+
 				int cSize = 0;
 				if (figure->points.size() == 1) {
 					cSize = size;
@@ -248,21 +251,25 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 
 					if (figure->points[i].x > maxXCoord - cSize) {
 						dx = -dx;
+						x += figure->points[i].x - maxXCoord + cSize;
 						break;
 					}
 
 					if (figure->points[i].y > maxYCoord - cSize) {
 						dy = -dy;
+						y += maxYCoord - figure->points[i].y - cSize;
 						break;
 					}
 
 					if (figure->points[i].x < 0) {
 						dx = -dx;
+						x += -figure->points[i].x;
 						break;
 					}
 
 					if (figure->points[i].y < 0) {
 						dy = -dy;
+						y += -figure->points[i].y;
 						break;
 					}
 

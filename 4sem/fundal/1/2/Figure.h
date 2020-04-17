@@ -88,10 +88,13 @@ public:
 	
 
 	void move(int dx, int dy) {
-		for (POINT p : points) {
-			p.x += dx;
-			p.y += dy;
+		for (int i = 0; i < points.size(); ++i) {
+			
+			points[i].x += dx;
+			points[i].y += dy;
 		}
+		x += dx;
+		y += dy;
 	}
 
 	void setXY(int x, int y) {

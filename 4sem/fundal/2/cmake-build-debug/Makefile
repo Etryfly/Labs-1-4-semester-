@@ -124,6 +124,19 @@ depend:
 .PHONY : 4/fast
 
 #=============================================================================
+# Target rules for targets named 5
+
+# Build rule for target.
+5 : cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 5
+.PHONY : 5
+
+# fast build rule for target.
+5/fast:
+	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/build
+.PHONY : 5/fast
+
+#=============================================================================
 # Target rules for targets named 1
 
 # Build rule for target.
@@ -230,6 +243,33 @@ depend:
 	$(MAKE) -f CMakeFiles/4.dir/build.make CMakeFiles/4.dir/4/main.cpp.s
 .PHONY : 4/main.cpp.s
 
+5/AVLTree.o: 5/AVLTree.cpp.o
+
+.PHONY : 5/AVLTree.o
+
+# target to build an object file
+5/AVLTree.cpp.o:
+	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/5/AVLTree.cpp.o
+.PHONY : 5/AVLTree.cpp.o
+
+5/AVLTree.i: 5/AVLTree.cpp.i
+
+.PHONY : 5/AVLTree.i
+
+# target to preprocess a source file
+5/AVLTree.cpp.i:
+	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/5/AVLTree.cpp.i
+.PHONY : 5/AVLTree.cpp.i
+
+5/AVLTree.s: 5/AVLTree.cpp.s
+
+.PHONY : 5/AVLTree.s
+
+# target to generate assembly for a file
+5/AVLTree.cpp.s:
+	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/5/AVLTree.cpp.s
+.PHONY : 5/AVLTree.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,6 +278,7 @@ help:
 	@echo "... depend"
 	@echo "... 4"
 	@echo "... edit_cache"
+	@echo "... 5"
 	@echo "... 1"
 	@echo "... rebuild_cache"
 	@echo "... 2"
@@ -250,6 +291,9 @@ help:
 	@echo "... 4/main.o"
 	@echo "... 4/main.i"
 	@echo "... 4/main.s"
+	@echo "... 5/AVLTree.o"
+	@echo "... 5/AVLTree.i"
+	@echo "... 5/AVLTree.s"
 .PHONY : help
 
 
