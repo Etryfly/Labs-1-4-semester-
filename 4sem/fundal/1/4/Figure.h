@@ -9,7 +9,7 @@ private:
 
 	HWND hwnd;
 	PAINTSTRUCT ps;
-	
+	HBRUSH constColor;
 	HBRUSH hb;
 	HPEN hp;
 	
@@ -27,13 +27,16 @@ public:
 
 	void setRandomBrush() {
 		hb = CreateSolidBrush(getRandomColor());
+		constColor = hb;
 	}
 
 	void setBrush(int R, int G, int B) {
 		hb = CreateSolidBrush(RGB(R, G, B));
 	}
 
-	
+	void retColor() {
+		hb = constColor;
+	}
 
 	void addPoint(POINT p) {
 		points.push_back(p);

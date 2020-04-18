@@ -361,10 +361,21 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     }
 
     case WM_MOUSEMOVE: {
+        POINT cursorPos;
+        GetCursorPos(&cursorPos);
+        ScreenToClient(hWnd, &cursorPos);
+        for (Figure* f : figures) {
+            if (isPointInsidePolygon(f->points.data(), f->points.size(), cursorPos.x, cursorPos.y)) {
+                f->setBrush(255, 255, 255);
+            }
+            else {
+                f->retColor();
+            }
+        }
+        InvalidateRect(hWnd, NULL, TRUE);
+
         if (figure) {
-            POINT cursorPos;
-            GetCursorPos(&cursorPos);
-            ScreenToClient(hWnd, &cursorPos);
+           
 
             RECT rect = { 0 };
             GetClientRect(hWnd, &rect);
