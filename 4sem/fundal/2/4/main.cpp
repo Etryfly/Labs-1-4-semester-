@@ -102,7 +102,9 @@ int main(int argc, char *argv[]) {
     }
     int size = node->getData()->getRecords().size();
     int price = 0;
-    auto maxDDate = node->getData()->getRecords()[0].getEnd() - node->getData()->getRecords()[0].getStart();
+    if (size != 0) {
+        auto maxDDate = node->getData()->getRecords()[0].getEnd() - node->getData()->getRecords()[0].getStart();
+
     int numOfMaxDDate = 0;
     int maxPrice = 0;
     int maxPriceNum = 0;
@@ -119,10 +121,14 @@ int main(int argc, char *argv[]) {
             maxPriceNum = j;
         }
     }
+
     cout << "Стоймость всех договоров: " << price << endl;
     cout << "Список всех договоров " << *node->getData();
     cout << "Самый продолжительный договор №" << node->getData()->getRecords()[numOfMaxDDate].getNumber() << endl;
     cout << "Самый дорогой договор № " << node->getData()->getRecords()[maxPriceNum].getNumber() << endl;
+    } else {
+        cout << "Записей нет" << endl;
+    }
     while (true) {
         cout << "1. Удалить сотрудника \n"
                 "2. Удалить договор\n"
@@ -152,6 +158,7 @@ int main(int argc, char *argv[]) {
                         break;
                     }
                 }
+
             }
             break;
 
