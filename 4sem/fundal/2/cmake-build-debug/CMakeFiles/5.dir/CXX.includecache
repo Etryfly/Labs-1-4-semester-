@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/4sem/fundal/2/5/AVLTreeNode.h
+vector
+-
+Message.h
+/home/etryfly/Документы/Labs/4sem/fundal/2/5/Message.h
+
+/home/etryfly/Документы/Labs/4sem/fundal/2/5/Message.h
+boost/date_time/posix_time/ptime.hpp
+/home/etryfly/Документы/Labs/4sem/fundal/2/5/boost/date_time/posix_time/ptime.hpp
+string
+-
+
+/home/etryfly/Документы/Labs/4sem/fundal/2/5/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+boost/date_time/posix_time/posix_time.hpp
+-
+Message.h
+/home/etryfly/Документы/Labs/4sem/fundal/2/5/Message.h
+AVLTreeNode.h
+/home/etryfly/Документы/Labs/4sem/fundal/2/5/AVLTreeNode.h
+

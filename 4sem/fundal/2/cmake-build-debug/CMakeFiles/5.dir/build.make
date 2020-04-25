@@ -57,28 +57,31 @@ include CMakeFiles/5.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/5.dir/flags.make
 
-CMakeFiles/5.dir/5/AVLTree.cpp.o: CMakeFiles/5.dir/flags.make
-CMakeFiles/5.dir/5/AVLTree.cpp.o: ../5/AVLTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/5.dir/5/AVLTree.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/5.dir/5/AVLTree.cpp.o -c /home/etryfly/Документы/Labs/4sem/fundal/2/5/AVLTree.cpp
+CMakeFiles/5.dir/5/main.cpp.o: CMakeFiles/5.dir/flags.make
+CMakeFiles/5.dir/5/main.cpp.o: ../5/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/5.dir/5/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/5.dir/5/main.cpp.o -c /home/etryfly/Документы/Labs/4sem/fundal/2/5/main.cpp
 
-CMakeFiles/5.dir/5/AVLTree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/5.dir/5/AVLTree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/etryfly/Документы/Labs/4sem/fundal/2/5/AVLTree.cpp > CMakeFiles/5.dir/5/AVLTree.cpp.i
+CMakeFiles/5.dir/5/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/5.dir/5/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/etryfly/Документы/Labs/4sem/fundal/2/5/main.cpp > CMakeFiles/5.dir/5/main.cpp.i
 
-CMakeFiles/5.dir/5/AVLTree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/5.dir/5/AVLTree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/etryfly/Документы/Labs/4sem/fundal/2/5/AVLTree.cpp -o CMakeFiles/5.dir/5/AVLTree.cpp.s
+CMakeFiles/5.dir/5/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/5.dir/5/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/etryfly/Документы/Labs/4sem/fundal/2/5/main.cpp -o CMakeFiles/5.dir/5/main.cpp.s
 
 # Object files for target 5
 5_OBJECTS = \
-"CMakeFiles/5.dir/5/AVLTree.cpp.o"
+"CMakeFiles/5.dir/5/main.cpp.o"
 
 # External object files for target 5
 5_EXTERNAL_OBJECTS =
 
-5 : CMakeFiles/5.dir/5/AVLTree.cpp.o
+5 : CMakeFiles/5.dir/5/main.cpp.o
 5 : CMakeFiles/5.dir/build.make
+5 : /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+5 : /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+5 : /usr/lib/x86_64-linux-gnu/libboost_system.so
 5 : CMakeFiles/5.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/etryfly/Документы/Labs/4sem/fundal/2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable 5"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/5.dir/link.txt --verbose=$(VERBOSE)

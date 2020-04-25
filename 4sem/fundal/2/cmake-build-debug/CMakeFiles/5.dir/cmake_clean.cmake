@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "5"
   "5.pdb"
-  "CMakeFiles/5.dir/5/AVLTree.cpp.o"
+  "CMakeFiles/5.dir/5/main.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

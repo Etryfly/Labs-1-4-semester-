@@ -243,32 +243,32 @@ depend:
 	$(MAKE) -f CMakeFiles/4.dir/build.make CMakeFiles/4.dir/4/main.cpp.s
 .PHONY : 4/main.cpp.s
 
-5/AVLTree.o: 5/AVLTree.cpp.o
+5/main.o: 5/main.cpp.o
 
-.PHONY : 5/AVLTree.o
+.PHONY : 5/main.o
 
 # target to build an object file
-5/AVLTree.cpp.o:
-	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/5/AVLTree.cpp.o
-.PHONY : 5/AVLTree.cpp.o
+5/main.cpp.o:
+	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/5/main.cpp.o
+.PHONY : 5/main.cpp.o
 
-5/AVLTree.i: 5/AVLTree.cpp.i
+5/main.i: 5/main.cpp.i
 
-.PHONY : 5/AVLTree.i
+.PHONY : 5/main.i
 
 # target to preprocess a source file
-5/AVLTree.cpp.i:
-	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/5/AVLTree.cpp.i
-.PHONY : 5/AVLTree.cpp.i
+5/main.cpp.i:
+	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/5/main.cpp.i
+.PHONY : 5/main.cpp.i
 
-5/AVLTree.s: 5/AVLTree.cpp.s
+5/main.s: 5/main.cpp.s
 
-.PHONY : 5/AVLTree.s
+.PHONY : 5/main.s
 
 # target to generate assembly for a file
-5/AVLTree.cpp.s:
-	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/5/AVLTree.cpp.s
-.PHONY : 5/AVLTree.cpp.s
+5/main.cpp.s:
+	$(MAKE) -f CMakeFiles/5.dir/build.make CMakeFiles/5.dir/5/main.cpp.s
+.PHONY : 5/main.cpp.s
 
 # Help Target
 help:
@@ -291,9 +291,9 @@ help:
 	@echo "... 4/main.o"
 	@echo "... 4/main.i"
 	@echo "... 4/main.s"
-	@echo "... 5/AVLTree.o"
-	@echo "... 5/AVLTree.i"
-	@echo "... 5/AVLTree.s"
+	@echo "... 5/main.o"
+	@echo "... 5/main.i"
+	@echo "... 5/main.s"
 .PHONY : help
 
 

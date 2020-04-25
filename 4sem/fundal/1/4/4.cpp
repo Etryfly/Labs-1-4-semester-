@@ -256,7 +256,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     SendMessageW(hListBox, LB_SETITEMDATA, i, (WPARAM)i);
                     
                 }
-                InvalidateRect(hWnd, NULL, TRUE);
+               // InvalidateRect(hWnd, NULL, TRUE);
                 listBoxCount = figures.size();
 
                 HMENU h = GetMenu(hWnd);
@@ -269,7 +269,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 
                 figureUnderEdit = NULL;
-
+               
                
                 break;
             }
@@ -367,6 +367,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         for (Figure* f : figures) {
             if (isPointInsidePolygon(f->points.data(), f->points.size(), cursorPos.x, cursorPos.y)) {
                 f->setBrush(255, 255, 255);
+                
             }
             else {
                 f->retColor();
@@ -480,6 +481,8 @@ BOOL __stdcall DlgProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam)
     HWND sliderBar2 = GetDlgItem(hDlg, IDC_SLIDER2);
     HWND sliderBar3 = GetDlgItem(hDlg, IDC_SLIDER3);
     HWND sliderBar4 = GetDlgItem(hDlg, IDC_SLIDER4);
+    HWND text = GetDlgItem(hDlg, IDC_STATIC);
+    static HBRUSH hb = CreateSolidBrush(RGB(255, 255, 255));
 
     static int angles = 1;
     static int r = 0, g = 0, b = 0;
@@ -500,9 +503,9 @@ BOOL __stdcall DlgProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam)
         SendMessage(sliderBar4, TBM_SETRANGEMAX, false, 7); //максимум
         SendMessage(sliderBar4, TBM_SETTICFREQ, false, 1);   //шаг
 
-        r = 1;
-        g = 1;
-        b = 1;
+       
+
+      
         angles = figure->points.size();
         return (INT_PTR) TRUE;
 
@@ -531,9 +534,16 @@ BOOL __stdcall DlgProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam)
             int curNumb = SendMessage(sliderBar4, TBM_GETPOS, 0, 0); // Получаем текущее положение слайдера
             angles = curNumb;
         }
+        hb = CreateSolidBrush(RGB(r, g, b));
+
+        InvalidateRect(hDlg, NULL, TRUE);
+       
 
         break;
     }
+
+    case WM_CTLCOLORDLG:
+        return (INT_PTR)(hb);
 
     case WM_COMMAND:
         switch (LOWORD(wParam)) {
@@ -547,7 +557,7 @@ BOOL __stdcall DlgProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lParam)
             //     break;
 
         case IDC_BUTTON1: {
-            figure->setBrush(r, g, b);
+            figure->setConst(r, g, b);
             if (figure->points.size() != angles) {
                 figure->setAngles(angles);
             }

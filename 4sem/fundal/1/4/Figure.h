@@ -34,6 +34,10 @@ public:
 		hb = CreateSolidBrush(RGB(R, G, B));
 	}
 
+	void setConst(int R, int G, int B) {
+		constColor = CreateSolidBrush(RGB(R, G, B));
+	}
+
 	void retColor() {
 		hb = constColor;
 	}

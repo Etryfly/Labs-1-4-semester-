@@ -15,7 +15,8 @@ add_executable(1 1/main.cpp)
 
 add_executable(2 2/main.cpp)
 add_executable(4 4/main.cpp 4/RBTree.h 4/Entry.h)
-add_executable(5 5/AVLTree.cpp 5/AVLTree.h 5/Message.h)
+add_executable(5 5/main.cpp 5/AVLTreeNode.h 5/Message.h )
 
 
 target_link_libraries (4 ${Boost_LIBRARIES})
+target_link_libraries (5 ${Boost_LIBRARIES})
