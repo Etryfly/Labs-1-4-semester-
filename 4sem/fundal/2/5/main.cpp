@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
         return 0;
     }
 
-    AVLTree tree;
+    AVLTreeNode *tree = nullptr;
     for (int i = 1; i < argc; ++i) {
 
         ifstream istream(argv[i]);
@@ -45,16 +45,16 @@ int main(int argc, char* argv[]) {
             if (v.size() == 0) continue;
 
             const std::locale loc = std::locale(std::locale::classic(),
-                                                new boost::posix_time::time_input_facet("%H:%M:%S%f"));
+                                                new boost::posix_time::time_input_facet("%H:%M:%s"));
             std::istringstream is(v[1]);
             is.imbue(loc);
 
-            boost::posix_time::ptime start;
-            is >> start;
+            boost::posix_time::ptime time;
+            is >> time;
+           // cout << time;
+            Message msg(v[0], time, v[3]);
 
-            Message msg(v[0], start, v[3]);
-
-            tree.insert(msg);
+            tree = tree->insert(tree, msg);
         }
 
         istream.close();
@@ -76,14 +76,77 @@ int main(int argc, char* argv[]) {
                 string str;
                 cin >> str;
                 vector<Message> v;
-                tree.getMessagesByName(tree.getRoot(), str, v);
+                tree->getMessagesByName(tree, str, &v);
                 for (Message msg : v) {
-                    cout << msg.name << " " << msg.time << " : " << msg.message << endl;
+                    cout << msg;
                 }
             }
                 break;
 
+            case 2: {
+                cout << "Введите временной интервал в формате HH:MM:SS.MLSCNS HH:MM:SS.MLSCNS \n";
+                string t1;
+                string t2;
+                string name;
+                cin >> t1 >> t2;
+                cout << "Введите имя\n";
+                cin >> name;
 
+                const std::locale loc = std::locale(std::locale::classic(),
+                                                    new boost::posix_time::time_input_facet("%H:%M:%s"));
+                std::istringstream is(t1);
+                is.imbue(loc);
+
+                boost::posix_time::ptime time1;
+                boost::posix_time::ptime time2;
+                is >> time1;
+
+                is.clear();
+
+                is = istringstream(t2);
+                is.imbue(loc);
+
+                is >> time2;
+
+                vector<Message> v;
+                tree->getMessagesByUserInInterval(tree, time1, time2,name, &v);
+                for (Message msg : v) {
+                    cout << msg;
+                }
+            }
+                break;
+
+            case 3: {
+                cout << "Введите временной интервал в формате HH:MM:SS.MLSCNS HH:MM:SS.MLSCNS \n";
+                string t1;
+                string t2;
+
+                cin >> t1 >> t2;
+
+                const std::locale loc = std::locale(std::locale::classic(),
+                                                    new boost::posix_time::time_input_facet("%H:%M:%s"));
+                std::istringstream is(t1);
+                is.imbue(loc);
+
+                boost::posix_time::ptime time1;
+                boost::posix_time::ptime time2;
+                is >> time1;
+
+                is.clear();
+
+                is = istringstream(t2);
+                is.imbue(loc);
+
+                is >> time2;
+
+                vector<Message> v;
+                tree->getMessagesInInterval(tree, time1, time2, &v);
+                for (Message msg : v) {
+                    cout << msg;
+                }
+
+            }
+            break;
 
             case 4:
                 return 0;

@@ -252,10 +252,10 @@ public:
 
 
         if (z->left == nullptr || z->right == nullptr) {
-            /* y has a nullptr node as a child */
+            /* y has a nullptr AVLTreeNode as a child */
             y = z;
         } else {
-            /* find tree successor with a nullptr node as a child */
+            /* find tree successor with a nullptr AVLTreeNode as a child */
             y = z->right;
             while (y->left != nullptr) y = y->left;
         }

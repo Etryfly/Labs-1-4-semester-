@@ -36,7 +36,17 @@ public:
 
     friend  bool operator == (const Message& msg1, const Message& msg2);
     friend  bool operator != (const Message& msg1, const Message& msg2);
+    friend std::ostream& operator<< (std::ostream &out, const Message &message);
 };
+
+std::ostream& operator<< (std::ostream &out, const Message &message) {
+    std::stringstream stream;
+    boost::posix_time::time_facet* facet = new boost::posix_time::time_facet();
+    facet->format("%H:%M:%s");
+    stream.imbue(std::locale(std::locale::classic(), facet));
+    stream << message.time;
+    out << message.name << " " << stream.str() << " : " << message.message << std::endl;
+}
 
 bool operator == (const Message& msg1, const Message& msg2) {
     return msg1.name == msg2.name && msg1.time == msg2.time;
