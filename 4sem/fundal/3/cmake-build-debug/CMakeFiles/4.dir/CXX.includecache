@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/4sem/fundal/3/4/main.cpp
+jsoncpp/json/json.h
+-
+fstream
+-
+iostream
+-
+unordered_map
+-
+person.h
+/home/etryfly/Документы/Labs/4sem/fundal/3/4/person.h
+
+/home/etryfly/Документы/Labs/4sem/fundal/3/4/person.h
+string
+-
+vector
+-
+

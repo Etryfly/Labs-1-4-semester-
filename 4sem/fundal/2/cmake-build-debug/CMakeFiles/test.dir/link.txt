@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/test.dir/test.cpp.o  -o test 
+/usr/bin/cc -g  -rdynamic CMakeFiles/test.dir/test.c.o  -o test -lm 

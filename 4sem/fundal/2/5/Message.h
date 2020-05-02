@@ -34,6 +34,14 @@ public:
         return !(*this > msg) && (*this != msg);
     }
 
+    bool operator <= (const Message& msg) {
+        return !(*this > msg);
+    }
+
+    bool operator >= (const Message& msg) {
+        return !(*this < msg);
+    }
+
     friend  bool operator == (const Message& msg1, const Message& msg2);
     friend  bool operator != (const Message& msg1, const Message& msg2);
     friend std::ostream& operator<< (std::ostream &out, const Message &message);
