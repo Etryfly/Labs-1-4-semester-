@@ -1,4 +1,4 @@
-// 2.cpp : Defines the entry point for the application.
+ // 2.cpp : Defines the entry point for the application.
 //
 
 #include "framework.h"

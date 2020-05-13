@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etryfly/Документы/Labs/4sem/fundal/3/1/MemoryCell.cpp
+
+/home/etryfly/Документы/Labs/4sem/fundal/3/1/Var.cpp
+string
+-
+MemoryCell.cpp
+/home/etryfly/Документы/Labs/4sem/fundal/3/1/MemoryCell.cpp
+
+/home/etryfly/Документы/Labs/4sem/fundal/3/1/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+algorithm
+-
+Var.cpp
+/home/etryfly/Документы/Labs/4sem/fundal/3/1/Var.cpp
+

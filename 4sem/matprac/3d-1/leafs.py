@@ -27,33 +27,40 @@ w.addItem(g)
 R = 10
 r=10
 
+verts = []
 
-phi_rng = np.linspace(0, 2*math.pi, 6)
-theta_rng = np.linspace(0, math.pi, 6)
+phi_rng = np.linspace(0, 2*math.pi, 15)
+theta_rng = np.linspace(0, math.pi, 15)
 
-for phi in phi_rng:
-    for theta in theta_rng:
-        x = r * math.sin(theta) * math.cos(phi)
-        y = r * math.sin(theta) * math.sin(phi)
-        z = r * math.cos(theta)
-        d = 5
-        x2 = (r + d) * math.sin(theta) * math.cos(phi)
-        y2 = (r) * math.sin(theta) * math.sin(phi)
-        z2 = (d) * math.cos(theta)
+verts.append([0, 0, 0])
+for theta in theta_rng:
+    for phi in phi_rng:
+        x = R * math.sin(theta) * math.cos(phi)
+        y = R * math.sin(theta) * math.sin(phi)
+        z = R * math.cos(theta)
+        verts.append([x, y, z])
 
+i = 1
+flag = 1
+for theta in theta_rng:
+    if flag:
+        flag = 0
+    else:
+        flag = 1
+    j = flag
 
-        verts = np.empty((69, 3, 3), dtype=np.float32)
-        theta = np.linspace(0, 5 * np.pi, 70)[:-1]
-        verts[:, 0] = np.vstack([x,y,z]).T
-        verts[:, 1] = np.vstack([x2,y2,z2]).T
-        verts[:, 2] = np.vstack([0,0,0]).T
+    for phi in phi_rng:
+        if (j % 2 == 0) and (j > 1):
+            mi = gl.GLMeshItem(vertexes=np.array([verts[0].copy(), verts[i - 1].copy(), verts[i].copy()])
+                               , faces=np.array([[0, 1, 2]])
+                               , smooth=False
+                               , drawEdges=True
+                               , color=(0, 1, 0, 1)
+                               , computeNormals=True)
+            w.addItem(mi)
+        i += 1
+        j += 1
 
-
-        # ptss = np.array([[x, y, z], [0, 0, 0]])
-        colors = np.random.random(size=(verts.shape[0], 3, 4))
-        plt = gl.GLMeshItem(vertexes=verts, vertexColors=colors, smooth=False, shader='balloon',
-                   drawEdges=True, edgeColor=(1, 1, 0, 1))
-        w.addItem(plt)
 
 
 

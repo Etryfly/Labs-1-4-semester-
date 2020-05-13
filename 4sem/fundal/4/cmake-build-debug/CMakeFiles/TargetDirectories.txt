@@ -1,0 +1,4 @@
+/home/etryfly/Документы/Labs/4sem/fundal/4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/etryfly/Документы/Labs/4sem/fundal/4/cmake-build-debug/CMakeFiles/1.dir
+/home/etryfly/Документы/Labs/4sem/fundal/4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/etryfly/Документы/Labs/4sem/fundal/4/cmake-build-debug/CMakeFiles/2.dir

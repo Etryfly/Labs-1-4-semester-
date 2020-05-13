@@ -448,7 +448,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                     hVelocityEdit = CreateWindow(_T("EDIT"), NULL, WS_BORDER | WS_VISIBLE | WS_CHILD | ES_LEFT | ES_MULTILINE,
                         380, 30, 120, 20, hWnd, (HMENU)ID_TEXTBOX3, NULL, NULL);
 
-                    hButton = CreateWindow(_T("button"), _T("Принять"), WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
+                    hButton = CreateWindow(_T("button"), _T("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ"), WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
                         100, 200, 120, 20, hWnd, (HMENU)ID_BUTTON, NULL, NULL);
 
                     editingBall = b;
@@ -514,20 +514,16 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                         while ((balls[i]->isCollision(balls[j]))) {
                             Vector p1 = balls[i]->center;
                             Vector p2 = balls[j]->center;
-                            // шары удобнее всего расталкивать вдоль прямой,
-                            // проходящей через их центры
+
                             Vector penetrationDirection = (p2 - p1).normalize();
-                            // глубина проникновения - это сумма радиусов двух шаров
-                            // минус расстояние между их центрами
-                           // float penetrationDepth = balls[i]->radius + balls[j]->radius
-                            //    - (p2 - p1).getLength();
+
 
                            
                             balls[i]->center -= penetrationDirection * 0.5;
                             balls[j]->center += penetrationDirection * 0.5;
                         }
-                        ofs << "Номера: " << i << " " << j << "\nКоординаты: " << balls[i]->center << ","
-                            << balls[j]->center << "Скорости до удара:" << balls[i]->velocity << "," << balls[j]->velocity;
+                        ofs << "пїЅпїЅпїЅпїЅпїЅпїЅ: " << i << " " << j << "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " << balls[i]->center << ","
+                            << balls[j]->center << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:" << balls[i]->velocity << "," << balls[j]->velocity;
 
                         Vector p1 = balls[i]->velocity * balls[i]->mass;
                         Vector p2 = balls[j]->velocity * balls[j]->mass;
@@ -543,7 +539,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                         balls[i]->velocity = v1;
                         balls[j]->velocity = v2;
 
-                        ofs << "Скорости после удара: " << v1 << "," << v2 << endl;
+                        ofs << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: " << v1 << "," << v2 << endl;
                        
                         balls[i]->checkBorders(0, 0, maxXCoord, maxYCoord);
                         balls[j]->checkBorders(0, 0, maxXCoord, maxYCoord);

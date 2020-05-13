@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/1.dir/1/main.cpp.o  -o 1 -lboost_chrono -lboost_date_time -lboost_system 
