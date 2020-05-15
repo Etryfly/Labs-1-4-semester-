@@ -6,13 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/etryfly/Документы/Labs/4sem/fundal/4/2/main.cpp
+/home/etryfly/Документы/Labs/4sem/fundal/4/2/Elevator.cpp
 vector
 -
-iostream
--
+Passenger.cpp
+/home/etryfly/Документы/Labs/4sem/fundal/4/2/Passenger.cpp
+
+/home/etryfly/Документы/Labs/4sem/fundal/4/2/Passenger.cpp
 string
 -
-cstdlib
+vector
 -
+
+/home/etryfly/Документы/Labs/4sem/fundal/4/2/main.cpp
+iostream
+-
+fstream
+-
+Elevator.cpp
+/home/etryfly/Документы/Labs/4sem/fundal/4/2/Elevator.cpp
 

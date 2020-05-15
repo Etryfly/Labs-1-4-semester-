@@ -163,6 +163,60 @@ depend:
 	$(MAKE) -f CMakeFiles/1.dir/build.make CMakeFiles/1.dir/1/main.cpp.s
 .PHONY : 1/main.cpp.s
 
+2/Elevator.o: 2/Elevator.cpp.o
+
+.PHONY : 2/Elevator.o
+
+# target to build an object file
+2/Elevator.cpp.o:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2/Elevator.cpp.o
+.PHONY : 2/Elevator.cpp.o
+
+2/Elevator.i: 2/Elevator.cpp.i
+
+.PHONY : 2/Elevator.i
+
+# target to preprocess a source file
+2/Elevator.cpp.i:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2/Elevator.cpp.i
+.PHONY : 2/Elevator.cpp.i
+
+2/Elevator.s: 2/Elevator.cpp.s
+
+.PHONY : 2/Elevator.s
+
+# target to generate assembly for a file
+2/Elevator.cpp.s:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2/Elevator.cpp.s
+.PHONY : 2/Elevator.cpp.s
+
+2/Passenger.o: 2/Passenger.cpp.o
+
+.PHONY : 2/Passenger.o
+
+# target to build an object file
+2/Passenger.cpp.o:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2/Passenger.cpp.o
+.PHONY : 2/Passenger.cpp.o
+
+2/Passenger.i: 2/Passenger.cpp.i
+
+.PHONY : 2/Passenger.i
+
+# target to preprocess a source file
+2/Passenger.cpp.i:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2/Passenger.cpp.i
+.PHONY : 2/Passenger.cpp.i
+
+2/Passenger.s: 2/Passenger.cpp.s
+
+.PHONY : 2/Passenger.s
+
+# target to generate assembly for a file
+2/Passenger.cpp.s:
+	$(MAKE) -f CMakeFiles/2.dir/build.make CMakeFiles/2.dir/2/Passenger.cpp.s
+.PHONY : 2/Passenger.cpp.s
+
 2/main.o: 2/main.cpp.o
 
 .PHONY : 2/main.o
@@ -203,6 +257,12 @@ help:
 	@echo "... 1/main.o"
 	@echo "... 1/main.i"
 	@echo "... 1/main.s"
+	@echo "... 2/Elevator.o"
+	@echo "... 2/Elevator.i"
+	@echo "... 2/Elevator.s"
+	@echo "... 2/Passenger.o"
+	@echo "... 2/Passenger.i"
+	@echo "... 2/Passenger.s"
 	@echo "... 2/main.o"
 	@echo "... 2/main.i"
 	@echo "... 2/main.s"

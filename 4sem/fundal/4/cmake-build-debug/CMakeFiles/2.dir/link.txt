@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/2.dir/2/main.cpp.o  -o 2 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/2.dir/2/main.cpp.o CMakeFiles/2.dir/2/Elevator.cpp.o CMakeFiles/2.dir/2/Passenger.cpp.o  -o 2 

@@ -133,6 +133,12 @@
 		<Unit filename="/home/etryfly/Документы/Labs/4sem/fundal/4/1/main.cpp">
 			<Option target="1"/>
 		</Unit>
+		<Unit filename="/home/etryfly/Документы/Labs/4sem/fundal/4/2/Elevator.cpp">
+			<Option target="2"/>
+		</Unit>
+		<Unit filename="/home/etryfly/Документы/Labs/4sem/fundal/4/2/Passenger.cpp">
+			<Option target="2"/>
+		</Unit>
 		<Unit filename="/home/etryfly/Документы/Labs/4sem/fundal/4/2/main.cpp">
 			<Option target="2"/>
 		</Unit>

@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/etryfly/Документы/Labs/4sem/fundal/4/2/Elevator.cpp" "/home/etryfly/Документы/Labs/4sem/fundal/4/cmake-build-debug/CMakeFiles/2.dir/2/Elevator.cpp.o"
+  "/home/etryfly/Документы/Labs/4sem/fundal/4/2/Passenger.cpp" "/home/etryfly/Документы/Labs/4sem/fundal/4/cmake-build-debug/CMakeFiles/2.dir/2/Passenger.cpp.o"
   "/home/etryfly/Документы/Labs/4sem/fundal/4/2/main.cpp" "/home/etryfly/Документы/Labs/4sem/fundal/4/cmake-build-debug/CMakeFiles/2.dir/2/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

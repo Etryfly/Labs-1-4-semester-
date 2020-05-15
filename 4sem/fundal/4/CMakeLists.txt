@@ -13,6 +13,6 @@ IF (Boost_FOUND)
 endif()
 
 add_executable(1 1/main.cpp)
-add_executable(2 2/main.cpp)
+add_executable(2 2/main.cpp 2/Elevator.cpp 2/Passenger.cpp )
 
 target_link_libraries (1 ${Boost_LIBRARIES})
