@@ -1,4 +1,5 @@
 #include <vector>
+#include <iostream>
 #include "Passenger.cpp"
 
 class Elevator {
@@ -17,11 +18,19 @@ private:
     int currentLoad;
     int floor;
 
+    int timeOfWait;
+    int timeOfWork;
+    int sumWork;
+    int maxWork;
+    int countOfOverload;
 public:
     std::vector<Passenger> passengers;
 
     void addPassenger(Passenger p) {
         passengers.push_back(p);
+        if (currentLoad > maxLoad) countOfOverload ++;
+        else sumWork += p.weight;
+
     }
 
     void calculateLoad() {
@@ -29,6 +38,11 @@ public:
         for (int i = 0; i < passengers.size(); ++i) {
             currentLoad += passengers[i].weight;
         }
+
+        if (currentLoad > maxLoad) countOfOverload ++;
+        else if (maxWork < currentLoad) maxWork = currentLoad;
+
+
     }
 
     bool isEmpty() {
@@ -39,6 +53,7 @@ public:
 
 
     bool moveOneSecond() {
+       // std::cout << floor << " " << currentLoad << std::endl;
         if (s == OPEN) return false;
 
         if (secondsFromFloor == currentLoad * 5) {
@@ -48,13 +63,37 @@ public:
             return true;
         }
         secondsFromFloor ++;
+        timeOfWork++;
         return false;
+    }
+
+    void waitOneSec() {
+        timeOfWait++;
     }
 
     bool isOverLoad() {
         return currentLoad > maxLoad;
     }
 
+    int getTimeOfWait() const {
+        return timeOfWait;
+    }
+
+    int getTimeOfWork() const {
+        return timeOfWork;
+    }
+
+    int getSumWork() const {
+        return sumWork;
+    }
+
+    int getMaxWork() const {
+        return maxWork;
+    }
+
+    int getCountOfOverload() const {
+        return countOfOverload;
+    }
 
     int getFloor() {
         return floor;
@@ -82,5 +121,10 @@ public:
         s = OPEN;
         floor = 0;
         secondsFromFloor = 0;
+        timeOfWait=0;
+        timeOfWork=0;
+        sumWork=0;
+        maxWork=0;
+        countOfOverload=0;
     }
 };

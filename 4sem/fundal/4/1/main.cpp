@@ -15,6 +15,7 @@ bool maskF(string &str) {
 }
 
 bool maskNameAndO(string &str) {
+    if (str.size() == 0) return false;
     if (!(str[0] >= 'A' && str[0]<= 'Z')) {
         return false;
     }
