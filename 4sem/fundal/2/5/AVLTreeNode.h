@@ -19,7 +19,7 @@ public:
 
 
     int getHeight(AVLTreeNode *N) {
-        if (N == NULL)
+        if (NULL == N)
             return 0;
         return N->height;
     }
@@ -38,6 +38,7 @@ public:
 
     AVLTreeNode *leftRotate(AVLTreeNode *root) {
         AVLTreeNode *x = root->right;
+        if (x == nullptr) return root;
         AVLTreeNode *t = x->left;
 
         root->right = t;
@@ -52,6 +53,7 @@ public:
 
     AVLTreeNode *rightRotate(AVLTreeNode *root) {
         AVLTreeNode *x = root->left;
+        if (x == nullptr) return root;
         AVLTreeNode *t = x->right;
 
         root->left = t;
@@ -73,7 +75,7 @@ public:
         if (root == nullptr)
             return new AVLTreeNode(value);
 
-        if (*root->key < value)
+        if (*root->key > value)
             root->right = insert(root->right, value);
         else if (*root->key == value) {
 
@@ -116,10 +118,10 @@ public:
             v->push_back(*p->key);
         }
 
-        if (p->right && p->right->key->name >= name) {
+        if (p->right) {
             getMessagesByName(p->right, name, v);
         }
-        if (p->left && p->left->key->name <= name) {
+        if (p->left ) {
             getMessagesByName(p->left, name, v);
         }
 
@@ -133,11 +135,11 @@ public:
             v->push_back(*p->key);
         }
 
-        if (p->right && p->right->key->name >= name) {
+        if (p->right) {
             getMessagesByUserInInterval(p->right, time1, time2, name, v);
         }
 
-        if (p->left && p->left->key->name <= name) {
+        if (p->left ) {
             getMessagesByUserInInterval(p->left, time1, time2, name, v);
         }
 

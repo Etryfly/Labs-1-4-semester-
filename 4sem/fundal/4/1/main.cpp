@@ -19,12 +19,16 @@ bool maskNameAndO(string &str) {
     if (!(str[0] >= 'A' && str[0]<= 'Z')) {
         return false;
     }
-    str[1] = '.';
+
     str.resize(2);
+    str[1] = '.';
     return true;
 }
 
 bool maskCard(string& str){
+    for (int j = 0; j < str.size(); ++j) {
+        if (!isdigit(str[j])) return false;
+    }
     if (str.size() != 16) return false;
     for (int i = 3; i < 14; ++i) {
         str[i] = 'x';
@@ -39,8 +43,9 @@ bool maskEmail(string& str){
     int indexOfA = -1;
     for (int i = 1; i < str.size(); ++i) {
         if (str[i] == '@') {
+            if (indexOfA != -1) return false;
             indexOfA = i;
-            break;
+
         }
         result[i]='x';
     }

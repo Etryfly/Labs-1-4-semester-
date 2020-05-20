@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
     for (int i = 1; i < argc; ++i) {
         ifstream istream(argv[i]);
         string line;
-        while (!istream.fail()) {
+        while (!istream.eof()) {
             getline(istream, line);
             if (line == "") continue;
             if (line.find('=') != string::npos) { // в строке есть =
@@ -91,14 +91,14 @@ int main(int argc, char *argv[]) {
                         }
                     }
                     if (isFind) continue;
-                    if (vars.size() == 0 || (heap != vars[0].memoryCell->ptr && heap + n <= vars[0].memoryCell->ptr)) {
+                    if ( (N >= n ) && (vars.size() == 0 || (heap != vars[0].memoryCell->ptr && heap + n <= vars[0].memoryCell->ptr))) {
 
                         Var v = Var(new MemoryCell(heap));
                         v.size = n;
                         v.name = words[0];
                         vars.push_back(v);
                     }   else {
-                        if (!isFind &&
+                        if (!isFind && !vars.empty() &&
                             (vars[vars.size() - 1].memoryCell->ptr + vars[vars.size() - 1].size + n < heap + N + 1)) {
 
                             Var v = Var(new MemoryCell(vars[vars.size() - 1].memoryCell->ptr
